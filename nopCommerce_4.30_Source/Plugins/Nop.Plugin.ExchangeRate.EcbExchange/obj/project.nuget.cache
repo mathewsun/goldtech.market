@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ec9joFHcnN291IwPFd/Dod9AY/SwneJ8OF/QztaVlHmOFCmTGvnrZsNwOZx6gLc8xwC5OIqqwelCyarOjjsSMQ==",
+  "dgSpecHash": "KJafkx00Bi0e1q/kbpQ25wj5Dppz4fcKWoFVKIYyjebwrtzpkHBSaim/k913Qd5xLXn3o7Gmejv+ADTrhxuAkA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MDubrovin\\Downloads\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.ExchangeRate.EcbExchange\\Nop.Plugin.ExchangeRate.EcbExchange.csproj",
+  "projectFilePath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.ExchangeRate.EcbExchange\\Nop.Plugin.ExchangeRate.EcbExchange.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MDubrovin\\.nuget\\packages\\autofac\\5.0.0\\autofac.5.0.0.nupkg.sha512",
     "C:\\Users\\MDubrovin\\.nuget\\packages\\autofac.extensions.dependencyinjection\\6.0.0\\autofac.extensions.dependencyinjection.6.0.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gBt4Hm4/vW1xB74oQ41JtuOTXXFOYn8ZoNCe72gFNR4su/SO4Twz6Ol6Dz7w/ys/tVgH1gKFRQfybmn/XoMiyw==",
+  "dgSpecHash": "cheSYoSkZU3wDRbG0eDkoGNMzaqbx7f0jHCoaGjT5kdpVwqzr3pWOBKREm80dsretKd53/7D+UzAGl3aeqNczw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MDubrovin\\Downloads\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Payments.CheckMoneyOrder\\Nop.Plugin.Payments.CheckMoneyOrder.csproj",
+  "projectFilePath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Payments.CheckMoneyOrder\\Nop.Plugin.Payments.CheckMoneyOrder.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MDubrovin\\.nuget\\packages\\advancedstringbuilder\\0.1.0\\advancedstringbuilder.0.1.0.nupkg.sha512",
     "C:\\Users\\MDubrovin\\.nuget\\packages\\autofac\\5.0.0\\autofac.5.0.0.nupkg.sha512",

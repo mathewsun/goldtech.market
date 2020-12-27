@@ -12788,11 +12788,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MDubrovin\\Downloads\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.ExternalAuth.Facebook\\Nop.Plugin.ExternalAuth.Facebook.csproj",
+      "projectUniqueName": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.ExternalAuth.Facebook\\Nop.Plugin.ExternalAuth.Facebook.csproj",
       "projectName": "Nop.Plugin.ExternalAuth.Facebook",
-      "projectPath": "C:\\Users\\MDubrovin\\Downloads\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.ExternalAuth.Facebook\\Nop.Plugin.ExternalAuth.Facebook.csproj",
+      "projectPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.ExternalAuth.Facebook\\Nop.Plugin.ExternalAuth.Facebook.csproj",
       "packagesPath": "C:\\Users\\MDubrovin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MDubrovin\\Downloads\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.ExternalAuth.Facebook\\obj\\",
+      "outputPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.ExternalAuth.Facebook\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MDubrovin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -12809,8 +12809,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\MDubrovin\\Downloads\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
-              "projectPath": "C:\\Users\\MDubrovin\\Downloads\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj"
+            "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
+              "projectPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj"
             }
           }
         }

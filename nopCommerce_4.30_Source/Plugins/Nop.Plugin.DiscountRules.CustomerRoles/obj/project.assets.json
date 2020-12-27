@@ -12760,11 +12760,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MDubrovin\\Downloads\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.DiscountRules.CustomerRoles\\Nop.Plugin.DiscountRules.CustomerRoles.csproj",
+      "projectUniqueName": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.DiscountRules.CustomerRoles\\Nop.Plugin.DiscountRules.CustomerRoles.csproj",
       "projectName": "Nop.Plugin.DiscountRules.CustomerRoles",
-      "projectPath": "C:\\Users\\MDubrovin\\Downloads\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.DiscountRules.CustomerRoles\\Nop.Plugin.DiscountRules.CustomerRoles.csproj",
+      "projectPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.DiscountRules.CustomerRoles\\Nop.Plugin.DiscountRules.CustomerRoles.csproj",
       "packagesPath": "C:\\Users\\MDubrovin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MDubrovin\\Downloads\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.DiscountRules.CustomerRoles\\obj\\",
+      "outputPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.DiscountRules.CustomerRoles\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MDubrovin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -12781,8 +12781,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\MDubrovin\\Downloads\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
-              "projectPath": "C:\\Users\\MDubrovin\\Downloads\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj"
+            "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
+              "projectPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj"
             }
           }
         }

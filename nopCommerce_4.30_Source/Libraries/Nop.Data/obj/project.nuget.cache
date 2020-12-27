@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VVfWEEJQSffOH0sGKb83EjSxU4YDZKnql4afb5pwX2WvK1c8oOu7O719un1CbkfPy+X2t6kKy/nBSUyinvOS4Q==",
+  "dgSpecHash": "0JgWpf4IsQ9rnA+8nMRBG4FBQVqI+k6wvYBEgkVHJR2IRtgSAsgBKMVaoRHhAXCT1c2596LaydquHBHmFlleiA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MDubrovin\\Downloads\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj",
+  "projectFilePath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MDubrovin\\.nuget\\packages\\autofac\\5.0.0\\autofac.5.0.0.nupkg.sha512",
     "C:\\Users\\MDubrovin\\.nuget\\packages\\autofac.extensions.dependencyinjection\\6.0.0\\autofac.extensions.dependencyinjection.6.0.0.nupkg.sha512",

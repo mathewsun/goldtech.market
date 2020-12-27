@@ -12819,11 +12819,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MDubrovin\\Downloads\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Tax.Avalara\\Nop.Plugin.Tax.Avalara.csproj",
+      "projectUniqueName": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Tax.Avalara\\Nop.Plugin.Tax.Avalara.csproj",
       "projectName": "Nop.Plugin.Tax.Avalara",
-      "projectPath": "C:\\Users\\MDubrovin\\Downloads\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Tax.Avalara\\Nop.Plugin.Tax.Avalara.csproj",
+      "projectPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Tax.Avalara\\Nop.Plugin.Tax.Avalara.csproj",
       "packagesPath": "C:\\Users\\MDubrovin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MDubrovin\\Downloads\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Tax.Avalara\\obj\\",
+      "outputPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Tax.Avalara\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MDubrovin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -12840,8 +12840,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\MDubrovin\\Downloads\\nopCommerce_4.30_Source\\Presentation\\Nop.Web\\Nop.Web.csproj": {
-              "projectPath": "C:\\Users\\MDubrovin\\Downloads\\nopCommerce_4.30_Source\\Presentation\\Nop.Web\\Nop.Web.csproj"
+            "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web\\Nop.Web.csproj": {
+              "projectPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web\\Nop.Web.csproj"
             }
           }
         }

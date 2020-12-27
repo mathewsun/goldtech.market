@@ -6,3 +6,7 @@ bin
 /nopCommerce_4.30_Source/Tests/Nop.Tests/obj
 /nopCommerce_4.30_Source/Tests/Nop.Web.MVC.Tests/bin
 /nopCommerce_4.30_Source/Tests/Nop.Web.MVC.Tests/obj
+/nopCommerce_4.30_Source/Presentation/Nop.Web/bin
+/nopCommerce_4.30_Source/Presentation/Nop.Web/obj
+/nopCommerce_4.30_Source/Presentation/Nop.Web.Framework/obj
+/nopCommerce_4.30_Source/Presentation/Nop.Web.Framework/bin

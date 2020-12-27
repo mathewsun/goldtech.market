@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H57I7B7UMcE6i6udY+Aq/HUSZGN2yL9K8My9P9xXqXaD0PYUEVgIbf80/1ES9cEyclS3Fpu5flvaYXqlDQW/5Q==",
+  "dgSpecHash": "0pIkOq4sJiuFrLsczStg9ZEa+n2zVQGH7DLtGPuU9hvq+Y+KwpPQC5HdyU/YitY2MJAqNcihkm8bAHXlp0UfcQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MDubrovin\\Downloads\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Misc.SendinBlue\\Nop.Plugin.Misc.SendinBlue.csproj",
+  "projectFilePath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Misc.SendinBlue\\Nop.Plugin.Misc.SendinBlue.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MDubrovin\\.nuget\\packages\\advancedstringbuilder\\0.1.0\\advancedstringbuilder.0.1.0.nupkg.sha512",
     "C:\\Users\\MDubrovin\\.nuget\\packages\\autofac\\5.0.0\\autofac.5.0.0.nupkg.sha512",
