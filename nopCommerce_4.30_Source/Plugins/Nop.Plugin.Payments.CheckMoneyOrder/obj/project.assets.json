@@ -12755,19 +12755,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MDubrovin\\.nuget\\packages\\": {}
+    "C:\\Users\\alexpigalyov\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Payments.CheckMoneyOrder\\Nop.Plugin.Payments.CheckMoneyOrder.csproj",
+      "projectUniqueName": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Payments.CheckMoneyOrder\\Nop.Plugin.Payments.CheckMoneyOrder.csproj",
       "projectName": "Nop.Plugin.Payments.CheckMoneyOrder",
-      "projectPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Payments.CheckMoneyOrder\\Nop.Plugin.Payments.CheckMoneyOrder.csproj",
-      "packagesPath": "C:\\Users\\MDubrovin\\.nuget\\packages\\",
-      "outputPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Payments.CheckMoneyOrder\\obj\\",
+      "projectPath": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Payments.CheckMoneyOrder\\Nop.Plugin.Payments.CheckMoneyOrder.csproj",
+      "packagesPath": "C:\\Users\\alexpigalyov\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Payments.CheckMoneyOrder\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\MDubrovin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alexpigalyov\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12781,8 +12785,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
-              "projectPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj"
+            "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
+              "projectPath": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj"
             }
           }
         }
@@ -12814,7 +12818,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Shipping.UPS\\Nop.Plugin.Shipping.UPS.csproj": {}
+    "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Shipping.UPS\\Nop.Plugin.Shipping.UPS.csproj": {}
   },
   "projects": {
-    "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
+    "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
       "version": "4.3.0",
       "restore": {
-        "projectUniqueName": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj",
+        "projectUniqueName": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj",
         "projectName": "Nop.Core",
-        "projectPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj",
-        "packagesPath": "C:\\Users\\MDubrovin\\.nuget\\packages\\",
-        "outputPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\obj\\",
+        "projectPath": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj",
+        "packagesPath": "C:\\Users\\alexpigalyov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\MDubrovin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alexpigalyov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -107,21 +110,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj": {
+    "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj": {
       "version": "4.3.0",
       "restore": {
-        "projectUniqueName": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj",
+        "projectUniqueName": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj",
         "projectName": "Nop.Data",
-        "projectPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj",
-        "packagesPath": "C:\\Users\\MDubrovin\\.nuget\\packages\\",
-        "outputPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\obj\\",
+        "projectPath": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj",
+        "packagesPath": "C:\\Users\\alexpigalyov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\MDubrovin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alexpigalyov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -135,8 +141,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
-                "projectPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj"
+              "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
+                "projectPath": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj"
               }
             }
           }
@@ -190,21 +196,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\Nop.Services.csproj": {
+    "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\Nop.Services.csproj": {
       "version": "4.3.0",
       "restore": {
-        "projectUniqueName": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\Nop.Services.csproj",
+        "projectUniqueName": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\Nop.Services.csproj",
         "projectName": "Nop.Services",
-        "projectPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\Nop.Services.csproj",
-        "packagesPath": "C:\\Users\\MDubrovin\\.nuget\\packages\\",
-        "outputPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\obj\\",
+        "projectPath": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\Nop.Services.csproj",
+        "packagesPath": "C:\\Users\\alexpigalyov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\MDubrovin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alexpigalyov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -218,11 +227,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
-                "projectPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj"
+              "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
+                "projectPath": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj"
               },
-              "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj": {
-                "projectPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj"
+              "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj": {
+                "projectPath": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj"
               }
             }
           }
@@ -288,21 +297,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Shipping.UPS\\Nop.Plugin.Shipping.UPS.csproj": {
+    "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Shipping.UPS\\Nop.Plugin.Shipping.UPS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Shipping.UPS\\Nop.Plugin.Shipping.UPS.csproj",
+        "projectUniqueName": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Shipping.UPS\\Nop.Plugin.Shipping.UPS.csproj",
         "projectName": "Nop.Plugin.Shipping.UPS",
-        "projectPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Shipping.UPS\\Nop.Plugin.Shipping.UPS.csproj",
-        "packagesPath": "C:\\Users\\MDubrovin\\.nuget\\packages\\",
-        "outputPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Shipping.UPS\\obj\\",
+        "projectPath": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Shipping.UPS\\Nop.Plugin.Shipping.UPS.csproj",
+        "packagesPath": "C:\\Users\\alexpigalyov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Shipping.UPS\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\MDubrovin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alexpigalyov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -316,8 +328,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
-                "projectPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj"
+              "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
+                "projectPath": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj"
               }
             }
           }
@@ -349,21 +361,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
+    "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
       "version": "4.3.0",
       "restore": {
-        "projectUniqueName": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj",
+        "projectUniqueName": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj",
         "projectName": "Nop.Web.Framework",
-        "projectPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj",
-        "packagesPath": "C:\\Users\\MDubrovin\\.nuget\\packages\\",
-        "outputPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\obj\\",
+        "projectPath": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj",
+        "packagesPath": "C:\\Users\\alexpigalyov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\MDubrovin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alexpigalyov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -377,14 +392,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
-                "projectPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj"
+              "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
+                "projectPath": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj"
               },
-              "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj": {
-                "projectPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj"
+              "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj": {
+                "projectPath": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj"
               },
-              "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\Nop.Services.csproj": {
-                "projectPath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\Nop.Services.csproj"
+              "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\Nop.Services.csproj": {
+                "projectPath": "C:\\Users\\alexpigalyov\\Desktop\\Projects\\goldtech-market.ru\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\Nop.Services.csproj"
               }
             }
           }
@@ -434,7 +449,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
