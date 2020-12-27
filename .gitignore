@@ -10,3 +10,9 @@ bin
 /nopCommerce_4.30_Source/Presentation/Nop.Web/obj
 /nopCommerce_4.30_Source/Presentation/Nop.Web.Framework/obj
 /nopCommerce_4.30_Source/Presentation/Nop.Web.Framework/bin
+/nopCommerce_4.30_Source/Libraries/Nop.Core/bin
+/nopCommerce_4.30_Source/Libraries/Nop.Core/obj
+/nopCommerce_4.30_Source/Libraries/Nop.Data/obj
+/nopCommerce_4.30_Source/Libraries/Nop.Data/bin
+/nopCommerce_4.30_Source/Libraries/Nop.Services/bin
+/nopCommerce_4.30_Source/Libraries/Nop.Services/obj
