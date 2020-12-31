@@ -154,12 +154,11 @@
         const settings = {
             "async": true,
             "crossDomain": true,
-            "url": "http://localhost:53222/api/currencies?currencyOfMetal=USD&currencyOfValute=RUB",
+            "url": "https://www.rentoolo.ru/api/currencies?currencyOfMetal=USD&currencyOfValute=RUB",
             "method": "GET"
         };
 
         $.ajax(settings).done(function (response) {
-            alert("123123");
             $("#gold-span_1").text('$ ' + response.Rates.XAU);
             $("#gold-span_2").text('$ ' + response.Rates.XAU);
             $("#gold-span_3").text('$ ' + response.Rates.XAU);
