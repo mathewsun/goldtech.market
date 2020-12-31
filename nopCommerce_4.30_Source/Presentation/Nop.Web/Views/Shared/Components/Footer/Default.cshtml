@@ -151,6 +151,39 @@
 </script>
 <script asp-location="Footer">
     $(document).ready(function () {
+        const settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "http://localhost:53222/api/currencies?currencyOfMetal=USD&currencyOfValute=RUB",
+            "method": "GET"
+        };
+
+        $.ajax(settings).done(function (response) {
+            alert("123123");
+            $("#gold-span_1").text('$ ' + response.Rates.XAU);
+            $("#gold-span_2").text('$ ' + response.Rates.XAU);
+            $("#gold-span_3").text('$ ' + response.Rates.XAU);
+
+            $("#silver-span_1").text('$ ' + response.Rates.XAG);
+            $("#silver-span_2").text('$ ' + response.Rates.XAG);
+            $("#silver-span_3").text('$ ' + response.Rates.XAG);
+
+            $("#platinum-span_2").text('$ ' + response.Rates.PL);
+            $("#platinum-span_1").text('$ ' + response.Rates.PL);
+            $("#platinum-span_3").text('$ ' + response.Rates.PL);
+
+            $("#usd-span_1").html(response.Rates.USD + " <big>₽</big>");
+            $("#usd-span_2").html(response.Rates.USD + " <big>₽</big>");
+            $("#usd-span_3").html(response.Rates.USD + " <big>₽</big>");
+
+            $("#eur-span_1").html(response.Rates.EUR + " <big>₽</big>");
+            $("#eur-span_2").html(response.Rates.EUR + " <big>₽</big>");
+            $("#eur-span_3").html(response.Rates.EUR + " <big>₽</big>");
+        });
+    });
+</script>
+<script asp-location="Footer">
+    $(document).ready(function () {
         $('.block .title').on('click', function () {
             var e = window, a = 'inner';
             if (!('innerWidth' in window)) {
