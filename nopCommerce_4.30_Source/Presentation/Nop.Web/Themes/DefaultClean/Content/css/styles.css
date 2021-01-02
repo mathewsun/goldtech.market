@@ -184,6 +184,55 @@ label, label + * {
 .buttons {
 	margin: 0 0 30px;
 }
+
+
+
+@keyframes marquee {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(-100%, 0);
+	}
+}
+.exchange {
+	background: #000;
+	color: #fff;
+	font-size: 12px;
+	padding: 6px 0;
+}
+.exchange__body {
+	position: relative;
+	padding: 0 100px 0 30px;
+}
+.exchange__marquee {
+	white-space: nowrap;
+}
+.exchange__title {
+	display: inline-block;
+	margin-right: 50px;
+	opacity: .7;
+}
+.exchange__list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+}
+.exchange__item {
+	display: inline-block;
+	margin-right: 50px;
+	opacity: .7;
+	padding-right: 19px;
+	position: relative;
+}
+.exchange-line {
+	display: inline-block;
+	animation: marquee 35.6s linear infinite;
+}
+
+
 .link-rss {
 	display: none;
 	width: 24px;
