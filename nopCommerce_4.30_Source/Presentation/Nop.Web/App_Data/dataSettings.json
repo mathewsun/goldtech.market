@@ -1,0 +1,5 @@
+﻿{
+  "DataConnectionString": "Data Source=localhost\\SQLEXPRESS;Initial Catalog=goldtech;Integrated Security=False;Persist Security Info=False;User ID=nopcommerce;Password=nopcommerce1",
+  "DataProvider": "sqlserver",
+  "RawDataSettings": {}
+}
