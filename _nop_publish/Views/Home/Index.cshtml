@@ -34,6 +34,38 @@
             <img src="@Url.Content("~/GoldTechLanding/watch/67763815/1.gif")" style="position:absolute; left:-9999px;" alt="">
         </div>
     </noscript>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            const settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://www.rentoolo.ru/api/currencies?currencyOfMetal=USD&currencyOfValute=RUB",
+                "method": "GET"
+            };
+    
+            $.ajax(settings).done(function (response) {
+                $("#gold-span_1").text('$ ' + response.Rates.XAU);
+                $("#gold-span_2").text('$ ' + response.Rates.XAU);
+                $("#gold-span_3").text('$ ' + response.Rates.XAU);
+    
+                $("#silver-span_1").text('$ ' + response.Rates.XAG);
+                $("#silver-span_2").text('$ ' + response.Rates.XAG);
+                $("#silver-span_3").text('$ ' + response.Rates.XAG);
+    
+                $("#platinum-span_2").text('$ ' + response.Rates.PL);
+                $("#platinum-span_1").text('$ ' + response.Rates.PL);
+                $("#platinum-span_3").text('$ ' + response.Rates.PL);
+    
+                $("#usd-span_1").html(response.Rates.USD + " <big>₽</big>");
+                $("#usd-span_2").html(response.Rates.USD + " <big>₽</big>");
+                $("#usd-span_3").html(response.Rates.USD + " <big>₽</big>");
+    
+                $("#eur-span_1").html(response.Rates.EUR + " <big>₽</big>");
+                $("#eur-span_2").html(response.Rates.EUR + " <big>₽</big>");
+                $("#eur-span_3").html(response.Rates.EUR + " <big>₽</big>");
+            });
+        });
+    </script>
     <!-- /Yandex.Metrika counter -->
     <script asp-location="Head">
         (function(w,d,u){
@@ -41,8 +73,50 @@
             var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
         })(window,document,'https://cdn-ru.bitrix24.ru/b14272346/crm/site_button/loader_3_t3gswl.js');
     </script>
+    
+    <style>
+    
+    .exchange {
+      background: #C39B6A;
+      color: #fff;
+      font-size: 12px;
+      padding: 6px 0;
+    }
+    .exchange__body {
+      position: relative;
+      padding: 0 100px 0 30px;
+    }
+    .exchange__marquee {
+      text-align: center;
+      white-space: nowrap;
+    }
+    .exchange__title {
+      display: inline-block;
+      margin-right: 50px;
+      opacity: .7;
+    }
+    .exchange__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+    }
+    .exchange__item {
+      display: inline-block;
+      margin-right: 50px;
+      opacity: .7;
+      padding-right: 19px;
+      position: relative;
+    }
+    .exchange-line {
+      display: inline-block;
+      animation: marquee 35.6s linear infinite;
+    }
+
+    </style>
 </head>
 <body>
+
 <div class="preloader">
     <div class="image-preload">
         <img id="image-preload" src="@Url.Content("~/GoldTechLanding/images/logo.png")">
@@ -57,6 +131,33 @@
         <div class="loader--text"></div>
     </div>
 </div>
+<div class="exchange">
+            <div class="container">
+                <div class="exchange__body">
+                    <div class="exchange__marquee" style="overflow-wrap: normal; white-space: nowrap; overflow: hidden;">
+                        <div class="exchange-line">
+                            <ul class="exchange__list">
+                                <li class="exchange__item">
+                                    Золото: <span class="exchange__val" id="gold-span_1">$ 0</span>
+                                </li>
+                                <li class="exchange__item">
+                                    Серебро: <span class="exchange__val" id="silver-span_1">$ 0</span>
+                                </li>
+                                <li class="exchange__item">
+                                    Платина: <span class="exchange__val" id="platinum-span_1">$ 0</span>
+                                </li>
+                                <li class="exchange__item">
+                                    Доллар: <span class="exchange__val" id="usd-span_1">0 ₽</span>
+                                </li>
+                                <li class="exchange__item">
+                                    Евро: <span class="exchange__val" id="eur-span_1">0 ₽</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 <div id="order">
     <order></order>
 </div>
