@@ -14,6 +14,7 @@
     <script src="@Url.Content("~/js/public.common.js")"></script>
     <title>Gold.Tech | Золото - ваш билет в светлое будущее!</title>
     <link rel="stylesheet" href="@Url.Content("~/GoldTechLanding/css/style.css")">
+    <link rel="stylesheet" href="@Url.Content("~/GoldTechLanding/css/style.css")">
     <link rel="stylesheet" type="text/css" href="@Url.Content("~/GoldTechLanding/npm/slick-carousel@1.8.1/slick/slick.css")">
     <link rel="icon" type="image/png" href="@Url.Content("~/GoldTechLanding/favicon.png")">
     <!-- Yandex.Metrika counter -->
@@ -73,47 +74,6 @@
             var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
         })(window,document,'https://cdn-ru.bitrix24.ru/b14272346/crm/site_button/loader_3_t3gswl.js');
     </script>
-    
-    <style>
-    
-    .exchange {
-      background: #C39B6A;
-      color: #fff;
-      font-size: 12px;
-      padding: 6px 0;
-    }
-    .exchange__body {
-      position: relative;
-      padding: 0 100px 0 30px;
-    }
-    .exchange__marquee {
-      text-align: center;
-      white-space: nowrap;
-    }
-    .exchange__title {
-      display: inline-block;
-      margin-right: 50px;
-      opacity: .7;
-    }
-    .exchange__list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: inline-block;
-    }
-    .exchange__item {
-      display: inline-block;
-      margin-right: 50px;
-      opacity: .7;
-      padding-right: 19px;
-      position: relative;
-    }
-    .exchange-line {
-      display: inline-block;
-      animation: marquee 35.6s linear infinite;
-    }
-
-    </style>
 </head>
 <body>
 
@@ -136,6 +96,9 @@
                 <div class="exchange__body">
                     <div class="exchange__marquee" style="overflow-wrap: normal; white-space: nowrap; overflow: hidden;">
                         <div class="exchange-line">
+                            <span class="exchange__title">
+                                Биржевые индексы:
+                            </span>
                             <ul class="exchange__list">
                                 <li class="exchange__item">
                                     Золото: <span class="exchange__val" id="gold-span_1">$ 0</span>
@@ -147,10 +110,54 @@
                                     Платина: <span class="exchange__val" id="platinum-span_1">$ 0</span>
                                 </li>
                                 <li class="exchange__item">
-                                    Доллар: <span class="exchange__val" id="usd-span_1">0 ₽</span>
+                                    Доллар: <span class="exchange__val" id="usd-span_1">0 <big>₽</big></span>
                                 </li>
                                 <li class="exchange__item">
-                                    Евро: <span class="exchange__val" id="eur-span_1">0 ₽</span>
+                                    Евро: <span class="exchange__val" id="eur-span_1">0 <big>₽</big></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="exchange-line">
+                            <span class="exchange__title">
+                                Биржевые индексы:
+                            </span>
+                            <ul class="exchange__list">
+                                <li class="exchange__item">
+                                    Золото: <span class="exchange__val" id="gold-span_2">$ 0</span>
+                                </li>
+                                <li class="exchange__item">
+                                    Серебро: <span class="exchange__val" id="silver-span_2">$ 0</span>
+                                </li>
+                                <li class="exchange__item">
+                                    Платина: <span class="exchange__val" id="platinum-span_2">$ 0</span>
+                                </li>
+                                <li class="exchange__item">
+                                    Доллар: <span class="exchange__val" id="usd-span_2">0 <big>₽</big></span>
+                                </li>
+                                <li class="exchange__item">
+                                    Евро: <span class="exchange__val" id="eur-span_2">0 <big>₽</big></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="exchange-line">
+                            <span class="exchange__title">
+                                Биржевые индексы:
+                            </span>
+                            <ul class="exchange__list">
+                                <li class="exchange__item">
+                                    Золото: <span class="exchange__val" id="gold-span_3">$ 0</span>
+                                </li>
+                                <li class="exchange__item">
+                                    Серебро: <span class="exchange__val" id="silver-span_3">$ 0</span>
+                                </li>
+                                <li class="exchange__item">
+                                    Платина: <span class="exchange__val" id="platinum-span_3">$ 0</span>
+                                </li>
+                                <li class="exchange__item">
+                                    Доллар: <span class="exchange__val" id="usd-span_3">0 <big>₽</big></span>
+                                </li>
+                                <li class="exchange__item">
+                                    Евро: <span class="exchange__val" id="eur-span_3">0 <big>₽</big></span>
                                 </li>
                             </ul>
                         </div>
