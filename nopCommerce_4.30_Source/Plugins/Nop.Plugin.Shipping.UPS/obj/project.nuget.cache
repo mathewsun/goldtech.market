@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kuSd0HLTlL3psaIWh8SSy8V6m4at6CgERAJFdBAMv6NlRI4J0hHVpqE8Gh1MOnDKGdiyfO2vPJN5MkQJnRJWmA==",
+  "dgSpecHash": "Gb80U5XwncTiwzmO1Ziy3hW3Wts+zebQu6QT/zRy4gVg9wHCZPD0cUMteHqxTRa/WJZrcvfyUrwUo8qL411QPQ==",
   "success": true,
-  "projectFilePath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Shipping.UPS\\Nop.Plugin.Shipping.UPS.csproj",
+  "projectFilePath": "C:\\old\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Shipping.UPS\\Nop.Plugin.Shipping.UPS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MDubrovin\\.nuget\\packages\\advancedstringbuilder\\0.1.0\\advancedstringbuilder.0.1.0.nupkg.sha512",
     "C:\\Users\\MDubrovin\\.nuget\\packages\\autofac\\5.0.0\\autofac.5.0.0.nupkg.sha512",

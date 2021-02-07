@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nwavKaE9kNjwiQ28wML1G1/nt83Wf2TaIgVLz/AlIJTIoTUZvGt1eyhqYe4kX8KcFwuppB7O4K7DOAuThgMPdQ==",
+  "dgSpecHash": "gCU2PI5R6eYXf92HJZDZAz78VhttfR7rLP4Nm0e5OuvHawT7b7JDyhjuf/2FhKNqwFwKcQ9JI4dr+YIpeeSRNw==",
   "success": true,
-  "projectFilePath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Tax.FixedOrByCountryStateZip\\Nop.Plugin.Tax.FixedOrByCountryStateZip.csproj",
+  "projectFilePath": "C:\\old\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Tax.FixedOrByCountryStateZip\\Nop.Plugin.Tax.FixedOrByCountryStateZip.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MDubrovin\\.nuget\\packages\\advancedstringbuilder\\0.1.0\\advancedstringbuilder.0.1.0.nupkg.sha512",
     "C:\\Users\\MDubrovin\\.nuget\\packages\\autofac\\5.0.0\\autofac.5.0.0.nupkg.sha512",

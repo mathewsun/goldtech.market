@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1nzE0kcFdzmEze3eZcIg5oo4GO4eK/R/KPRdMCZNMrnjm1aoBAr3PYsg9Rfjlx0h2IGfhF7J2XSzG5Ot0hklsQ==",
+  "dgSpecHash": "Pcv8BBiv3TRlVyXX7p41xpXxg8OcTXeZiSQrKxRLIqHz09iIirdlur7Te6ebfCOm1B9h4eWalB2iM0kwd8CptA==",
   "success": true,
-  "projectFilePath": "C:\\old\\NOPCOMMERCE\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Widgets.GoogleAnalytics\\Nop.Plugin.Widgets.GoogleAnalytics.csproj",
+  "projectFilePath": "C:\\old\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Widgets.GoogleAnalytics\\Nop.Plugin.Widgets.GoogleAnalytics.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MDubrovin\\.nuget\\packages\\advancedstringbuilder\\0.1.0\\advancedstringbuilder.0.1.0.nupkg.sha512",
     "C:\\Users\\MDubrovin\\.nuget\\packages\\autofac\\5.0.0\\autofac.5.0.0.nupkg.sha512",
