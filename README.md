@@ -1,1 +1,1 @@
-# goldtech-market.ru
+# http://goldtech.market/
