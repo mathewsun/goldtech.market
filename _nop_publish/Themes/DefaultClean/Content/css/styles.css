@@ -7457,4 +7457,10 @@ pre {
     max-width: 100%;
 }
 
+
+	/*** FONT SIZE ***/
+.font-size-9px
+{
+	font-size: 9px;
+}
 }
