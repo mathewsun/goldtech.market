@@ -41,6 +41,10 @@ namespace Nop.Web.Infrastructure
             //home page
             endpointRouteBuilder.MapControllerRoute("Homepage", pattern,
                 new { controller = "Home", action = "Index" });
+            
+            //shop page
+            endpointRouteBuilder.MapControllerRoute("Shoppage", $"{pattern}shop/",
+                new { controller = "Shop", action = "Index" });
 
             //login
             endpointRouteBuilder.MapControllerRoute("Login", $"{pattern}login/",
