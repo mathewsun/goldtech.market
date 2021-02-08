@@ -66,7 +66,7 @@
 }
 .exchange__body {
   position: relative;
-  padding: 0 100px 0 30px;
+  //padding: 0 100px 0 30px;
 }
 .exchange__marquee {
   text-align: center;
