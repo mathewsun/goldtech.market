@@ -13,22 +13,9 @@
     <script src="@Url.Content("~/lib/jquery-validate/jquery.validate.unobtrusive-v3.2.11/jquery.validate.unobtrusive.min.js")"></script>
     <script src="@Url.Content("~/js/public.common.js")"></script>
     <title>Gold.Tech | Золото - ваш билет в светлое будущее!</title>
-    <link rel="stylesheet" href="@Url.Content("~/GoldTechLanding/css/style.css?4")">
+    <link rel="stylesheet" href="@Url.Content("~/GoldTechLanding/css/style.css?44")">
     <link rel="stylesheet" type="text/css" href="@Url.Content("~/GoldTechLanding/npm/slick-carousel@1.8.1/slick/slick.css")">
     <link rel="icon" type="image/png" href="@Url.Content("~/GoldTechLanding/favicon.png")">
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" asp-location="Head">
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-        ym(67763815, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-        });
-    </script>
     <noscript>
         <div>
             <img src="@Url.Content("~/GoldTechLanding/watch/67763815/1.gif")" style="position:absolute; left:-9999px;" alt="">
@@ -66,7 +53,7 @@
             });
         });
     </script>
-    <!-- /Yandex.Metrika counter -->
+
     <script asp-location="Head">
         (function(w,d,u){
             var s=d.createElement('script');s.async=true;s.src= '@Html.Raw(@Url.Content("~/GoldTechLanding/"))' + u+'?'+(Date.now()/60000|0);
@@ -1145,27 +1132,7 @@
         <div class="map">
             <div id="map"></div>
 
-            <script src="@Url.Content("~/GoldTechLanding/2.1/json.txt?lang=ru_RU")" type="text/javascript"></script>
-            <script>
-    ymaps.ready(init);
-    function init() {
-        // Создание карты.
-        var myMap = new ymaps.Map("map", {
-                center: [54.719778, 20.503840],
-                zoom: 17,
-                controls: ['zoomControl']},
-            {
-                searchControlProvider: 'yandex#search'
-            }),
-            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                hintContent: '',
-                balloonContent: ''
-            });
-        myMap.geoObjects.add(myPlacemark);
-        myMap.behaviors.disable('scrollZoom');
-
-    }
-</script>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af34d64535c2e31ead4224f90adee2d570c2020c1e22e933b2a7c6a2bc862d7b6&amp;width=767&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
     </div>
 </section>
