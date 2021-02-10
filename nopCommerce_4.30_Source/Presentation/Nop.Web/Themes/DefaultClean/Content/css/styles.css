@@ -408,10 +408,10 @@ label, label + * {
   border-top: none;
 }
 .data-table tr.hidden-row th > span{
-  height: 1px; 
-  width: 1px; 
-  position: absolute; 
-  overflow: hidden; 
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
   top: -10px;
 }
 .cart th,
@@ -824,11 +824,11 @@ label, label + * {
 	font-size: 0;
 }
 .language-list li {
-	display: inline-block; 
+	display: inline-block;
 	margin: 0 1px;
 	vertical-align: middle;
 }
-.language-list a { 
+.language-list a {
 	display: block;
 	position: relative;
 	width: 24px;
@@ -1046,32 +1046,10 @@ label, label + * {
 	display: inline-block;
 	margin: 0 5px;
 }
-.follow-us .social a {
-	display: block;
-	width: 38px;
-	height: 38px;
-	background: url('../images/social-sprite.png') no-repeat;
-	font-size: 0;
-}
-.follow-us .social .facebook a {
-	background-position: 0 0;
-}
-.follow-us .social .twitter a {
-	background-position: -38px 0;
-}
-.follow-us .social .rss a {
-	background-position: -76px 0;
-}
-.follow-us .social .youtube a {
-	background-position: -114px 0;
-}
-.follow-us .social .google-plus a {
-	background-position: -152px 0;
-}
 
-.newsletter-email { 
+.newsletter-email {
 	display: inline-block;
-	overflow: hidden; 
+	overflow: hidden;
 }
 .newsletter-email input[type="email"] {
 	float: left;
@@ -1096,14 +1074,14 @@ label, label + * {
     clear: both;
     padding: 10px 0 0;
 }
-.newsletter-validation, 
-.newsletter-result { 
+.newsletter-validation,
+.newsletter-result {
 	width: 100%;
-	overflow: hidden; 
-	line-height: 28px; 
+	overflow: hidden;
+	line-height: 28px;
 }
 /*.newsletter-validation .please-wait {
-	display: none !important; 
+	display: none !important;
 }*/
 
 .footer-lower {
@@ -1283,10 +1261,10 @@ label, label + * {
 	padding: 10px 20px;
 	font-size: 13px;
 	color: #fff;
-	text-transform: uppercase;	
+	text-transform: uppercase;
 }
 .poll .buttons input:hover {
-	background-color: #bbb;	
+	background-color: #bbb;
 }
 .poll-total-votes {
 	display: block;
@@ -1480,10 +1458,10 @@ label, label + * {
 	padding: 10px 20px;
 	font-size: 13px;
 	color: #fff;
-	text-transform: uppercase;	
+	text-transform: uppercase;
 }
 .remove-filter a:hover {
-	background-color: #999;	
+	background-color: #999;
 }
 
 .item-grid:after {
@@ -1862,7 +1840,7 @@ label, label + * {
 	background: url('../images/rating1.png') repeat-x;
 }
 .product-review-box .rating div {
-	height: 14px; 
+	height: 14px;
 	background: url('../images/rating2.png') repeat-x;
 }
 .product-review-links a {
@@ -1958,7 +1936,7 @@ label, label + * {
 .variant-overview .delivery {
 	overflow: hidden;
 }
-.overview .free-shipping, 
+.overview .free-shipping,
 .variant-overview .free-shipping {
 	display: inline-block;
 	margin: 10px 0;
@@ -2202,14 +2180,14 @@ label, label + * {
 	margin: 20px 0;
 }
 .attributes dl {
-	overflow: hidden; 
+	overflow: hidden;
     padding: 0 2px; /* fix for Chrome in Mac, the checkboxes get cut off */
 }
 .attributes dt,
 .attribute-label {
 	display: block;
 	margin: 0 0 5px;
-	white-space: nowrap; 
+	white-space: nowrap;
 	font-weight: bold;
 	color: #444;
 }
@@ -2479,7 +2457,7 @@ label, label + * {
 	margin: 0 0 30px;
 }
 
-.tooltip {    
+.tooltip {
     position: initial;
     display: inline-block;
     border-bottom: 1px dotted black;
@@ -2491,18 +2469,18 @@ label, label + * {
     width: auto;
     background: #f0f0f0 no-repeat 100% 5%;
     border: #c0c0c0 1px dotted;
-    text-align: Left;    
+    text-align: Left;
     padding: 10px 10px 5px 5px;
     position: absolute;
-    z-index: 1;    
-    left: 10%;    
+    z-index: 1;
+    left: 10%;
     opacity: 0;
     transition: opacity 0.3s;
 }
 
 .tooltip .tooltiptext::after {
     content: "";
-    position: absolute;    
+    position: absolute;
 }
 
 .tooltip:hover .tooltiptext {
@@ -2606,7 +2584,7 @@ label, label + * {
 .product-review-helpfulness .vote {
 	display: inline-block;
 	padding: 0 5px;
-	color: #C39B6A; 
+	color: #C39B6A;
 	cursor: pointer;
 }
 .product-review-helpfulness .question {
@@ -2934,7 +2912,7 @@ label, label + * {
 }
 .date-of-birth .date-picker-wrapper {
     display: inline;
-} 
+}
 .date-of-birth select {
     width: 31%; /*always single line*/
     max-width: 126px;
@@ -2964,7 +2942,7 @@ label, label + * {
     display: inline-block;
     line-height: 32px;
 }
-.inputs.accept-consent span, 
+.inputs.accept-consent span,
 .inputs.accept-consent a {
     color: #C39B6A;
     cursor: pointer;
@@ -4142,7 +4120,7 @@ label, label + * {
 .order-review-data li,
 .order-details-area li,
 .shipment-details-area li {
-	padding: 3px 0; 
+	padding: 3px 0;
 }
 .order-review-data .title,
 .order-details-area .title,
@@ -4456,7 +4434,7 @@ label, label + * {
 }
 .search-results .warning,
 .search-results .no-result {
-	margin: 10px 0; 
+	margin: 10px 0;
 	color: #e4434b;
 }
 
@@ -4572,7 +4550,7 @@ label, label + * {
 	padding: 0 10px;
 	line-height: 22px;
 }
-.blog-page .tags, 
+.blog-page .tags,
 .blogpost-page .tags {
 	margin: 0 0 15px;
 	overflow: hidden;
@@ -5331,7 +5309,7 @@ label, label + * {
 .private-messages-page th.select {
 	text-align: center;
 }
-.private-messages-page td.from, 
+.private-messages-page td.from,
 .private-messages-page td.to,
 .private-messages-page td.subject {
 	min-width: 150px;
@@ -5450,15 +5428,15 @@ label, label + * {
 pre {
     white-space: pre-wrap;
     white-space: normal;
-    word-wrap: break-word;	
+    word-wrap: break-word;
 }
 .csharpcode {
 	margin: 10px 0;
     border: 1px dashed #ccc;
 	background-color: #fff;
-    padding: 10px; 
+    padding: 10px;
 	font-family: "Courier New", Courier, monospace;
-	color: #000;  
+	color: #000;
 }
 .csharpcode .rem {
     color: green;
@@ -7154,7 +7132,7 @@ pre {
 .registration-page .vat-note {
     margin-left: 275px;
 }
-.customer-info-page .vat-note, 
+.customer-info-page .vat-note,
 .customer-info-page .email-to-revalidate-note {
     margin-left: 150px;
 }
@@ -7395,7 +7373,7 @@ pre {
 .registration-page .vat-note {
     margin-left: 385px;
 }
-.customer-info-page .vat-note, 
+.customer-info-page .vat-note,
 .customer-info-page .email-to-revalidate-note {
     margin-left: 225px;
 }
