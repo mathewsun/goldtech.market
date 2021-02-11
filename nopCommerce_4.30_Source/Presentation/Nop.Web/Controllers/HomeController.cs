@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Nop.Core;
 using Nop.Services.Catalog;
+using Nop.Services.Customers;
+using Nop.Web.Factories;
 using Nop.Web.Models.Home;
 
 namespace Nop.Web.Controllers
@@ -7,13 +10,24 @@ namespace Nop.Web.Controllers
     public partial class HomeController : Controller
     {
         private readonly IProductService _productService;
-        public HomeController(IProductService productService)
+        private readonly IWorkContext _workContext;
+        private readonly ICustomerService _customerService;
+        public HomeController(
+            IProductService productService,
+            IWorkContext workContext,
+            ICustomerService customerService)
         {
             _productService = productService;
+            _workContext = workContext;
+            _customerService = customerService;            
         }
         public virtual IActionResult Index()
         {
             HomeModel model = new HomeModel();
+
+            var isAuthentificated = _customerService.IsRegistered(_workContext.CurrentCustomer);
+
+            model.IsAuthetihicated = isAuthentificated;
 
             var products = _productService.GetProductsByIds(new[] {46, 49, 48, 51, 61});
 

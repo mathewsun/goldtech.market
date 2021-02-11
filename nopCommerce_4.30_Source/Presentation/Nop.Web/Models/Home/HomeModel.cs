@@ -11,5 +11,6 @@ namespace Nop.Web.Models.Home
         public double CanadianMapleLeafCoinCost { get; set; }
         public double AustralianKangarooCoinCost { get; set; }
         public double TheViennaPhilharmonicCoinCost { get; set; }
+        public bool IsAuthetihicated { get; set; }
     }
 }
