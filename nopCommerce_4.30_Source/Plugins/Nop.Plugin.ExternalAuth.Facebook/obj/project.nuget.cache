@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pQ9wOPnqUarGsVFQ/sElzqk5BSpDYqgtUS3gCSrog/1sEIuf0oVfoLPGHxSE5Uu922tFonIFFWrYSkGa71aFvA==",
+  "dgSpecHash": "lAm7v5Ta05bNDZkZLEs5/x4t7qfXbOKuQzNsLHDoFV+bEdWdYvM4+FsSj1MHjHYZbBUznFhmsSy/LJIFsvMqKA==",
   "success": true,
-  "projectFilePath": "C:\\old\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.ExternalAuth.Facebook\\Nop.Plugin.ExternalAuth.Facebook.csproj",
+  "projectFilePath": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.ExternalAuth.Facebook\\Nop.Plugin.ExternalAuth.Facebook.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MDubrovin\\.nuget\\packages\\advancedstringbuilder\\0.1.0\\advancedstringbuilder.0.1.0.nupkg.sha512",
     "C:\\Users\\MDubrovin\\.nuget\\packages\\autofac\\5.0.0\\autofac.5.0.0.nupkg.sha512",

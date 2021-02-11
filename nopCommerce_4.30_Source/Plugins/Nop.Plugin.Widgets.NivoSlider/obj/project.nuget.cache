@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A+GuY6h2HLZ9fOaqAhuLYiaqOGuT79fJs6L+uYNUf14W98ONvvM1A7HWnxr/P2tVS0XTWxcmMsfSxVqr7//vNA==",
+  "dgSpecHash": "t1PBTHgR4DJINgb0p6PzTDDGCqcruDk7jQiqA743Nz1S3ZnpB1I7yE1hcFF9ObrPQrdtpGVMt7p7DfbqaaU3pw==",
   "success": true,
-  "projectFilePath": "C:\\old\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Widgets.NivoSlider\\Nop.Plugin.Widgets.NivoSlider.csproj",
+  "projectFilePath": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Widgets.NivoSlider\\Nop.Plugin.Widgets.NivoSlider.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MDubrovin\\.nuget\\packages\\advancedstringbuilder\\0.1.0\\advancedstringbuilder.0.1.0.nupkg.sha512",
     "C:\\Users\\MDubrovin\\.nuget\\packages\\autofac\\5.0.0\\autofac.5.0.0.nupkg.sha512",

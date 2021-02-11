@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K+iWOQZHsYOZxB4ZFTouZtu48cmKwYr+SFZt/7Kh8cMEqxL/ZA4ZsD3w/EaAiOilMI6ymyqLW5+sBcl8nNWpcw==",
+  "dgSpecHash": "HFyCxUQtXMSL4cJBEtlb8xX0UDe4u82b/5Mq3MFkBmvZFQEGuMuT1Atlth1H3EOcI5QOxYxEu31z0i1zt7htBw==",
   "success": true,
-  "projectFilePath": "C:\\old\\goldtech-market.ru\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Pickup.PickupInStore\\Nop.Plugin.Pickup.PickupInStore.csproj",
+  "projectFilePath": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Pickup.PickupInStore\\Nop.Plugin.Pickup.PickupInStore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MDubrovin\\.nuget\\packages\\advancedstringbuilder\\0.1.0\\advancedstringbuilder.0.1.0.nupkg.sha512",
     "C:\\Users\\MDubrovin\\.nuget\\packages\\autofac\\5.0.0\\autofac.5.0.0.nupkg.sha512",
