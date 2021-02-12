@@ -1,0 +1,1241 @@
+﻿@model Nop.Web.Models.Home.HomeModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="@Url.Content("~/lib/jquery/jquery-3.4.1.min.js")"></script>
+    <script src="@Url.Content("~/lib/jquery-validate/jquery.validate-v1.19.1/jquery.validate.min.js")"></script>
+    <script src="@Url.Content("~/lib/jquery-validate/jquery.validate.unobtrusive-v3.2.11/jquery.validate.unobtrusive.min.js")"></script>
+    <script src="@Url.Content("~/js/public.common.js")"></script>
+    <title>Gold.Tech | Золото - ваш билет в светлое будущее!</title>
+    <link rel="stylesheet" href="@Url.Content("~/GoldTechLanding/css/style.css?44444")">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/GoldTechLanding/npm/slick-carousel@1.8.1/slick/slick.css")">
+    <link rel="icon" type="image/png" href="@Url.Content("~/GoldTechLanding/favicon.png")">
+    <script type="text/javascript" asp-location="Head">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        ym(67763815, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div>
+            <img src="@Url.Content("~/GoldTechLanding/watch/67763815/1.gif")" style="position:absolute; left:-9999px;" alt="">
+        </div>
+    </noscript>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            const settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://www.rentoolo.ru/api/currencies?currencyOfMetal=USD&currencyOfValute=RUB",
+                "method": "GET"
+            };
+
+            $.ajax(settings).done(function (response) {
+                $("#gold-span_1").text('$ ' + response.Rates.XAU);
+                $("#gold-span_2").text('$ ' + response.Rates.XAU);
+                $("#gold-span_3").text('$ ' + response.Rates.XAU);
+
+                $("#silver-span_1").text('$ ' + response.Rates.XAG);
+                $("#silver-span_2").text('$ ' + response.Rates.XAG);
+                $("#silver-span_3").text('$ ' + response.Rates.XAG);
+
+                $("#platinum-span_2").text('$ ' + response.Rates.PL);
+                $("#platinum-span_1").text('$ ' + response.Rates.PL);
+                $("#platinum-span_3").text('$ ' + response.Rates.PL);
+
+                $("#usd-span_1").html(response.Rates.USD + " <big>₽</big>");
+                $("#usd-span_2").html(response.Rates.USD + " <big>₽</big>");
+                $("#usd-span_3").html(response.Rates.USD + " <big>₽</big>");
+
+                $("#eur-span_1").html(response.Rates.EUR + " <big>₽</big>");
+                $("#eur-span_2").html(response.Rates.EUR + " <big>₽</big>");
+                $("#eur-span_3").html(response.Rates.EUR + " <big>₽</big>");
+            });
+        });
+    </script>
+
+    <script asp-location="Head">
+        (function(w,d,u){
+            var s=d.createElement('script');s.async=true;s.src= '@Html.Raw(@Url.Content("~/GoldTechLanding/"))' + u+'?'+(Date.now()/60000|0);
+            var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.ru/b14272346/crm/site_button/loader_3_t3gswl.js');
+    </script>
+</head>
+<body>
+
+<div class="preloader">
+    <div class="image-preload">
+        <img id="image-preload" src="@Url.Content("~/GoldTechLanding/images/logo.png")">
+    </div>
+    <div class="loader">
+        <div class="loader--dot"></div>
+        <div class="loader--dot"></div>
+        <div class="loader--dot"></div>
+        <div class="loader--dot"></div>
+        <div class="loader--dot"></div>
+        <div class="loader--dot"></div>
+        <div class="loader--text"></div>
+    </div>
+</div>
+<div id="order">
+    <order></order>
+</div>
+<nav class="navbar">
+    <div class="exchange">
+        <div class="container">
+            <div class="exchange__body">
+                <div class="exchange__marquee" style="overflow-wrap: normal; white-space: nowrap; overflow: hidden;">
+                    <div class="exchange-line">
+                        <span class="exchange__title">
+                            Биржевые индексы:
+                        </span>
+                        <ul class="exchange__list">
+                            <li class="exchange__item">
+                                Золото: <span class="exchange__val" id="gold-span_1">$ 0</span>
+                            </li>
+                            <li class="exchange__item">
+                                Серебро: <span class="exchange__val" id="silver-span_1">$ 0</span>
+                            </li>
+                            <li class="exchange__item">
+                                Платина: <span class="exchange__val" id="platinum-span_1">$ 0</span>
+                            </li>
+                            <li class="exchange__item">
+                                Доллар: <span class="exchange__val" id="usd-span_1">0 <big>₽</big></span>
+                            </li>
+                            <li class="exchange__item">
+                                Евро: <span class="exchange__val" id="eur-span_1">0 <big>₽</big></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="exchange-line">
+                        <span class="exchange__title">
+                            Биржевые индексы:
+                        </span>
+                        <ul class="exchange__list">
+                            <li class="exchange__item">
+                                Золото: <span class="exchange__val" id="gold-span_2">$ 0</span>
+                            </li>
+                            <li class="exchange__item">
+                                Серебро: <span class="exchange__val" id="silver-span_2">$ 0</span>
+                            </li>
+                            <li class="exchange__item">
+                                Платина: <span class="exchange__val" id="platinum-span_2">$ 0</span>
+                            </li>
+                            <li class="exchange__item">
+                                Доллар: <span class="exchange__val" id="usd-span_2">0 <big>₽</big></span>
+                            </li>
+                            <li class="exchange__item">
+                                Евро: <span class="exchange__val" id="eur-span_2">0 <big>₽</big></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="exchange-line">
+                        <span class="exchange__title">
+                            Биржевые индексы:
+                        </span>
+                        <ul class="exchange__list">
+                            <li class="exchange__item">
+                                Золото: <span class="exchange__val" id="gold-span_3">$ 0</span>
+                            </li>
+                            <li class="exchange__item">
+                                Серебро: <span class="exchange__val" id="silver-span_3">$ 0</span>
+                            </li>
+                            <li class="exchange__item">
+                                Платина: <span class="exchange__val" id="platinum-span_3">$ 0</span>
+                            </li>
+                            <li class="exchange__item">
+                                Доллар: <span class="exchange__val" id="usd-span_3">0 <big>₽</big></span>
+                            </li>
+                            <li class="exchange__item">
+                                Евро: <span class="exchange__val" id="eur-span_3">0 <big>₽</big></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-footer-content">
+        <div class="logo"></div>
+        <ul class="navbar-elements">
+            <div class="adaptive">
+                <li class="nav-item">
+                    <a href="shop" class="flow-scroll">Магазин</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="flow-scroll">О компании</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#offer" class="flow-scroll">Монеты</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#instruction" class="flow-scroll">Как купить</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#qna" class="flow-scroll">Вопрос-ответ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="flow-scroll">Контакты</a>
+                </li>
+                @if (Model.IsAuthetihicated == false)
+                {
+                    <li class="nav-item">
+                        <a href="login" class="flow-scroll">Войти</a>
+                    </li>
+                }
+                <navbar></navbar>
+            </div>
+            <div class="mobile-menu">
+                <div class="spoiler-head toggle-mobile" id="toggle-mobile">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div class="spoiler-body">
+                    <ul class="navbar-elements">
+                        <li class="nav-item">
+                            <a href="shop" class="flow-scroll">Магазин</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="flow-scroll">О компании</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#offer" class="flow-scroll">Монеты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#instruction" class="flow-scroll">Как купить</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#qna" class="flow-scroll">Вопрос-ответ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="flow-scroll">Контакты</a>
+                        </li>
+                        @if (Model.IsAuthetihicated == false)
+                        {
+                            <li class="nav-item">
+                                <a href="login" class="flow-scroll">Войти</a>
+                            </li>
+                        }
+                        <navbar></navbar>
+                    </ul>
+                </div>
+            </div>
+        </ul>
+    </div>
+</nav>
+<section class="start">
+    <div class="content-start">
+        <h1 style="margin-bottom: 50px !important;">
+            <p class="name-project"><span>Gold.</span>Tech</p>
+        </h1>
+        <div class="coin"></div>
+        <a class="btn-main btn-radius-50 flow-scroll" href="#offer">
+            <div class="content-button">
+                Наши предложения
+            </div>
+        </a>
+    </div>
+</section>
+<section class="about section-padding" id="about">
+    <div class="content">
+        <div class="about-text">
+            <div class="text-block" style="text-align: justify !important;">
+                <div class="icon-1"></div>
+                <h4>О НАС</h4>
+                <p>
+                    объедение специалистов по разработке IT инфраструктуры на основе действующего законодательства стран в работе с драгоценными металлами.
+                </p>
+            </div>
+            <div class="text-block" style="text-align: justify !important;">
+                <div class="icon-2"></div>
+                <h4>Защищаем законные права</h4>
+                <p>
+                    и интересы ведущих компаний на рынке драгоценных металлов и ценных бумаг;
+                    осуществляем их комплексное юридическое, финансовое и аналитическо-консультационное обслуживание
+                </p>
+            </div>
+            <div class="text-block" style="text-align: justify !important;">
+                <div class="icon-3"></div>
+                <h4>Наши стратегические задачи</h4>
+                <p>
+                    создание инновационной экосистемы, основанной на справедливых этических принципах с высокой скоростью масштабирования, опирающейся на финансовые активы в виде драгоценных металлов.
+                    С используем SMART TECHNOLOGY и BLOCKCHAIN.
+                </p>
+            </div>
+            <div class="about-image" style="width: 547px !important; height: 547px !important;"></div>
+        </div>
+    </div>
+</section>
+<section id="offer" class="offer section-padding app-vue">
+<div class="content">
+<h2 class="header center-text">Наши торговые предложения</h2> <h4 class="sub-header">Золотые инвестиционные монеты</h4>
+<div class="coins">
+<div class="element">
+    <div class="element-content">
+        <div class="con-con">
+            <div class="coin-img" style="background-image: url(&quot;/GoldTechLanding/storage/coins/mmd1.jpg&quot;);"><!----></div>
+            <div class="coin-switch-img">
+                <ul>
+                    <li class="line-active"></li> <li class=""></li>
+                </ul>
+            </div>
+            <div class="specifications">
+                <div class="spec">
+                    <p class="title">проба</p>
+                    <p class="var">999</p>
+                </div>
+                <div class="spec">
+                    <p class="title">вес</p>
+                    <p class="var">7.78 г</p>
+                </div>
+                <div class="spec">
+                    <p class="title">страна</p>
+                    <p class="var">Россия</p>
+                </div>
+            </div> <h4 class="coin-name">Георгий Победоносец 2018-2020 (ММД)</h4>
+            <p class="coin-desc">Золотая инвестиционная монета «Георгий Победоносец» весом 7,78 грамма или 1/4 тройской унции чистого золота.</p>
+            <p class="price">@Model.StGeorgeTheVictorious2020CoinCost ₽</p>
+            <div class="coin-buy">
+                <a href="georgij-pobedonosec-2018-2020gv-mmd-14-uncii">
+                    <button class="btn-main btn-radius-50 add-basket">
+                        <span>Купить</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="modal-wrapper" style="display: none;">
+        <div class="coin-modal-info">
+            <div class="coin-modal-info-content">
+                <button class="close-modal"></button>
+                <h3 class="header">Георгий Победоносец 2018-2020 (ММД)</h3>
+                <div class="main-content-modal">
+                    <div class="img" style="background-image: url(&quot;/GoldTechLanding/storage/coins/mmd1.jpg&quot;);">
+                        <div class="coin-switch-img">
+                            <ul>
+                                <li class="line-active"></li> <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <h5>Описание аверса монеты:</h5>
+                        <p>В центре – рельефное изображение Государственного герба Российской Федерации, над ним вдоль канта – надпись полукругом: "РОССИЙСКАЯ ФЕДЕРАЦИЯ", обрамленная с обеих сторон сдвоенными ромбами, внизу под гербом: слева – обозначения драгоценного металла и пробы, справа – содержание химически чистого металла и товарный знак монетного двора, внизу в центре – надпись в три строки: "БАНК РОССИИ", номинал монеты: "50 РУБЛЕЙ", год выпуска.</p> <h5>Описание аверса монеты:</h5>
+                        <p>На реверсе золотой монеты - изображение Георгия Победоносца верхом на коне, поражающего копьем змея.</p>
+                    </div>
+                </div>
+                <div class="sub-content-modal">
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p>Драгоценный металл монеты:</p> <span>Золото</span>
+                            </li>
+                            <li>
+                                <p>Проба металла монеты:</p> <span>999</span>
+                            </li>
+                            <li>
+                                <p>Чистого драгметалла в монете:</p> <span>7.7800</span>
+                            </li>
+                            <li>
+                                <p>Качество чеканки монеты:</p> <span>Анциркулейтед</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p>Страна-эмитент монеты:</p> <span>Россия</span>
+                            </li>
+                            <li>
+                                <p>Номинал монеты:</p> <span>50</span>
+                            </li>
+                            <li>
+                                <p>Валюта номинала:</p> <span>рубль</span>
+                            </li>
+                            <li>
+                                <p>Упаковка монеты:</p> <span>капсула</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p>Год выпуска монеты:</p> <span>2018-2019</span>
+                            </li>
+                            <li>
+                                <p>Диаметр монеты:</p> <span>22.6</span>
+                            </li>
+                            <li>
+                                <p>Толщина монеты:</p> <span>1.6</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="min column">
+                        <ul>
+                            <li>
+                                <p>Стоимость монеты:</p> <span class="modal-price">43600 ₽</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="btn-main btn-radius-50 add-basket">
+                    <div class="content-button">
+                        В корзину
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="element">
+    <div class="element-content">
+        <div class="con-con">
+            <div class="coin-img" style="background-image: url(&quot;/GoldTechLanding/storage/coins/5216-0060-18r.jpg&quot;);"><!----></div>
+            <div class="coin-switch-img">
+                <ul>
+                    <li class="line-active"></li> <li class=""></li>
+                </ul>
+            </div>
+            <div class="specifications">
+                <div class="spec">
+                    <p class="title">проба</p>
+                    <p class="var">999</p>
+                </div>
+                <div class="spec">
+                    <p class="title">вес</p>
+                    <p class="var">7.78 г</p>
+                </div>
+                <div class="spec">
+                    <p class="title">страна</p>
+                    <p class="var">Россия</p>
+                </div>
+            </div> <h4 class="coin-name">Георгий Победоносец 2018-2019 (СПМД)</h4>
+            <p class="coin-desc">Золотая инвестиционная монета «Георгий Победоносец» весом 7,78 грамма или 1/4 тройской унции чистого золота.</p>
+            <p class="price">@Model.StGeorgeTheVictorious2019CoinCost ₽</p>
+            <div class="coin-buy">
+                <a href="georgij-pobedonosec-2018-2020gv-mmd-14-uncii">
+                    <button class="btn-main btn-radius-50 add-basket">
+                        <span>Купить</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="modal-wrapper" style="display: none;">
+        <div class="coin-modal-info">
+            <div class="coin-modal-info-content">
+                <button class="close-modal"></button>
+                <h3 class="header">Георгий Победоносец 2018-2019 (СПМД)</h3>
+                <div class="main-content-modal">
+                    <div class="img" style="background-image: url(&quot;/GoldTechLanding/storage/coins/5216-0060-18r.jpg&quot;);">
+                        <div class="coin-switch-img">
+                            <ul>
+                                <li class="line-active"></li> <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <h5>Описание аверса монеты:</h5>
+                        <p>В центре – рельефное изображение Государственного герба Российской Федерации, над ним вдоль канта – надпись полукругом: "РОССИЙСКАЯ ФЕДЕРАЦИЯ", обрамленная с обеих сторон сдвоенными ромбами, внизу под гербом: слева – обозначения драгоценного металла и пробы, справа – содержание химически чистого металла и товарный знак монетного двора, внизу в центре – надпись в три строки: "БАНК РОССИИ", номинал монеты: "50 РУБЛЕЙ", год выпуска: "2018 г.".</p> <h5>Описание аверса монеты:</h5>
+                        <p>На реверсе изображен Георгий Победоносец на коне, поражающий копьем змея.</p>
+                    </div>
+                </div>
+                <div class="sub-content-modal">
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p>Драгоценный металл монеты:</p> <span>Золото</span>
+                            </li>
+                            <li>
+                                <p>Проба металла монеты:</p> <span>999</span>
+                            </li>
+                            <li>
+                                <p>Чистого драгметалла в монете:</p> <span>7.7800</span>
+                            </li>
+                            <li>
+                                <p>Качество чеканки монеты:</p> <span>Анциркулейтед</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p>Страна-эмитент монеты:</p> <span>Россия</span>
+                            </li>
+                            <li>
+                                <p>Номинал монеты:</p> <span>50</span>
+                            </li>
+                            <li>
+                                <p>Валюта номинала:</p> <span>рубль</span>
+                            </li>
+                            <li>
+                                <p>Упаковка монеты:</p> <span>капсула</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p>Год выпуска монеты:</p> <span>2018-2019</span>
+                            </li>
+                            <li>
+                                <p>Диаметр монеты:</p> <span>22.6</span>
+                            </li>
+                            <li>
+                                <p>Толщина монеты:</p> <span>1.6</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="min column">
+                        <ul>
+                            <li>
+                                <p>Стоимость монеты:</p> <span class="modal-price">43400 ₽</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="btn-main btn-radius-50 add-basket">
+                    <div class="content-button">
+                        В корзину
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="element">
+    <div class="element-content">
+        <div class="con-con">
+            <div class="coin-img" style="background-image: url(&quot;/GoldTechLanding/storage/coins/chess-unc1.jpg&quot;);"><!----></div>
+            <div class="coin-switch-img">
+                <ul>
+                    <li class="line-active"></li> <li class=""></li>
+                </ul>
+            </div>
+            <div class="specifications">
+                <div class="spec">
+                    <p class="title">проба</p>
+                    <p class="var">9999</p>
+                </div>
+                <div class="spec">
+                    <p class="title">вес</p>
+                    <p class="var">31.1 г</p>
+                </div>
+                <div class="spec">
+                    <p class="title">страна</p>
+                    <p class="var">Камерун</p>
+                </div>
+            </div> <h4 class="coin-name">"Шахматы" золотая монета Камеруна</h4>
+            <p class="coin-desc">Инвестиционные золотые монеты под названием «Шахматы» отчеканены по лицензии Камеруна на Московском дворе ММД при участии российского бизнеса.</p>
+            <p class="price">@Model.ChessCoinCost ₽</p>
+            <div class="coin-buy">
+                <a href="shahmaty-zolotaya-moneta-kameruna">
+                    <button class="btn-main btn-radius-50 add-basket">
+                        <span>Купить</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="modal-wrapper" style="display: none;">
+        <div class="coin-modal-info">
+            <div class="coin-modal-info-content">
+                <button class="close-modal"></button>
+                <h3 class="header">"Шахматы" золотая монета Камеруна</h3>
+                <div class="main-content-modal">
+                    <div class="img" style="background-image: url(&quot;/GoldTechLanding/storage/coins/chess-unc1.jpg&quot;);">
+                        <div class="coin-switch-img">
+                            <ul>
+                                <li class="line-active"></li> <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <h5>Описание аверса монеты:</h5>
+                        <p>
+                            На аверсе золотой монеты «Шахматы» — герб Камеруна, надпись на английском языке
+                            «Republic of Cameroon», вес чистого золота — 1 тройская унция чистого золота (проба 0,9999), номинал монеты — 5000 африканских франков.
+                        </p> <h5>Описание аверса монеты:</h5>
+                        <p>
+                            На реверсе золотой монеты «Шахматы» — изображение шахматной доски-земного шара,
+                            шахматных фигур. Сверху надпись на испанском языке «EL AJEDREZ ES LA VIDA» — «Шахматы — это жизнь». Внизу — год выпуска золотой монеты (2019).
+                        </p>
+                    </div>
+                </div>
+                <div class="sub-content-modal">
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p>Драгоценный металл монеты:</p> <span>Золото</span>
+                            </li>
+                            <li>
+                                <p>Проба металла монеты:</p> <span>9999</span>
+                            </li>
+                            <li>
+                                <p>Чистого драгметалла в монете:</p> <span>31.1000</span>
+                            </li>
+                            <li>
+                                <p>Качество чеканки монеты:</p> <span>Анциркулейтед</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p>Страна-эмитент монеты:</p> <span>Камерун</span>
+                            </li>
+                            <li>
+                                <p>Номинал монеты:</p> <span>5000</span>
+                            </li>
+                            <li>
+                                <p>Валюта номинала:</p> <span>африканский франк</span>
+                            </li>
+                            <li>
+                                <p>Упаковка монеты:</p> <span>капсула</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p>Год выпуска монеты:</p> <span>2019</span>
+                            </li>
+                            <li>
+                                <p>Диаметр монеты:</p> <span>37</span>
+                            </li>
+                            <li>
+                                <p>Толщина монеты:</p> <span>2</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="min column">
+                        <ul>
+                            <li>
+                                <p>Стоимость монеты:</p> <span class="modal-price">162452 ₽</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="btn-main btn-radius-50 add-basket">
+                    <div class="content-button">
+                        В корзину
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="element">
+    <div class="element-content">
+        <div class="con-con">
+            <div class="coin-img" style="background-image: url(&quot;/GoldTechLanding/storage/coins/2c1482d6a4f2d6850ebe836cbbbf1f8d.jpg&quot;);"><!----></div>
+            <div class="coin-switch-img">
+                <ul>
+                    <li class="line-active"></li> <li class=""></li>
+                </ul>
+            </div>
+            <div class="specifications">
+                <div class="spec">
+                    <p class="title">проба</p>
+                    <p class="var">9999</p>
+                </div>
+                <div class="spec">
+                    <p class="title">вес</p>
+                    <p class="var">31.1 г</p>
+                </div>
+                <div class="spec">
+                    <p class="title">страна</p>
+                    <p class="var">Канада</p>
+                </div>
+            </div> <h4 class="coin-name">Кленовый Лист канадская инвестиционная золотая монета</h4>
+            <p class="coin-desc">Королевский канадский монетный двор известен своим безупречным стандартом качества чеканки монет из чистого золота (.9999).</p>
+            <p class="price">@Model.CanadianMapleLeafCoinCost ₽</p>
+            <div class="coin-buy">
+                <a href="klenovyj-list-kanadskaya-investicionnaya-zolotaya-moneta-1-unciya">
+                    <button class="btn-main btn-radius-50 add-basket">
+                        <span>Купить</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="modal-wrapper" style="display: none;">
+        <div class="coin-modal-info">
+            <div class="coin-modal-info-content">
+                <button class="close-modal"></button>
+                <h3 class="header">Кленовый Лист канадская инвестиционная золотая монета</h3>
+                <div class="main-content-modal">
+                    <div class="img" style="background-image: url(&quot;/GoldTechLanding/storage/coins/2c1482d6a4f2d6850ebe836cbbbf1f8d.jpg&quot;);">
+                        <div class="coin-switch-img">
+                            <ul>
+                                <li class="line-active"></li> <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <h5>Описание аверса монеты:</h5>
+                        <p>
+                            На аверсе помещено изображение профиля королевы Елизаветы II. Сверху надпись
+                            ELIZABETH II — Елизавета II. Внизу по ободу надпись 50 DOLLARS и год выпуска монеты.
+                        </p> <h5>Описание аверса монеты:</h5>
+                        <p>
+                            На реверсе изображение кленового листа — символа Канады. Справа и слева от листа чистота монеты
+                            9999. Внизу надпись FINE GOLD (англ) — чистое золото, вес монеты 1 oz. (тройcкая унция) и надпись OR PUR (франц) — чистое золото.
+                        </p>
+                    </div>
+                </div>
+                <div class="sub-content-modal">
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p>Драгоценный металл монеты:</p> <span>Золото</span>
+                            </li>
+                            <li>
+                                <p>Проба металла монеты:</p> <span>9999</span>
+                            </li>
+                            <li>
+                                <p>Чистого драгметалла в монете:</p> <span>31.1000</span>
+                            </li>
+                            <li>
+                                <p>Качество чеканки монеты:</p> <span>Анциркулейтед</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p>Страна-эмитент монеты:</p> <span>Канада</span>
+                            </li>
+                            <li>
+                                <p>Номинал монеты:</p> <span>50</span>
+                            </li>
+                            <li>
+                                <p>Валюта номинала:</p> <span>доллар</span>
+                            </li>
+                            <li>
+                                <p>Упаковка монеты:</p> <span>капсула</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p>Год выпуска монеты:</p> <span>2016-2019</span>
+                            </li>
+                            <li>
+                                <p>Диаметр монеты:</p> <span>30</span>
+                            </li>
+                            <li>
+                                <p>Толщина монеты:</p> <span>2.8</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="min column">
+                        <ul>
+                            <li>
+                                <p>Стоимость монеты:</p> <span class="modal-price">169128 ₽</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="btn-main btn-radius-50 add-basket">
+                    <div class="content-button">
+                        В корзину
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="element">
+    <div class="element-content">
+        <div class="con-con">
+            <div class="coin-img" style="background-image: url(&quot;/GoldTechLanding/storage/coins/b5c75ac8869c63405c8b3a541ee32552.jpg&quot;);"><!----></div>
+            <div class="coin-switch-img">
+                <ul>
+                    <li class="line-active"></li> <li class=""></li>
+                </ul>
+            </div>
+            <div class="specifications">
+                <div class="spec">
+                    <p class="title">проба</p>
+                    <p class="var">9999</p>
+                </div>
+                <div class="spec">
+                    <p class="title">вес</p>
+                    <p class="var">31.1 г</p>
+                </div>
+                <div class="spec">
+                    <p class="title">страна</p>
+                    <p class="var">Австралия</p>
+                </div>
+            </div> <h4 class="coin-name">Кенгуру золотая инвестиционная монета Австралии</h4>
+            <p class="coin-desc">Дизайн золотых монет Кенгуру меняется ежегодно, но на них всегда изображают самого известного в Австралии сумчатого кенгуру. </p>
+            <p class="price">169870 ₽</p>
+            <div class="coin-buy">
+                <a href="zolotaya-moneta-nagget-kenguru-2021gv-1-unciya">
+                    <button class="btn-main btn-radius-50 add-basket">
+                        <span>Купить</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="modal-wrapper" style="display: none;">
+        <div class="coin-modal-info">
+            <div class="coin-modal-info-content">
+                <button class="close-modal"></button>
+                <h3 class="header">Кенгуру золотая инвестиционная монета Австралии</h3>
+                <div class="main-content-modal">
+                    <div class="img" style="background-image: url(&quot;/GoldTechLanding/storage/coins/b5c75ac8869c63405c8b3a541ee32552.jpg&quot;);">
+                        <div class="coin-switch-img">
+                            <ul>
+                                <li class="line-active"></li> <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <h5>Описание аверса монеты:</h5>
+                        <p>
+                            На аверсе золотой монеты Австралийский кенгуру изображен портрет королевы Елизаветы II. Сверху надпись ELIZABETH II — Елизавета II, AUSTRALIA — Австралия. Внизу номинал монеты 100 DOLLARS (100 австралийских долларов).
+                            Возле нижней стороны портрета имеется надпись «IRB», обозначающая инициалы автора изображённого портрета – Иена Рэнка-Бродли.
+                        </p> <h5>Описание аверса монеты:</h5>
+                        <p>
+                            На реверсе золотой монеты представлен кенгуру — символ Австралии. Изображение меняется каждый год. Надпись AUSTRALIAN KANGAROO — австралийский кенгуру. Также указаны год выпуска монеты, вес 1 oz (1 тройская унция) и проба золота - 0.9999 (99,99% чистого золота). На монете
+                            2017 года выпуска изображен кенгуру в движении. Знак монетного двора - английскую букву "P" (Perth Mint) можно видеть слева от изображения кенгуру на реверсе монеты.
+                        </p>
+                    </div>
+                </div>
+                <div class="sub-content-modal">
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p>Драгоценный металл монеты:</p> <span>Золото</span>
+                            </li>
+                            <li>
+                                <p>Проба металла монеты:</p> <span>9999</span>
+                            </li>
+                            <li>
+                                <p>Чистого драгметалла в монете:</p> <span>31.1000</span>
+                            </li>
+                            <li>
+                                <p>Качество чеканки монеты:</p> <span>Анциркулейтед</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p>Страна-эмитент монеты:</p> <span>Австралия</span>
+                            </li>
+                            <li>
+                                <p>Номинал монеты:</p> <span>100</span>
+                            </li>
+                            <li>
+                                <p>Валюта номинала:</p> <span>австралийский доллар</span>
+                            </li>
+                            <li>
+                                <p>Упаковка монеты:</p> <span>капсула</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p>Год выпуска монеты:</p> <span>2010-2019</span>
+                            </li>
+                            <li>
+                                <p>Диаметр монеты:</p> <span>32.1</span>
+                            </li>
+                            <li>
+                                <p>Толщина монеты:</p> <span>2.8</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="min column">
+                        <ul>
+                            <li>
+                                <p>Стоимость монеты:</p> <span class="modal-price">@Model.AustralianKangarooCoinCost ₽</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="btn-main btn-radius-50 add-basket">
+                    <div class="content-button">
+                        В корзину
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="element">
+    <div class="element-content">
+        <div class="con-con">
+            <div class="coin-img" style="background-image: url(&quot;/GoldTechLanding/storage/coins/671a1fb036d7235dab7f18a87853027a.jpg&quot;);"><!----></div>
+            <div class="coin-switch-img">
+                <ul>
+                    <li class="line-active"></li> <li class=""></li>
+                </ul>
+            </div>
+            <div class="specifications">
+                <div class="spec">
+                    <p class="title">проба</p>
+                    <p class="var">9999</p>
+                </div>
+                <div class="spec">
+                    <p class="title">вес</p>
+                    <p class="var">31.1 г</p>
+                </div>
+                <div class="spec">
+                    <p class="title">страна</p>
+                    <p class="var">Австрия</p>
+                </div>
+            </div> <h4 class="coin-name">Венская Филармония золотая инвестиционная монета Австрии</h4>
+            <p class="coin-desc">Инвестиционная золотая монета Венская Филармония весом четверть унции была впервые отчеканена в октябре 1989 года, и теперь является самой успешной инвестиционной монетой Европы.</p>
+            <p class="price">169870 ₽</p>
+            <div class="coin-buy">
+                <a href="venskaya-filarmoniya-zolotaya-investicionnaya-moneta-avstrii-2">
+                    <button class="btn-main btn-radius-50 add-basket">
+                        <span>Купить</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="modal-wrapper" style="display: none;">
+        <div class="coin-modal-info">
+            <div class="coin-modal-info-content">
+                <button class="close-modal"></button>
+                <h3 class="header">Венская Филармония золотая инвестиционная монета Австрии</h3>
+                <div class="main-content-modal">
+                    <div class="img" style="background-image: url(&quot;/GoldTechLanding/storage/coins/671a1fb036d7235dab7f18a87853027a.jpg&quot;);">
+                        <div class="coin-switch-img">
+                            <ul>
+                                <li class="line-active"></li> <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <h5>Описание аверса монеты:</h5>
+                        <p>
+                            На аверсе золотой инвестиционной монеты австрийский Филармоникер изображен большой орган в филармоническом концертном зале в Вене. Сверху надпись – REPUBLIK OSTERREICH, внизу – вес и проба монеты (1 унция золота 999,9 пробы),
+                            год выпуска монеты, а также номинал монеты. Ранее номинал равнялся 2000 австрийских шиллингов, с 2002 года монета номинирована в евро (100 евро).
+                        </p> <h5>Описание аверса монеты:</h5>
+                        <p>
+                            На реверсе золотой монеты австрийский Филармоникер
+                            изображены различные музыкальные инструменты, такие как контрабас, виолончели, скрипки, фагот, арфа и труба. Сверху надпись – WIENER PHILHARMONIKER.
+                        </p>
+                    </div>
+                </div>
+                <div class="sub-content-modal">
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p>Драгоценный металл монеты:</p> <span>Золото</span>
+                            </li>
+                            <li>
+                                <p>Проба металла монеты:</p> <span>9999</span>
+                            </li>
+                            <li>
+                                <p>Чистого драгметалла в монете:</p> <span>31.1000</span>
+                            </li>
+                            <li>
+                                <p>Качество чеканки монеты:</p> <span>Анциркулейтед</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p>Страна-эмитент монеты:</p> <span>Австрия</span>
+                            </li>
+                            <li>
+                                <p>Номинал монеты:</p> <span>100</span>
+                            </li>
+                            <li>
+                                <p>Валюта номинала:</p> <span>евро</span>
+                            </li>
+                            <li>
+                                <p>Упаковка монеты:</p> <span>капсула</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <p>Год выпуска монеты:</p> <span>2013-2019</span>
+                            </li>
+                            <li>
+                                <p>Диаметр монеты:</p> <span>37</span>
+                            </li>
+                            <li>
+                                <p>Толщина монеты:</p> <span>2</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="min column">
+                        <ul>
+                            <li>
+                                <p>Стоимость монеты:</p> <span class="modal-price">@Model.TheViennaPhilharmonicCoinCost ₽</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="btn-main btn-radius-50 add-basket">
+                    <div class="content-button">
+                        В корзину
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-wrapper" style="display: none;">
+    <div class="coin-modal-info success-add">
+        <div class="coin-modal-info-content">
+            <button class="close-modal"></button>
+            <h3 class="header">Товар добавлен в корзину</h3> <h5></h5>
+            <div class="img" style="background-image: url(&quot;/GoldTechLanding/&quot;);"></div>
+            <div class="count-price">
+                <span class="price"> ₽</span> <span class="count">Количество: </span>
+            </div>
+            <div class="control">
+                <button class="btn-submain btn-radius-50">
+                    <div class="content-button">
+                        Продолжить покупки
+                    </div>
+                </button>
+                <button class="btn-main btn-radius-50">
+                    <div class="content-button">
+                        Оформить заказ
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</section>
+<section class="slider section-padding" id="slider">
+    <div class="slider-back"></div>
+    <div class="content">
+        <div class="dialogus">
+            <div class="dia-img">
+                <a href="@Url.Content("~/GoldTechLanding/file/d/1dheBcF9_1LsJ9eMmTIOKRtnjtraHBCoH/view.html")" target="_blank">
+                    <img src="@Url.Content("GoldTechLanding/images/man.jpg")">
+                </a>
+            </div>
+            <div class="dia-text">
+                <div class="dots"></div>
+                <p class="slider-main-text" style="line-height: 1">
+                    Золото как эффективный инструмент инвестирования и защиты сбережений граждан, домохозяйств и малого бизнеса в условиях экономического и социально-политического кризиса. Москва 2020
+                </p>
+                <p class="slider-sub-text">
+                    <b> С.Д. Козлов</b><br>
+                    доктор политических наук, профессор, проректор по научной работе НАНО ВО «ИМЦ»
+                </p>
+                <div class="lines">
+                    <ul>
+                        <li class="line-active"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="instruction section-padding" id="instruction">
+    <div class="instruction-back">
+    </div>
+    <div class="content">
+        <h2 class="header">Схема оформления заказа</h2>
+        <a href="#offer" class="btn-main btn-radius-50 flow-scroll">
+            <div class="content-button">
+                Наши предложения
+            </div>
+        </a>
+        <div class="steps">
+            <div class="step">
+                <div class="step-content">
+                    <div class="step-icon icon-1"></div>
+                    <div class="step-desc">
+                        <h4 class="step-name">Оформление</h4>
+                        <p class="step-info">
+                            Вы выбираете способ получения товара и заполняете форму заказа.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-content block-center">
+                    <div class="step-icon icon-2"></div>
+                    <div class="step-desc">
+                        <h4 class="step-name">Подтверждение</h4>
+                        <p class="step-info">
+                            Через несколько минут Вам перезвонит наш менеджер, который уточнит детали оплаты и получения товара.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-content block-right">
+                    <div class="step-icon icon-3"></div>
+                    <div class="step-desc">
+                        <h4 class="step-name">Получение</h4>
+                        <p class="step-info">
+                            В зависимости от выбранного способа получения, вы забираете заказ самостоятельно или ожидаете курьерскую доставку.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="contact section-padding" id="contact">
+    <div class="content">
+        <h2 class="header">
+            Адреса магазинов<br>
+        </h2>
+        <div class="contact-info">
+            <a class="btn-main btn-radius-50 spoiler-head-contact">
+                <div class="content-button">
+                    Москва
+                </div>
+            </a>
+            <ul class="contact-data spoiler-body-contact">
+                <li>г. Москва, ул. Пресненская набережная 2, Москва-Сити, Башня Око.</li>
+                <!--<li>+7 (495) 728-29-96, +7 (800) 550-40-97</li>!-->
+                <li>
+                    пн-чт с 10:00 до 18:30, пт с 10:00 до 18:00,<br>
+                    сб и вс - выходной
+                </li>
+            </ul>
+        </div>
+        <div class="contact-info">
+            <a class="btn-main btn-radius-50 spoiler-head-contact">
+                <div class="content-button">
+                    Калининград
+                </div>
+            </a>
+            <ul class="contact-data spoiler-body-contact">
+                <li>г. Калининград, пл. Победы, д.10 – торговая секция 1</li>
+                <!--<li>+7 (495) 728-29-96, +7 (800) 550-40-97</li>!-->
+                <li>
+                    пн-чт с 10:00 до 18:30, пт с 10:00 до 18:00,<br>
+                    сб и вс - выходной
+                </li>
+            </ul>
+        </div>
+
+        <div class="map">
+            <div id="map"></div>
+
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af34d64535c2e31ead4224f90adee2d570c2020c1e22e933b2a7c6a2bc862d7b6&amp;width=480&amp;height=300&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+    </div>
+</section>
+<section class="qna section-padding" id="qna">
+    <div class="content">
+        <h2 class="header">Вопрос-ответ</h2>
+        <div class="qna-content">
+            <div class="qna-element">
+                <h4 class="spoiler-head">Зачем покупать инвестиционные золотые монеты?</h4>
+                <div class="spoiler-body">
+                    Инвестиционные монеты свободны от большинства недостатков: у них нет НДС, хорошая ликвидность, малый спред между ценой покупки и продажи, небольшая "премия" к цене металла при покупке, они не требовательны к условиям хранения и т.д. Поэтому приобретение инвестиционных монет следует признать лучшим способом инвестиций в золото.
+                    <br>
+                    Вложения денег в драгметалл являются на сегодняшний день самыми стабильными и перспективными. Этому действительно есть обоснование. На протяжении последнего десятилетия финансовые рынки трясет от кризисов. Депозиты дают доход ниже уровня инфляции, тем самым не позволяя получать доход от вложений, фондовые рынки то и дело обваливаются, что делает вложение рискованным. При этом стоимость монет за это время выросла почти в пять раз. По оценкам участников аукционов, тенденция к росту сохраняется на тех же темпах, а рост цен в среднем в год достигает 16-20%.
+                    <br>
+                    Инвестиционную привлекательность монеты создает отсутствие налога на добавленную стоимость. По статистике наиболее востребованными являются монеты из золота. Монеты продаются в специальных капсулах, чтобы защитить из от повреждений при хранении.
+                </div>
+            </div>
+            <div class="qna-element">
+                <h4 class="spoiler-head">Можно ли заработать на покупке инвестиционных монет?</h4>
+                <div class="spoiler-body">
+                    Как и другие вложения в драгоценные металлы, инвестиционные монеты — это консервативный инструмент, который хорошо работает только на дистанциях в годы и десятки лет.
+                    <br>
+                    Ценность монет привязана к ценности драгметаллов, а они могут годами колебаться в узком диапазоне, не принося никакой прибыли. Кроме того, монету сложно быстро продать за рыночную цену. Поэтому инвестиции в монеты работают больше как сохранение вложенных средств, чем инструмент для получения сверхприбыли.
+                </div>
+            </div>
+            <div class="qna-element">
+                <h4 class="spoiler-head">В чем ваши преимущества по сравнению с другими дилерами монет?</h4>
+                <div class="spoiler-body">
+                    Наша компания настроена на продажу золотых инвестиционных активов в любой точке мира в режиме онлайн, консультирование и предложение на рынок качественных финансовых инструментов на золотых активах, которые позволят нашим клиентам создать стабильный финансовый поток.
+                    <br>
+                    Наш опыт поможет Вам качественно понять бизнес и инвестирование в драгоценные металлы.
+                    <br>
+                    Наша компания объединяет в себе преимущества профессиональных участников рынка драгоценных металлов с тем, чтобы дать участникам рынка больше специальных предложений и финансовых инструментов. Предоставляет все виды традиционных и цифровых услуг с драгоценными металлами.
+                </div>
+            </div>
+            <div class="qna-element">
+                <h4 class="spoiler-head">Как я могу самостоятельно реализовать золотые монеты?</h4>
+                <div class="spoiler-body">
+                    Самая высокая ликвидность, то есть возможность быстро продать у известных массовых российских инвестиционных монет: Соболя, Георгия Победоносца, Сеятеля и т.д., а затем иностранных: Американский Орел, Британия, Австрийский Филармоникер и другие.
+                    <br>
+                    В крупных городах монеты можно продать проще и получить за них больше. Но даже если вы живете в небольшом городке не спешите отдавать свое сокровище за бесценок! Обратитесь (позвоните или напишите) к крупным монетным дилерам, некоторые выкупают монеты с курьерской доставкой.
+                    <br>
+                    Если вам нужно срочно продать монеты - тогда вам в скупку и к дилерам. Продажа через аукционы, доски объявлений, форумы может быть более выгодной по цене, но она так же может затянуться по времени надолго и не кончиться ничем.
+                    <br>
+                    При продаже на аукционе, доске объявлений сделайте качественные резкие фото монеты крупным планом. Если монеты продавалась в коробке или с сертификатом, сделайте дополнительные фото с ними. В объявлении укажите название монеты на русском и английском языках, если она иностранная. Опишите состояние, например, в заводской капсуле, или имеются видимые в лупу царапины. При возможности, укажите где вы монету купили и имейте этот документ при себе для демонстрации покупателю.
+                    <br>
+                    Будьте готовы к тому, что покупатель может захотеть проверить монету не повреждающими способами: измерить и взвесить ее, разглядывать через увеличительное стекло и сравнивать с фото оригиналов.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="cookies">
+    <p>Мы используем cookie на нашем сайте. Если вы продолжите навигацию по сайту, это значит, что вы с этим согласны.</p>
+    <button class="btn-main btn-radius-50" id="agreeCookies">Согласен</button>
+</div>
+
+<footer>
+    <div class="nav-footer-content">
+        <div class="logo-footer"></div>
+        <div class="rights">
+            <p style="color: white; font-family: Bold"></p>
+            <p>
+                ООО "Голден Тех" 2020. Все права защищены.
+            </p>
+            <p hidden="">
+                1123317, Москва, Пресненская набережная 12<br>
+                Башня «Око» 33-й этаж, офис №6
+            </p>
+        </div>
+        <div class="inn">
+            <p>
+                ИНН 7725788590<br>
+                ОГРН 1137746320403
+            </p>
+        </div>
+        <div class="social">
+            <ul style="list-style-type: none; text-align: left !important;">
+                <li>
+                    <a href="https://www.instagram.com/goldtech.market/" title="Мы в Instagram"><img src="/GoldTechLanding/images/instagram_gold.png" width="35" height="35"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script src="@Url.Content("~/GoldTechLanding/npm/js-cookie@rc/dist/js.cookie.min.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/GoldTechLanding/npm/slick-carousel@1.8.1/slick/slick.min.js")"></script>
+<script src="@Url.Content("~/GoldTechLanding/js/js.js")"></script>
+</body>
+</html>

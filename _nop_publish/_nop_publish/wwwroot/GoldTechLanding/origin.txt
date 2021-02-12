@@ -1,0 +1,196 @@
+Uri: http://goldtech.market/
+File Name: Z:\WEB\goldtech.market1\goldtech.market\index.htm
+Content Type: text/html
+
+Uri: http://goldtech.market/css/style.css
+File Name: Z:\WEB\goldtech.market1\goldtech.market\css\style.css
+Content Type: text/css
+
+Uri: http://goldtech.market/favicon.png
+File Name: Z:\WEB\goldtech.market1\goldtech.market\favicon.png
+Content Type: image/png
+
+Uri: https://drive.google.com/file/d/1dheBcF9_1LsJ9eMmTIOKRtnjtraHBCoH/view
+File Name: Z:\WEB\goldtech.market1\goldtech.market\file\d\1dheBcF9_1LsJ9eMmTIOKRtnjtraHBCoH\view.html
+Content Type: text/html
+
+Uri: http://goldtech.market/images/logo.png
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\logo.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/man.jpg
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\man.jpg
+Content Type: image/jpeg
+
+Uri: https://api-maps.yandex.ru/2.1/?lang=ru_RU
+File Name: Z:\WEB\goldtech.market1\goldtech.market\2.1\json.txt
+Content Type: application/javascript
+
+Uri: https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js
+File Name: Z:\WEB\goldtech.market1\goldtech.market\npm\js-cookie@rc\dist\js.cookie.min.js
+Content Type: application/javascript
+
+Uri: http://goldtech.market/js/app.js
+File Name: Z:\WEB\goldtech.market1\goldtech.market\js\app.js
+Content Type: application/javascript
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js
+File Name: Z:\WEB\goldtech.market1\goldtech.market\ajax\libs\axios\0.20.0\axios.min.js
+Content Type: application/javascript
+
+Uri: http://goldtech.market/js/js.js
+File Name: Z:\WEB\goldtech.market1\goldtech.market\js\js.js
+Content Type: application/javascript
+
+Uri: http://goldtech.market/fonts/CeraPro-Regular.ttf?f582d3a21e59803eb6af6411dd730f32
+File Name: Z:\WEB\goldtech.market1\goldtech.market\fonts\CeraPro-Regular.ttf
+Content Type: application/font-sfnt
+
+Uri: http://goldtech.market/fonts/CeraPro-Bold.ttf?5390828f32f017cbe4ee17931d7cbc6d
+File Name: Z:\WEB\goldtech.market1\goldtech.market\fonts\CeraPro-Bold.ttf
+Content Type: application/font-sfnt
+
+Uri: http://goldtech.market/images/logo.png?98dbd11c3c774670114b974242e8c3b3
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\logo-1.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/basket.png?c83706f426f4276182395c0b2266ff97
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\basket.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/remove-coin.png?bc0708b473e592dd2502e3a7a2c14808
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\remove-coin.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/coin.png?6ee74699ad61b24bd623cd8e01094552
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\coin.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/about-1.png?1ca6bba07911ba02934c961a3428659a
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\about-1.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/about-2.png?a089c8592163a1a72c6c9c1ed30b4353
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\about-2.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/about-3.png?8608b63dfc4f9cac7c702290d5f22d7d
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\about-3.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/about-img.png?c7faa4942bd8b6e6439e12dd4a93ec24
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\about-img.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/close-icon.png?92d34aff705d125ef3eb38f6c33ff79c
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\close-icon.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/back.png?a164b0a17182d6f07e35b36c33c0b465
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\back.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/dots.png?9a54c671b480300c0dfca5afe0c70295
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\dots.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/step-1.png?1924c58c69c8034481c45cd8fe7cf2ad
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\step-1.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/step-2.png?8b84b4e6849e13a700d01f0884b162c1
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\step-2.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/step-3.png?2c69a832906af398106142ca18be3455
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\step-3.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/contact-back.png?396e003507cf31e61409b9909a7d8e64
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\contact-back.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/contact-icon.png?fc38ae48624e6646b4602ce919c3dae7
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\contact-icon.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/contact-1.png?193e867112b231e5d1a49c99a1c66604
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\contact-1.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/contact-2.png?a69b81398955e676eb7e13a9babbaf81
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\contact-2.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/contact-3.png?83a712c3782fa2d9ec422ed6726ac02e
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\contact-3.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/spoil-arr.png?41e8b1d350dad347018bddbaaa89b52a
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\spoil-arr.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/cert-back.png?0608969c86a985774bc5974d1293f316
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\cert-back.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/slide-arrow.png?91faee16c0a2d08fd44a8a21542775e2
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\slide-arrow.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/logo-footer.png?a072f6629989510f506367c0af8ccede
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\logo-footer.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/telegram.png?81d43f89908db8b4b178f3c6473c883e
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\telegram.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/telegram-act.png?e7d0ed1f06613b24c726fae43858d845
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\telegram-act.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/instagram.png?23697c93b6a8840537cf7b188c63c8b2
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\instagram.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/instagram-act.png?faf3260007e69c3919cfad603123470d
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\instagram-act.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/whatsapp.png?29bba32c11a8281321ac1efc9ec9d137
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\whatsapp.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/whatsapp-act.png?4f8045899ead15b71ec918bb85561bf8
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\whatsapp-act.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/fb.png?a33ac2c56e27f357c5f48d7aeb2255d5
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\fb.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/fb-act.png?68e82040c7e4140abf4eb7e1d510820b
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\fb-act.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/twitter.png?21c2a77bcde63ec7292733ea2a2df8b0
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\twitter.png
+Content Type: image/png
+
+Uri: http://goldtech.market/images/twitter-act.png?a61f5504aeed3123b9d5e437b72fd118
+File Name: Z:\WEB\goldtech.market1\goldtech.market\images\twitter-act.png
+Content Type: image/png
+
+Uri: https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css
+File Name: Z:\WEB\goldtech.market1\goldtech.market\npm\slick-carousel@1.8.1\slick\slick.css
+Content Type: text/css
+
+Uri: https://mc.yandex.ru/watch/67763815/1
+File Name: Z:\WEB\goldtech.market1\goldtech.market\watch\67763815\1.gif
+Content Type: image/gif
+
+Uri: https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js
+File Name: Z:\WEB\goldtech.market1\goldtech.market\npm\slick-carousel@1.8.1\slick\slick.min.js
+Content Type: application/javascript
+
