@@ -1,21 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Pickup.PickupInStore\\Nop.Plugin.Pickup.PickupInStore.csproj": {}
+    "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Pickup.PickupInStore\\Nop.Plugin.Pickup.PickupInStore.csproj": {}
   },
   "projects": {
-    "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
+    "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
       "version": "4.3.0",
       "restore": {
-        "projectUniqueName": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj",
+        "projectUniqueName": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj",
         "projectName": "Nop.Core",
-        "projectPath": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj",
-        "packagesPath": "C:\\Users\\MDubrovin\\.nuget\\packages\\",
-        "outputPath": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\obj\\",
+        "projectPath": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj",
+        "packagesPath": "C:\\Users\\mrale\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\MDubrovin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\mrale\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -107,22 +112,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj": {
+    "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj": {
       "version": "4.3.0",
       "restore": {
-        "projectUniqueName": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj",
+        "projectUniqueName": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj",
         "projectName": "Nop.Data",
-        "projectPath": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj",
-        "packagesPath": "C:\\Users\\MDubrovin\\.nuget\\packages\\",
-        "outputPath": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\obj\\",
+        "projectPath": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj",
+        "packagesPath": "C:\\Users\\mrale\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\MDubrovin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\mrale\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -135,8 +145,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
-                "projectPath": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj"
+              "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
+                "projectPath": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj"
               }
             }
           }
@@ -190,22 +200,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\Nop.Services.csproj": {
+    "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\Nop.Services.csproj": {
       "version": "4.3.0",
       "restore": {
-        "projectUniqueName": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\Nop.Services.csproj",
+        "projectUniqueName": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\Nop.Services.csproj",
         "projectName": "Nop.Services",
-        "projectPath": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\Nop.Services.csproj",
-        "packagesPath": "C:\\Users\\MDubrovin\\.nuget\\packages\\",
-        "outputPath": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\obj\\",
+        "projectPath": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\Nop.Services.csproj",
+        "packagesPath": "C:\\Users\\mrale\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\MDubrovin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\mrale\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -218,11 +233,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
-                "projectPath": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj"
+              "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
+                "projectPath": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj"
               },
-              "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj": {
-                "projectPath": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj"
+              "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj": {
+                "projectPath": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj"
               }
             }
           }
@@ -288,22 +303,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Pickup.PickupInStore\\Nop.Plugin.Pickup.PickupInStore.csproj": {
+    "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Pickup.PickupInStore\\Nop.Plugin.Pickup.PickupInStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Pickup.PickupInStore\\Nop.Plugin.Pickup.PickupInStore.csproj",
+        "projectUniqueName": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Pickup.PickupInStore\\Nop.Plugin.Pickup.PickupInStore.csproj",
         "projectName": "Nop.Plugin.Pickup.PickupInStore",
-        "projectPath": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Pickup.PickupInStore\\Nop.Plugin.Pickup.PickupInStore.csproj",
-        "packagesPath": "C:\\Users\\MDubrovin\\.nuget\\packages\\",
-        "outputPath": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Pickup.PickupInStore\\obj\\",
+        "projectPath": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Pickup.PickupInStore\\Nop.Plugin.Pickup.PickupInStore.csproj",
+        "packagesPath": "C:\\Users\\mrale\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Plugins\\Nop.Plugin.Pickup.PickupInStore\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\MDubrovin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\mrale\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -316,8 +336,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
-                "projectPath": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj"
+              "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
+                "projectPath": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj"
               }
             }
           }
@@ -349,22 +369,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
+    "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
       "version": "4.3.0",
       "restore": {
-        "projectUniqueName": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj",
+        "projectUniqueName": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj",
         "projectName": "Nop.Web.Framework",
-        "projectPath": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj",
-        "packagesPath": "C:\\Users\\MDubrovin\\.nuget\\packages\\",
-        "outputPath": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\obj\\",
+        "projectPath": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj",
+        "packagesPath": "C:\\Users\\mrale\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Presentation\\Nop.Web.Framework\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\MDubrovin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\mrale\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -377,14 +402,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
-                "projectPath": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj"
+              "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
+                "projectPath": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Core\\Nop.Core.csproj"
               },
-              "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj": {
-                "projectPath": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj"
+              "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj": {
+                "projectPath": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Data\\Nop.Data.csproj"
               },
-              "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\Nop.Services.csproj": {
-                "projectPath": "C:\\old\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\Nop.Services.csproj"
+              "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\Nop.Services.csproj": {
+                "projectPath": "D:\\Dev\\Repositories\\goldtech.market\\nopCommerce_4.30_Source\\Libraries\\Nop.Services\\Nop.Services.csproj"
               }
             }
           }
@@ -434,7 +459,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

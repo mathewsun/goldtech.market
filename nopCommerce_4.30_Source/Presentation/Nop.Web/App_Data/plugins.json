@@ -70,6 +70,10 @@
     {
       "SystemName": "ExternalAuth.Facebook",
       "Version": "1.63"
+    },
+    {
+      "SystemName": "Shipping.DPD",
+      "Version": "1.0.6"
     }
   ],
   "PluginNamesToUninstall": [],

@@ -1,0 +1,279 @@
+﻿@using Nop.Plugin.Shipping.DPD.Infrastructure
+@using Nop.Core
+@inject IWebHelper webHelper
+@model DPDCheckoutShippingMethodModel
+@{
+    var storeLocation = webHelper.GetStoreLocation();
+    Context.Items["nop.IgnoreScriptTagLocation"] = true;
+}
+
+<div class="checkout-data">
+
+    <script asp-location="Footer">
+        var chooser = new DPDChooser('dpdchooser',
+            {
+                type: 'dpdclient',
+                //Геопозиция:
+                address: '@Html.Raw(Model.DeliveryCity)',
+                viewdistance: 100,
+                //Фильтры:
+                filter_wait: 0,
+                filter_temp: 0,
+                filter_cod: 0,
+                filter_give: 1,
+                filter_take: 0,
+                filter_pvz: 1,
+                filter_postamat: 1,
+
+                choose: 1,
+                width: '100%',
+                mapHeight: '600',
+
+                sid: 'HB0dHB0bHRsZGlFvFBQdHxwbaBlpHh0UaR5sbBQbGm8aFRppGBluHBhpb28bFBxpax0dKg==',
+                //Задать высоту виджета нельзя, т.к. детализация может "прыгнуть" вниз из-за нехватки места в ширину.
+                fullscreen: true,
+            });
+
+        chooser.onChoose(function (dep) {
+            pickupAddress = dep;
+
+
+            var availableServiceCodes = '@Html.Raw(Model.JsonAvailableServiceCodes)'.split(':');
+
+            for (var i = 0; i < availableServiceCodes.length; i++) {
+                availableServiceCodes[i] = availableServiceCodes[i].replace('[', '').replace(']', '');
+                availableServiceCodes[i] = availableServiceCodes[i].substring(0, 3) + " " + availableServiceCodes[i].substring(3, availableServiceCodes[i].length).toUpperCase();
+            }
+
+            const data = {
+                ClientKey: '@Html.Raw(Model.ClientKey)',
+                ClientNumber: @Html.Raw(Model.ClientNumber),
+                DeliveryCityName: '@Html.Raw(Model.SenderCity)',
+                PickupCityName: dep.cityName,
+                SelfPickup: false,
+                SelfDelivery: true,
+                DeclaredValue: (@Html.Raw(Model.ProductCost)),
+                Weight: (@Html.Raw(Model.ProductWeight)) <= 0 ? 1 : (@Html.Raw(Model.ProductWeight))
+            };
+            $.post("http://web-api.online/api/DPDCitiesDeliveryCost", data, function (result, status)
+            {
+                var select = document.getElementById("dpd-dt-services-select");
+
+                var length = select.options.length;
+                for (i = length - 1; i >= 0; i--) {
+                    select.options[i] = null;
+                }
+
+                var index = 0;
+
+                result.forEach(obj => {
+                    if (availableServiceCodes.includes(obj.serviceName)) {
+                        var opt = document.createElement("option");
+
+                        opt.id = "dpd-option-dt-" + index;
+                        opt.value = obj.serviceName + "___" + "DPD-DT";
+                        opt.text = "DPD Pick-up delivery (" + obj.serviceName + ") (" + obj.cost + " ₽ )";
+
+                        select.appendChild(opt);
+
+                        index = index + 1;
+                    }
+                });
+
+                $("#shippingoption_dpdDT-label").html($("#dpd-option-dd-1").html());
+                $("#shippingoption_dpdDT-input").val($("#dpd-option-dd-1").val());
+            });
+
+            $("#pickup-terminal-code").val(dep.code);
+            $("#pickup-country-name").val(dep.addressString.split(',')[1]);
+            $("#pickup-city").val(dep.cityName);
+            $("#pickup-street").val(dep.address.street);
+            $("#pickup-house").val(dep.address.houseNo);
+        });
+
+
+        chooser.onCancel(function () {
+            $("#pickup-terminal-code").val(null);
+            $("#pickup-country-name").val(null);
+            $("#pickup-city").val(null);
+            $("#pickup-street").val(null);
+            $("#pickup-house").val(null);
+        });
+
+        $(document).ready(function () {
+            $(".method-list").children().each(function (index) {
+                $("#shippingoption_" + index).change(function () {
+                    $("#pickup-terminal-code").val(null);
+                    $("#pickup-country-name").val(null);
+                    $("#pickup-city").val(null);
+                    $("#pickup-house").val(null);
+                    $("#pickup-street").val(null);
+                });
+            });
+            $("#shippingoption_dpdDD-input").change(function () {
+                $("#pickup-terminal-code").val(null);
+                $("#pickup-country-name").val(null);
+                $("#pickup-city").val(null);
+                $("#pickup-street").val(null);
+                $("#pickup-house").val(null);
+            });
+
+        });
+    </script>
+
+    <script asp-location="Footer">
+        $(document).ready(function () {
+            if ($("#shippingoption_dpdDD-input").prop('checked') == true) {
+                $("#dpdchooser").hide();
+                $("#dpd-td-services-box").hide();
+                $("#dpd-dd-services-box").show();
+            }
+            else if ($("#shippingoption_dpdDT-input").prop('checked') == true) {
+                $("#dpdchooser").show();
+                $("#dpd-td-services-box").show();
+                $("#dpd-dd-services-box").hide();
+            }
+            $("#shippingoption_dpdDD-input").change(function () {
+                if ($("#shippingoption_dpdDD-input").prop('checked') == true) {
+                    $("#dpdchooser").hide();
+                    $("#dpd-td-services-box").hide();
+                    $("#dpd-dd-services-box").show();
+                }
+            });
+            $("#shippingoption_dpdDT-input").change(function () {
+                if ($("#shippingoption_dpdDT-input").prop('checked') == true) {
+                    $("#dpdchooser").show();
+                    $("#dpd-td-services-box").show();
+                    $("#dpd-dd-services-box").hide();
+                }
+            });
+            $("#dpd-dd-services-select").change(function () {
+                $("#dpd-dd-services-select").children().each(function (index) {
+                    if ($("#dpd-option-dd-" + index).prop('selected') == true) {
+                        $("#shippingoption_dpdDD-label").html($("#dpd-option-dd-" + index).html());
+                        $("#shippingoption_dpdDD-input").val($("#dpd-option-dd-" + index).val());
+                    }
+                });
+            });
+            $("#dpd-dt-services-select").change(function () {
+                $("#dpd-dt-services-select").children().each(function (index) {
+                    if ($("#dpd-option-dt-" + index).prop('selected') == true) {
+                        $("#shippingoption_dpdDT-label").html($("#dpd-option-dt-" + index).html());
+                        $("#shippingoption_dpdDT-input").val($("#dpd-option-dt-" + index).val());
+                    }
+                });
+            });
+            $(".method-list").children().each(function (index) {
+                $("#shippingoption_" + index).change(function () {
+                    $("#dpdchooser").hide();
+                    $("#dpd-td-services-box").hide();
+                    $("#dpd-dd-services-box").hide();
+                });
+            });
+        });
+    </script>
+
+    @if (Model.PickupPointsModel == null || !Model.PickupPointsModel.PickupInStoreOnly)
+     {
+        <input id="pickup-terminal-code" name="pickupaddress" type="hidden" />
+        <input id="pickup-country-name" name="pickupaddress" type="hidden" />
+        <input id="pickup-city" name="pickupaddress" type="hidden" />
+        <input id="pickup-street" name="pickupaddress" type="hidden" />
+        <input id="pickup-house" name="pickupaddress" type="hidden" />
+        <div class="section shipping-method" id="shipping-methods-form">
+            @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.OpCheckoutShippingMethodTop })
+            @if (Model.Warnings.Count == 0)
+             {
+                var dpdShippingMethodsDD = Model.ShippingMethods.Where(x => x.ShippingRateComputationMethodSystemName == "DPD-DD").ToList();
+                var dpdShippingMethodsDT = Model.ShippingMethods.Where(x => x.ShippingRateComputationMethodSystemName == "DPD-DT").ToList();
+
+                dpdShippingMethodsDT.ForEach(x => Model.ShippingMethods.Remove(x));
+                dpdShippingMethodsDD.ForEach(x => Model.ShippingMethods.Remove(x));
+                <ul class="method-list">
+                    @if (dpdShippingMethodsDT.Count > 0)
+                     {
+                        <li>
+                            <div class="method-name">
+                                <input id="shippingoption_dpdDT-input" type="radio" name="shippingoption" value="@(dpdShippingMethodsDT[0].Name)___@(dpdShippingMethodsDT[0].ShippingRateComputationMethodSystemName)" checked="@dpdShippingMethodsDT[0].Selected" />
+                                <label id="shippingoption_dpdDT-label" for="shippingoption_dpdDT-label">@T("Checkout.SelectShippingMethod.MethodAndFee", dpdShippingMethodsDT[0].Name, dpdShippingMethodsDT[0].Fee)</label>
+                                <div id="dpd-td-services-box" style="display: none; margin-top: 20px;">
+                                    <select id="dpd-dt-services-select">
+                                        @for (int i = 0; i < dpdShippingMethodsDT.Count; i++)
+                                         {
+                                            <option id="dpd-option-dt-@(i)" value="@(dpdShippingMethodsDT[i].Name)___@(dpdShippingMethodsDT[i].ShippingRateComputationMethodSystemName)">@(dpdShippingMethodsDT[i].Name) (@(dpdShippingMethodsDT[i].ShippingOption.Rate) &#8381;)</option>
+                                         }
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                     }
+                    @if (dpdShippingMethodsDD.Count > 0)
+                     {
+                        <li>
+                            <div class="method-name">
+                                <input id="shippingoption_dpdDD-input" type="radio" name="shippingoption" value="@(dpdShippingMethodsDD[0].Name)___@(dpdShippingMethodsDD[0].ShippingRateComputationMethodSystemName)" checked="@dpdShippingMethodsDD[0].Selected" />
+                                <label id="shippingoption_dpdDD-label" for="shippingoption_dpdDD-label">@T("Checkout.SelectShippingMethod.MethodAndFee", dpdShippingMethodsDD[0].Name, dpdShippingMethodsDD[0].Fee)</label>
+                                <div id="dpd-dd-services-box" style="display: none; margin-top: 20px;">
+                                    <select id="dpd-dd-services-select">
+                                        @for (int i = 0; i < dpdShippingMethodsDD.Count; i++)
+                                         {
+                                            <option id="dpd-option-dd-@(i)" value="@(dpdShippingMethodsDD[i].Name)___@(dpdShippingMethodsDD[i].ShippingRateComputationMethodSystemName)">@(dpdShippingMethodsDD[i].Name) (@(dpdShippingMethodsDD[i].ShippingOption.Rate) &#8381;)</option>
+                                         }
+                                    </select>
+                                </div>
+                            </div>
+                            @if (!string.IsNullOrEmpty(dpdShippingMethodsDD[0].Description))
+                             {
+                                <div class="method-description">
+                                    @Html.Raw(dpdShippingMethodsDD[0].Description)
+                                </div>
+                             }
+
+                        </li>
+                     }
+
+                    @for (var i = 0; i < Model.ShippingMethods.Count; i++)
+                     {
+                        var shippingMethod = Model.ShippingMethods[i];
+                        if (!shippingMethod.ShippingRateComputationMethodSystemName.Contains("DPD"))
+                        {
+                            <li>
+                                <div class="method-name">
+                                    <input id="shippingoption_@(i)" type="radio" name="shippingoption" value="@(shippingMethod.Name)___@(shippingMethod.ShippingRateComputationMethodSystemName)" checked="@shippingMethod.Selected" />
+                                    <label for="shippingoption_@(i)">@T("Checkout.SelectShippingMethod.MethodAndFee", shippingMethod.Name, shippingMethod.Fee)</label>
+                                </div>
+                                @if (!string.IsNullOrEmpty(shippingMethod.Description))
+                                 {
+                                    <div class="method-description">
+                                        @Html.Raw(shippingMethod.Description)
+                                    </div>
+                                 }
+                            </li>
+                        }
+
+                     }
+                </ul>
+                if (Model.NotifyCustomerAboutShippingFromMultipleLocations)
+                {
+                    <div class="multiple-locations">
+                        @T("Checkout.ShippingMethod.ShippingFromMultipleLocations")
+                    </div>
+                }
+             }
+            else
+            {
+                <div class="message-error">
+                    <ul>
+                        @foreach (var warning in Model.Warnings)
+                        {
+                            <li>@warning</li>
+                        }
+                    </ul>
+                </div>
+            }
+            <div id="dpdchooser" style="padding: 0; width: 100%; height: 600px; margin: 0 auto 30px; display: none;">
+            </div>
+            @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.OpCheckoutShippingMethodBottom })
+        </div>
+     }
+</div>

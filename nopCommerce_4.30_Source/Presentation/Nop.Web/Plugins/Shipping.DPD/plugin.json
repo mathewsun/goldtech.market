@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Shipping rate computation",
+  "FriendlyName": "DPD (Dynamic Parcel Distribution)",
+  "SystemName": "Shipping.DPD",
+  "Version": "1.0.6",
+  "SupportedVersions": [ "4.30" ],
+  "Author": "Stella team",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Shipping.DPD.dll",
+  "Description": "This plugin offers shipping rates by DPD"
+}
