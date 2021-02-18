@@ -2,7 +2,7 @@
   "Group": "Shipping rate computation",
   "FriendlyName": "DPD (Dynamic Parcel Distribution)",
   "SystemName": "Shipping.DPD",
-  "Version": "1.0.6",
+  "Version": "1.0.7",
   "SupportedVersions": [ "4.30" ],
   "Author": "Stella team",
   "DisplayOrder": 1,
