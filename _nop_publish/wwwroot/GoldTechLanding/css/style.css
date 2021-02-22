@@ -859,7 +859,6 @@ body {
 }
 
 .start .content-start {
-  margin-left: 12%;
   position: relative;
   z-index: 2;
 }
@@ -869,7 +868,8 @@ body {
   color: #242633;
   font-size: 74px;
   line-height: 1;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
+  text-align:center;
 }
 
 .start h1 .name-project {
@@ -897,7 +897,9 @@ body {
   top: -50px;
   z-index: -1;
 }
-
+.start .btn-main {
+  margin: 0 auto;
+}
 @media (max-width: 1700px) {
   .start .coin {
     right: 100px;
@@ -933,10 +935,6 @@ body {
 
   .start .start-sub-header {
     font-size: 16px;
-  }
-
-  .start .btn-main {
-    margin: 0 auto;
   }
 }
 
