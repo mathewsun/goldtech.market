@@ -39,30 +39,30 @@
             const settings = {
                 "async": true,
                 "crossDomain": true,
-                "url": "https://www.rentoolo.ru/api/currencies?currencyOfMetal=USD&currencyOfValute=RUB",
+                "url": 'http://web-api.online/api/Currencies/Ticker',
                 "method": "GET"
             };
 
             $.ajax(settings).done(function (response) {
-                $("#gold-span_1").text('$ ' + response.Rates.XAU);
-                $("#gold-span_2").text('$ ' + response.Rates.XAU);
-                $("#gold-span_3").text('$ ' + response.Rates.XAU);
+                $("#gold-span_1").text('$ ' + response[2].buy);
+                $("#gold-span_2").text('$ ' + response[2].buy);
+                $("#gold-span_3").text('$ ' + response[2].buy);
 
-                $("#silver-span_1").text('$ ' + response.Rates.XAG);
-                $("#silver-span_2").text('$ ' + response.Rates.XAG);
-                $("#silver-span_3").text('$ ' + response.Rates.XAG);
+                $("#silver-span_1").text('$ ' + response[4].buy);
+                $("#silver-span_2").text('$ ' + response[4].buy);
+                $("#silver-span_3").text('$ ' + response[4].buy);
 
-                $("#platinum-span_2").text('$ ' + response.Rates.PL);
-                $("#platinum-span_1").text('$ ' + response.Rates.PL);
-                $("#platinum-span_3").text('$ ' + response.Rates.PL);
+                $("#platinum-span_2").text('$ ' + response[3].buy);
+                $("#platinum-span_1").text('$ ' + response[3].buy);
+                $("#platinum-span_3").text('$ ' + response[3].buy);
 
-                $("#usd-span_1").html(response.Rates.USD + " <big>₽</big>");
-                $("#usd-span_2").html(response.Rates.USD + " <big>₽</big>");
-                $("#usd-span_3").html(response.Rates.USD + " <big>₽</big>");
+                $("#usd-span_1").html(response[0].buy + " <big>₽</big>");
+                $("#usd-span_2").html(response[0].buy + " <big>₽</big>");
+                $("#usd-span_3").html(response[0].buy + " <big>₽</big>");
 
-                $("#eur-span_1").html(response.Rates.EUR + " <big>₽</big>");
-                $("#eur-span_2").html(response.Rates.EUR + " <big>₽</big>");
-                $("#eur-span_3").html(response.Rates.EUR + " <big>₽</big>");
+                $("#eur-span_1").html(response[1].buy + " <big>₽</big>");
+                $("#eur-span_2").html(response[1].buy + " <big>₽</big>");
+                $("#eur-span_3").html(response[1].buy + " <big>₽</big>");
             });
         });
     </script>
