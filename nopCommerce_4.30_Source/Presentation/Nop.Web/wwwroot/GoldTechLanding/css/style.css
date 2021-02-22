@@ -398,7 +398,8 @@ body {
 }
 
 .section-padding {
-    padding: 60px 0;
+    /* padding: 60px 0 0; */
+    padding: 30px 0;
 }
 
 .nav-footer-content {
@@ -857,6 +858,8 @@ body {
     }
 }
 
+
+/* -- Section Start -- */
 .start {
     background-color: #F8F9FA;
     position: relative;
@@ -902,6 +905,7 @@ body {
         right: 204px;
         top: -50px;
         z-index: -1;
+        background-repeat: no-repeat;
     }
 
 @media (max-width: 1700px) {
@@ -925,7 +929,7 @@ body {
 
 @media (max-width: 500px) {
     .start {
-        height: 75vh;
+        height: 50vh;
         top: 0;
     }
 
@@ -935,6 +939,7 @@ body {
 
         .start h1 {
             font-size: 50px;
+            text-align: center;
         }
 
         .start .start-sub-header {
@@ -946,9 +951,22 @@ body {
         }
 }
 
+@media (min-width: 500px) {
+    .start h1 {
+        margin-top: 200px;
+    }
+
+    .start .coin {
+        right: 0px;
+        top: -200px;
+    }
+}
+
+
+/* Section About */
 .about {
     position: relative;
-    height: 900px;
+    height: 720px;
 }
 
     .about .about-text {
@@ -1014,24 +1032,32 @@ body {
 }
 
 @media (max-width: 500px) {
-    .about .about-image {
-        display: none;
+    .about {
+        height: 900px;
     }
 
-    .about .about-text {
-        width: 100%;
-        text-align: center;
-    }
-
-        .about .about-text p {
-            font-size: 14px;
+        .about .about-image {
+            display: none;
         }
 
-        .about .about-text .icon-1,
-        .about .about-text .icon-2,
-        .about .about-text .icon-3 {
-            margin: 0 auto;
+        .about .about-text {
+            width: 100%;
+            text-align: center;
         }
+
+            .about .about-text p {
+                font-size: 14px;
+            }
+
+            .about .about-text .icon-1,
+            .about .about-text .icon-2,
+            .about .about-text .icon-3 {
+                margin: 0 auto;
+            }
+
+            .about .about-text .text-block h4 {
+                text-align: center;
+            }
 }
 
 .offer .coins::after {
@@ -1658,6 +1684,7 @@ body {
                         font-size: 23px;
                         color: #242633;
                         font-family: Bold;
+                        text-align: center;
                     }
 
                     .instruction .steps .step .step-content .step-desc .step-info {
@@ -1729,23 +1756,6 @@ body {
     background-repeat: no-repeat;
 }
 
-    .contact .btn-main .content-button {
-        position: relative;
-        padding-right: 40px;
-    }
-
-        .contact .btn-main .content-button::before {
-            position: absolute;
-            content: "";
-            background-image: url(../images/contact-icon.png);
-            width: 24px;
-            height: 24px;
-            display: block;
-            right: 41px;
-            top: 18px;
-            transition-duration: 0.2s;
-        }
-
     .contact::after {
         content: "";
         clear: both;
@@ -1755,16 +1765,19 @@ body {
     .contact .contact-info {
         width: 30%;
         float: left;
+        margin-bottom: 1em;
     }
 
 .map {
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
+    max-width: calc(100vw - 30px);
+    overflow-x: hidden;
 }
 
 .contact .map {
     width: 40%;
     float: right;
-    height: 400px;
+    /* height: 400px; */
 }
 
     .contact .map #map {
@@ -2044,7 +2057,7 @@ body {
     margin-top: 30px;
     margin-bottom: 30px;
 }
-
+/* -- Footer -- */
 footer {
     background-color: #242633;
     padding: 20px;
@@ -2068,7 +2081,7 @@ footer {
         background-repeat: no-repeat;
         display: inline-block;
         float: left;
-        margin-top: 30px;
+        margin-top: 20px;
         width: 18%;
         background-position: left top;
     }
@@ -2076,6 +2089,7 @@ footer {
     footer .rights {
         width: 35%;
         float: left;
+        margin-top: 20px;
     }
 
     footer .inn {
@@ -2118,4 +2132,41 @@ footer {
         footer .social ul li {
             margin: 0 5px;
         }
+}
+
+/* -- Кнопки -- */
+.contact .content .contact-info .spoiler-head-contact {
+    cursor: pointer;
+}
+
+.contact .content .contact-info .btn-main {
+    color: #C39B6A;
+    font-weight: bold;
+    background: transparent;
+    border: 1px solid #C39B6A;
+    margin: 1em auto;
+    width: 250px;
+    height: 45px;
+}
+
+    .contact .content .contact-info .btn-main .content-button {
+        position: relative;
+        padding-top: 10px;
+    }
+
+.contact .content .contact-info .content-button::before {
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 9px;
+    display: block;
+    content: "";
+    position: absolute;
+    background-image: url(../images/spoil-arr.png);
+    right: 38px;
+    top: 18px;
+    transition-duration: 0.2s;
+}
+
+.contact .content .contact-info .open-spoil-contact .content-button::before {
+    transform: rotate(180deg);
 }
