@@ -1472,7 +1472,7 @@ body {
         background-position: right top;
         background-repeat: no-repeat;
         width: 100%;
-        height: 1000px;
+        /* height: 1000px; */
         right: 0;
         top: 60px;
         z-index: 1;
@@ -1610,6 +1610,90 @@ body {
                     margin: 20px auto;
                     float: none;
                 }
+}
+
+/* .блок цены конкурентов */
+.price-tab-wrapper {
+    width: 980px;
+    /* ширина блока, в магазине 980px, на Landing - 1180px*/
+    max-width: calc(100vw - 30px);
+    margin: 50px auto;
+}
+
+.price-tab {
+    width: calc(100% + 15px);
+    margin-left: -15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+    /* max-height: 795px; */
+    /* если надо убрать лишние элементы и оставить максимум 3 ряда, по 2 или 3 элемента */
+}
+
+.price-tab__item {
+    width: 180px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.17);
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.17);
+}
+
+@media (max-width: 500px) {
+    .price-tab__item {
+        max-width: calc((100% - 30px) / 2);
+    }
+}
+
+.price-tab-logo {
+    width: 120px;
+    height: 50px;
+    margin: 0 auto 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+    .price-tab-logo img {
+        max-width: 100%;
+        width: auto;
+        max-height: 100%;
+        height: auto;
+    }
+
+.price-tab__item .nalichie {
+    text-align: center;
+    color: #1B9B56;
+}
+
+.price-tab__item .pokupka {
+    text-align: center;
+}
+
+.price-tab__item .prodaja {
+    text-align: center;
+}
+
+    .price-tab__item .pokupka p,
+    .price-tab__item .prodaja p {
+        margin-bottom: 0.1em;
+    }
+
+.bold {
+    font-weight: bold;
 }
 
 .instruction {
