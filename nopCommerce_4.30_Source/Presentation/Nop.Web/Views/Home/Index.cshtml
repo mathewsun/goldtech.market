@@ -35,7 +35,8 @@
         </div>
     </noscript>
     <script type="text/javascript">
-        $(document).ready(function () {
+
+        function loadTicker() {
             const settings = {
                 "async": true,
                 "crossDomain": true,
@@ -64,6 +65,10 @@
                 $("#eur-span_2").html(response[1].buy + " <big>₽</big>");
                 $("#eur-span_3").html(response[1].buy + " <big>₽</big>");
             });
+        }
+
+        $(document).ready(function () {
+            loadTicker();
         });
     </script>
 
