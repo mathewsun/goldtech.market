@@ -67,7 +67,7 @@
             });
         }
 
-        function loadcoinsRates() {
+        function loadCoinsRates() {
             const settings = {
                 "async": true,
                 "crossDomain": true,
@@ -77,22 +77,22 @@
 
             $.ajax(settings).done(function (response) {
                 $("#zoloto-md-sell").text(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPM").sell);
-                $("#zoloto-md-buy").text(response.find(x => x.site  == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPM").buy);
+                $("#zoloto-md-buy").text(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPM").buy);
 
                 $("#zolotoy-zapas-sell").text(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPM").sell);
-                $("#zolotoy-zapas-buy").text(response.find(x => x.site  == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPM").buy);
+                $("#zolotoy-zapas-buy").text(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPM").buy);
 
                 $("#zolotoydvor-sell").text(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPM").sell);
-                $("#zolotoydvor-buy").text(response.find(x => x.site  == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPM").buy);
+                $("#zolotoydvor-buy").text(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPM").buy);
 
                 $("#zolotoy-club-sell").text(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPM").sell);
-                $("#zolotoy-club-buy").text(response.find(x => x.site  == "https://www.zolotoy-club.ru/" && x.acronim == "GPM").buy);
+                $("#zolotoy-club-buy").text(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPM").buy);
 
                 $("#vfbank-sell").text(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPM").sell);
-                $("#vfbank-buy").text(response.find(x => x.site  == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPM").buy);
+                $("#vfbank-buy").text(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPM").buy);
 
                 $("#rshb-sell").text(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPM").sell);
-                $("#rshb-buy").text(response.find(x => x.site  == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPM").buy);
+                $("#rshb-buy").text(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPM").buy);
 
                 /*
                 $("#sberbank-sell").text(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPM").sell);
@@ -100,25 +100,31 @@
                 */
 
                 $("#ricgold-sell").text(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya--moneta-georgij-pobedonosets-mmd-2006-2020-gg-388/" && x.acronim == "GPM").sell);
-                $("#ricgold-buy").text(response.find(x => x.site  == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya--moneta-georgij-pobedonosets-mmd-2006-2020-gg-388/" && x.acronim == "GPM").buy);
+                $("#ricgold-buy").text(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya--moneta-georgij-pobedonosets-mmd-2006-2020-gg-388/" && x.acronim == "GPM").buy);
 
                 $("#monetainvest-sell").text(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPM").sell);
-                $("#monetainvest-buy").text(response.find(x => x.site  == "https://msk.monetainvest.ru/" && x.acronim == "GPM").buy);
+                $("#monetainvest-buy").text(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPM").buy);
 
                 $("#lanta-sell").text(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPM").sell);
-                $("#lanta-buy").text(response.find(x => x.site  == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPM").buy);
+                $("#lanta-buy").text(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPM").buy);
 
                 $("#tsbnk-sell").text(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-2018-georgiy-pobedonosets-mmd-50-rub-2018-g-v-zoloto-7-78-gr-mmd/" && x.acronim == "GPM").sell);
                 $("#tsbnk-buy").text(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-2018-georgiy-pobedonosets-mmd-50-rub-2018-g-v-zoloto-7-78-gr-mmd/" && x.acronim == "GPM").buy);
 
                 $("#9999d-sell").text(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPM").sell);
-                $("#9999d-buy").text(response.find(x => x.site  == "https://9999d.ru/" && x.acronim == "GPM").buy);
+                $("#9999d-buy").text(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPM").buy);
+
+                $('.prodaja span').each(function () {
+                    if ($(this).text() == '0') {
+                        $(this).parent().parent().find('.nalichie').text("Нет в наличие").css('color', 'gray');
+                    }
+                });
             });
         }
 
         $(document).ready(function () {
             loadTicker();
-            loadcoinsRates();
+            loadCoinsRates();
         });
     </script>
 
@@ -1137,13 +1143,13 @@
                     <img src="@Url.Content("GoldTechLanding/images/zoloto-md.jpg")" alt="zoloto-md">
                 </div>
                 <div class="nalichie">В наличии</div>
-                <div class="pokupka">
+                <div class="prodaja">
                     <p>
                         Продажа
                     </p>
                     <span class="bold" id="zoloto-md-sell">$ 0</span> rub
                 </div>
-                <div class="prodaja">
+                <div class="pokupka">
                     <p>
                         Покупка
                     </p>
@@ -1156,13 +1162,13 @@
                     <img src="@Url.Content("GoldTechLanding/images/zolotoy-zapas.jpg")" alt="zolotoy-zapas">
                 </div>
                 <div class="nalichie">В наличии</div>
-                <div class="pokupka">
+                <div class="prodaja">
                     <p>
                         Продажа
                     </p>
                     <span class="bold" id="zolotoy-zapas-sell">$ 0</span> rub
                 </div>
-                <div class="prodaja">
+                <div class="pokupka">
                     <p>
                         Покупка
                     </p>
@@ -1175,13 +1181,13 @@
                     <img src="@Url.Content("GoldTechLanding/images/zolotoydvor.jpg")" alt="zolotoydvor">
                 </div>
                 <div class="nalichie">В наличии</div>
-                <div class="pokupka">
+                <div class="prodaja">
                     <p>
                         Продажа
                     </p>
                     <span class="bold" id="zolotoydvor-sell">$ 0</span> rub
                 </div>
-                <div class="prodaja">
+                <div class="pokupka">
                     <p>
                         Покупка
                     </p>
@@ -1194,13 +1200,13 @@
                     <img src="@Url.Content("GoldTechLanding/images/zolotoy-club.jpg")" alt="zolotoy-club">
                 </div>
                 <div class="nalichie">В наличии</div>
-                <div class="pokupka">
+                <div class="prodaja">
                     <p>
                         Продажа
                     </p>
                     <span class="bold" id="zolotoy-club-sell">$ 0</span> rub
                 </div>
-                <div class="prodaja">
+                <div class="pokupka">
                     <p>
                         Покупка
                     </p>
@@ -1213,13 +1219,13 @@
                     <img src="@Url.Content("GoldTechLanding/images/vfbank.jpg")" alt="Внешфинбанк">
                 </div>
                 <div class="nalichie">В наличии</div>
-                <div class="pokupka">
+                <div class="prodaja">
                     <p>
                         Продажа
                     </p>
                     <span class="bold" id="vfbank-sell">$ 0</span> rub
                 </div>
-                <div class="prodaja">
+                <div class="pokupka">
                     <p>
                         Покупка
                     </p>
@@ -1232,32 +1238,32 @@
                     <img src="@Url.Content("GoldTechLanding/images/rosselhozbank.jpeg")" alt="Россельхозбанк">
                 </div>
                 <div class="nalichie">В наличии</div>
-                <div class="pokupka">
+                <div class="prodaja">
                     <p>
                         Продажа
                     </p>
                     <span class="bold" id="rshb-sell">$ 0</span> rub
                 </div>
-                <div class="prodaja">
+                <div class="pokupka">
                     <p>
                         Покупка
                     </p>
                     <span class="bold" id="rshb-buy">$ 0</span> rub
                 </div>
             </div><!-- /.price-tab__item -- rshb -->
-            
+
             <div class="price-tab__item" style="display: none;">
                 <div class="price-tab-logo">
                     <img src="@Url.Content("GoldTechLanding/images/sber.png")" alt="sber">
                 </div>
                 <div class="nalichie">В наличии</div>
-                <div class="pokupka">
+                <div class="prodaja">
                     <p>
                         Продажа
                     </p>
                     <span class="bold" id="sberbank-sell">$ 0</span> rub
                 </div>
-                <div class="prodaja">
+                <div class="pokupka">
                     <p>
                         Покупка
                     </p>
@@ -1270,13 +1276,13 @@
                     <img src="@Url.Content("GoldTechLanding/images/ricgold.jpg")" alt="ricgold">
                 </div>
                 <div class="nalichie">В наличии</div>
-                <div class="pokupka">
+                <div class="prodaja">
                     <p>
                         Продажа
                     </p>
                     <span class="bold" id="ricgold-sell">$ 0</span> rub
                 </div>
-                <div class="prodaja">
+                <div class="pokupka">
                     <p>
                         Покупка
                     </p>
@@ -1289,13 +1295,13 @@
                     <img src="@Url.Content("GoldTechLanding/images/monetainvest.jpg")" alt="monetainvest">
                 </div>
                 <div class="nalichie">В наличии</div>
-                <div class="pokupka">
+                <div class="prodaja">
                     <p>
                         Продажа
                     </p>
                     <span class="bold" id="monetainvest-sell">$ 0</span> rub
                 </div>
-                <div class="prodaja">
+                <div class="pokupka">
                     <p>
                         Покупка
                     </p>
@@ -1308,17 +1314,17 @@
                     <img src="@Url.Content("GoldTechLanding/images/lanta.jpg")" alt="Ланта Банк">
                 </div>
                 <div class="nalichie">В наличии</div>
-                <div class="pokupka">
+                <div class="prodaja">
                     <p>
                         Продажа
                     </p>
                     <span class="bold" id="lanta-sell">$ 0</span> rub
                 </div>
-                <div class="prodaja">
+                <div class="pokupka">
                     <p>
                         Покупка
                     </p>
-                    <span class="bold" id="lanta-buy">$ 0</span> rub
+                    <span class="bold" id="lanta-buy"></span>
                 </div>
             </div><!-- /.price-tab__item -- lanta -->
             <!--
@@ -1327,13 +1333,13 @@
                     <img src="@Url.Content("GoldTechLanding/images/coins_tsbnk.png")" alt="coins_tsbnk">
                 </div>
                 <div class="nalichie">В наличии</div>
-                <div class="pokupka">
+                <div class="prodaja">
                     <p>
                         Продажа
                     </p>
                     <span class="bold" id="tsbnk-sell">$ 0</span> rub
                 </div>
-                <div class="prodaja">
+                <div class="pokupka">
                     <p>
                         Покупка
                     </p>
@@ -1346,13 +1352,13 @@
                     <img src="@Url.Content("GoldTechLanding/images/9999d.jpg")" alt="золото державы">
                 </div>
                 <div class="nalichie">В наличии</div>
-                <div class="pokupka">
+                <div class="prodaja">
                     <p>
                         Продажа
                     </p>
                     <span class="bold" id="9999d-sell">$ 0</span> rub
                 </div>
-                <div class="prodaja">
+                <div class="pokupka">
                     <p>
                         Покупка
                     </p>
