@@ -1613,14 +1613,14 @@ body {
 }
 
 /* .блок цены конкурентов */
-.price-tab-wrapper {
-    width: 980px;
+.coins-rates__tab-wrapper {
+    width: 1180px;
     /* ширина блока, в магазине 980px, на Landing - 1180px*/
     max-width: calc(100vw - 30px);
     margin: 50px auto;
 }
 
-.price-tab {
+.coins-rates__tab {
     width: calc(100% + 15px);
     margin-left: -15px;
     display: -webkit-box;
@@ -1636,23 +1636,26 @@ body {
     /* если надо убрать лишние элементы и оставить максимум 3 ряда, по 2 или 3 элемента */
 }
 
-.price-tab__item {
+.coins-rates__item {
     width: 180px;
     margin-left: 15px;
     margin-bottom: 15px;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.17);
     box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.17);
 }
 
 @media (max-width: 500px) {
-    .price-tab__item {
+    .coins-rates__item {
         max-width: calc((100% - 30px) / 2);
+    }
+    .coins-rates__tab-wrapper .header {
+        font-size: 24px;
     }
 }
 
-.price-tab-logo {
+.coins-rates__logo {
     width: 120px;
     height: 50px;
     margin: 0 auto 15px;
@@ -1667,31 +1670,33 @@ body {
     align-items: center;
 }
 
-    .price-tab-logo img {
+    .coins-rates__logo img {
         max-width: 100%;
         width: auto;
         max-height: 100%;
         height: auto;
     }
 
-.price-tab__item .nalichie {
+.coins-rates__available {
     text-align: center;
     color: #1B9B56;
 }
 
-.price-tab__item .pokupka {
+.coins-rates__buy,
+.coins-rates__sell {
     text-align: center;
 }
 
-.price-tab__item .prodaja {
-    text-align: center;
+.coins-rates__buy p,
+.coins-rates__sell p {
+    margin-bottom: 0.1em;
 }
-
-    .price-tab__item .pokupka p,
-    .price-tab__item .prodaja p {
-        margin-bottom: 0.1em;
-    }
-
+.coins-rates__date {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 12px;
+    color: grey;
+}
 .bold {
     font-weight: bold;
 }
