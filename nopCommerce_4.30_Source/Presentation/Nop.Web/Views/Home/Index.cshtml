@@ -13,7 +13,7 @@
     <script src="@Url.Content("~/lib/jquery-validate/jquery.validate.unobtrusive-v3.2.11/jquery.validate.unobtrusive.min.js")"></script>
     <script src="@Url.Content("~/js/public.common.js")"></script>
     <title>Gold.Tech | BlockChain</title>
-    <link rel="stylesheet" href="@Url.Content("~/GoldTechLanding/css/style.css?44447")">
+    <link rel="stylesheet" href="@Url.Content("~/GoldTechLanding/css/style.css?44449")">
     <link rel="stylesheet" type="text/css" href="@Url.Content("~/GoldTechLanding/npm/slick-carousel@1.8.1/slick/slick.css")">
     <link rel="icon" type="image/png" href="@Url.Content("~/GoldTechLanding/favicon.png")">
     <script type="text/javascript" asp-location="Head">
@@ -76,49 +76,76 @@
             };
 
             $.ajax(settings).done(function (response) {
+
                 $("#zoloto-md-sell").text(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPM").sell);
                 $("#zoloto-md-buy").text(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPM").buy);
+                $("#zoloto-md-date").text(CoinsRatesDateFormat(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPM").date));
 
                 $("#zolotoy-zapas-sell").text(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPM").sell);
                 $("#zolotoy-zapas-buy").text(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPM").buy);
+                $("#zolotoy-zapas-date").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPM").date));
 
                 $("#zolotoydvor-sell").text(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPM").sell);
                 $("#zolotoydvor-buy").text(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPM").buy);
+                $("#zolotoydvor-date").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPM").date));
 
                 $("#zolotoy-club-sell").text(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPM").sell);
                 $("#zolotoy-club-buy").text(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPM").buy);
+                $("#zolotoy-club-date").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPM").date));
 
                 $("#vfbank-sell").text(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPM").sell);
                 $("#vfbank-buy").text(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPM").buy);
+                $("#vfbank-date").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPM").date));
 
                 $("#rshb-sell").text(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPM").sell);
                 $("#rshb-buy").text(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPM").buy);
+                $("#rshb-date").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPM").date));
 
-                /*
-                $("#sberbank-sell").text(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPM").sell);
-                $("#sberbank-buy").text(response.find(x => x.site  == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPM").buy);
-                */
+                /* сейчас выводим монету Санкт-Петербург */
+                $("#sberbank-sell").text(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPS").sell);
+                $("#sberbank-buy").text(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPS").buy);
+                $("#sberbank-date").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPS").date));
 
                 $("#ricgold-sell").text(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya--moneta-georgij-pobedonosets-mmd-2006-2020-gg-388/" && x.acronim == "GPM").sell);
                 $("#ricgold-buy").text(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya--moneta-georgij-pobedonosets-mmd-2006-2020-gg-388/" && x.acronim == "GPM").buy);
+                $("#ricgold-date").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya--moneta-georgij-pobedonosets-mmd-2006-2020-gg-388/" && x.acronim == "GPM").date));
 
                 $("#monetainvest-sell").text(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPM").sell);
                 $("#monetainvest-buy").text(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPM").buy);
+                $("#monetainvest-date").text(CoinsRatesDateFormat(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPM").date));
 
                 $("#lanta-sell").text(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPM").sell);
                 $("#lanta-buy").text(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPM").buy);
+                $("#lanta-date").text(CoinsRatesDateFormat(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPM").date));
 
                 $("#tsbnk-sell").text(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-2018-georgiy-pobedonosets-mmd-50-rub-2018-g-v-zoloto-7-78-gr-mmd/" && x.acronim == "GPM").sell);
                 $("#tsbnk-buy").text(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-2018-georgiy-pobedonosets-mmd-50-rub-2018-g-v-zoloto-7-78-gr-mmd/" && x.acronim == "GPM").buy);
+                $("#tsbnk-date").text(CoinsRatesDateFormat(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-2018-georgiy-pobedonosets-mmd-50-rub-2018-g-v-zoloto-7-78-gr-mmd/" && x.acronim == "GPM").date));
 
                 $("#9999d-sell").text(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPM").sell);
                 $("#9999d-buy").text(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPM").buy);
+                $("#9999d-date").text(CoinsRatesDateFormat(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPM").date));
 
-                $('.prodaja span').each(function () {
+                $('.coins-rates__sell span').each(function () {
                     if ($(this).text() == '0') {
-                        $(this).parent().parent().find('.nalichie').text("Нет в наличие").css('color', 'gray');
+                        $(this).parent().parent().find('.coins-rates__available').text("Нет в наличие").css('color', 'gray');
                     }
                 });
+
+                function CoinsRatesDateFormat(str) {
+                    var date = new Date(str);
+                    var month = date.getMonth() + 1;
+                    var day = date.getDate();
+                    var hours = date.getHours();
+                    var minutes = date.getMinutes();
+                    if (month < 10) month = "0" + month;
+                    if (day < 10) day = "0" + day;
+                    if (hours < 10) hours = "0" + hours;
+                    if (minutes < 10) minutes = "0" + minutes;
+
+                    return day + "." + month + "-" + hours + ":" + minutes;
+                }
+
             });
         }
 
@@ -165,13 +192,13 @@
                             </span>
                             <ul class="exchange__list">
                                 <li class="exchange__item">
-                                    Золото: <span class="exchange__val" id="gold-span_1">$ 0</span>
+                                    Золото: <span class="exchange__val" id="gold-span_1">--</span>
                                 </li>
                                 <li class="exchange__item">
-                                    Серебро: <span class="exchange__val" id="silver-span_1">$ 0</span>
+                                    Серебро: <span class="exchange__val" id="silver-span_1">--</span>
                                 </li>
                                 <li class="exchange__item">
-                                    Платина: <span class="exchange__val" id="platinum-span_1">$ 0</span>
+                                    Платина: <span class="exchange__val" id="platinum-span_1">--</span>
                                 </li>
                                 <li class="exchange__item">
                                     Доллар: <span class="exchange__val" id="usd-span_1">0 <big>₽</big></span>
@@ -187,13 +214,13 @@
                             </span>
                             <ul class="exchange__list">
                                 <li class="exchange__item">
-                                    Золото: <span class="exchange__val" id="gold-span_2">$ 0</span>
+                                    Золото: <span class="exchange__val" id="gold-span_2">--</span>
                                 </li>
                                 <li class="exchange__item">
-                                    Серебро: <span class="exchange__val" id="silver-span_2">$ 0</span>
+                                    Серебро: <span class="exchange__val" id="silver-span_2">--</span>
                                 </li>
                                 <li class="exchange__item">
-                                    Платина: <span class="exchange__val" id="platinum-span_2">$ 0</span>
+                                    Платина: <span class="exchange__val" id="platinum-span_2">--</span>
                                 </li>
                                 <li class="exchange__item">
                                     Доллар: <span class="exchange__val" id="usd-span_2">0 <big>₽</big></span>
@@ -209,13 +236,13 @@
                             </span>
                             <ul class="exchange__list">
                                 <li class="exchange__item">
-                                    Золото: <span class="exchange__val" id="gold-span_3">$ 0</span>
+                                    Золото: <span class="exchange__val" id="gold-span_3">--</span>
                                 </li>
                                 <li class="exchange__item">
-                                    Серебро: <span class="exchange__val" id="silver-span_3">$ 0</span>
+                                    Серебро: <span class="exchange__val" id="silver-span_3">--</span>
                                 </li>
                                 <li class="exchange__item">
-                                    Платина: <span class="exchange__val" id="platinum-span_3">$ 0</span>
+                                    Платина: <span class="exchange__val" id="platinum-span_3">--</span>
                                 </li>
                                 <li class="exchange__item">
                                     Доллар: <span class="exchange__val" id="usd-span_3">0 <big>₽</big></span>
@@ -252,11 +279,11 @@
                         <a href="#contact" class="flow-scroll">Контакты</a>
                     </li>
                     @if (Model.IsAuthetihicated == false)
-                {
-                    <li class="nav-item">
-                        <a href="login" class="flow-scroll">Войти</a>
-                    </li>
-                }
+                    {
+                        <li class="nav-item">
+                            <a href="login" class="flow-scroll">Войти</a>
+                        </li>
+                    }
                     <navbar></navbar>
                 </div>
                 <div class="mobile-menu">
@@ -286,11 +313,11 @@
                                 <a href="#contact" class="flow-scroll">Контакты</a>
                             </li>
                             @if (Model.IsAuthetihicated == false)
-                        {
-                            <li class="nav-item">
-                                <a href="login" class="flow-scroll">Войти</a>
-                            </li>
-                        }
+                            {
+                                <li class="nav-item">
+                                    <a href="login" class="flow-scroll">Войти</a>
+                                </li>
+                            }
                             <navbar></navbar>
                         </ul>
                     </div>
@@ -1134,240 +1161,252 @@
             </div>
         </div>
     </section>
-    <div class="price-tab-wrapper">
+    <div class="coins-rates__tab-wrapper">
         <h2 class="header center-text">"Георгий Победоносец" 2018-2020г.в (ММД)</h2>
-        <div class="price-tab">
+        <div class="coins-rates__tab">
 
-            <div class="price-tab__item">
-                <div class="price-tab-logo">
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
                     <img src="@Url.Content("GoldTechLanding/images/zoloto-md.jpg")" alt="zoloto-md">
                 </div>
-                <div class="nalichie">В наличии</div>
-                <div class="prodaja">
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="zoloto-md-sell">$ 0</span> rub
+                    <span class="bold" id="zoloto-md-sell">--</span> руб.
                 </div>
-                <div class="pokupka">
+                <div class="coins-rates__buy">
                     <p>
                         Покупка
                     </p>
-                    <span class="bold" id="zoloto-md-buy">$ 0</span> rub
+                    <span class="bold" id="zoloto-md-buy">--</span> руб.
                 </div>
-            </div><!-- /.price-tab__item -- zoloto-md -->
+                <div id="zoloto-md-date" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- zoloto-md -->
 
-            <div class="price-tab__item">
-                <div class="price-tab-logo">
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
                     <img src="@Url.Content("GoldTechLanding/images/zolotoy-zapas.jpg")" alt="zolotoy-zapas">
                 </div>
-                <div class="nalichie">В наличии</div>
-                <div class="prodaja">
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="zolotoy-zapas-sell">$ 0</span> rub
+                    <span class="bold" id="zolotoy-zapas-sell">--</span> руб.
                 </div>
-                <div class="pokupka">
+                <div class="coins-rates__buy">
                     <p>
                         Покупка
                     </p>
-                    <span class="bold" id="zolotoy-zapas-buy">$ 0</span> rub
+                    <span class="bold" id="zolotoy-zapas-buy">--</span> руб.
                 </div>
-            </div><!-- /.price-tab__item -- zolotoy-zapas -->
+                <div id="zolotoy-zapas-date" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- zolotoy-zapas -->
 
-            <div class="price-tab__item">
-                <div class="price-tab-logo">
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
                     <img src="@Url.Content("GoldTechLanding/images/zolotoydvor.jpg")" alt="zolotoydvor">
                 </div>
-                <div class="nalichie">В наличии</div>
-                <div class="prodaja">
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="zolotoydvor-sell">$ 0</span> rub
+                    <span class="bold" id="zolotoydvor-sell">--</span> руб.
                 </div>
-                <div class="pokupka">
+                <div class="coins-rates__buy">
                     <p>
                         Покупка
                     </p>
-                    <span class="bold" id="zolotoydvor-buy">$ 0</span> rub
+                    <span class="bold" id="zolotoydvor-buy">--</span> руб.
                 </div>
-            </div><!-- /.price-tab__item -- zolotoydvor -->
+                <div id="zolotoydvor-date" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- zolotoydvor -->
 
-            <div class="price-tab__item">
-                <div class="price-tab-logo">
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
                     <img src="@Url.Content("GoldTechLanding/images/zolotoy-club.jpg")" alt="zolotoy-club">
                 </div>
-                <div class="nalichie">В наличии</div>
-                <div class="prodaja">
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="zolotoy-club-sell">$ 0</span> rub
+                    <span class="bold" id="zolotoy-club-sell">--</span> руб.
                 </div>
-                <div class="pokupka">
+                <div class="coins-rates__buy">
                     <p>
                         Покупка
                     </p>
-                    <span class="bold" id="zolotoy-club-buy">$ 0</span> rub
+                    <span class="bold" id="zolotoy-club-buy">--</span> руб.
                 </div>
-            </div><!-- /.price-tab__item -- zolotoy-club -->
+                <div id="zolotoy-club-date" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- zolotoy-club -->
 
-            <div class="price-tab__item">
-                <div class="price-tab-logo">
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
                     <img src="@Url.Content("GoldTechLanding/images/vfbank.jpg")" alt="Внешфинбанк">
                 </div>
-                <div class="nalichie">В наличии</div>
-                <div class="prodaja">
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="vfbank-sell">$ 0</span> rub
+                    <span class="bold" id="vfbank-sell">--</span> руб.
                 </div>
-                <div class="pokupka">
+                <div class="coins-rates__buy">
                     <p>
                         Покупка
                     </p>
-                    <span class="bold" id="vfbank-buy">$ 0</span> rub
+                    <span class="bold" id="vfbank-buy">--</span> руб.
                 </div>
-            </div><!-- /.price-tab__item -- vfbank -->
+                <div id="vfbank-date" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- vfbank -->
 
-            <div class="price-tab__item">
-                <div class="price-tab-logo">
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
                     <img src="@Url.Content("GoldTechLanding/images/rosselhozbank.jpeg")" alt="Россельхозбанк">
                 </div>
-                <div class="nalichie">В наличии</div>
-                <div class="prodaja">
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="rshb-sell">$ 0</span> rub
+                    <span class="bold" id="rshb-sell">--</span> руб.
                 </div>
-                <div class="pokupka">
+                <div class="coins-rates__buy">
                     <p>
                         Покупка
                     </p>
-                    <span class="bold" id="rshb-buy">$ 0</span> rub
+                    <span class="bold" id="rshb-buy">--</span> руб.
                 </div>
-            </div><!-- /.price-tab__item -- rshb -->
+                <div id="rshb-date" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- rshb -->
 
-            <div class="price-tab__item" style="display: none;">
-                <div class="price-tab-logo">
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
                     <img src="@Url.Content("GoldTechLanding/images/sber.png")" alt="sber">
                 </div>
-                <div class="nalichie">В наличии</div>
-                <div class="prodaja">
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="sberbank-sell">$ 0</span> rub
+                    <span class="bold" id="sberbank-sell">--</span> руб.
                 </div>
-                <div class="pokupka">
+                <div class="coins-rates__buy">
                     <p>
                         Покупка
                     </p>
-                    <span class="bold" id="sberbank-buy">$ 0</span> rub
+                    <span class="bold" id="sberbank-buy">--</span> руб.
                 </div>
-            </div><!-- /.price-tab__item -- sberbank -->
+                <div id="sberbank-date" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- sberbank -->
 
-            <div class="price-tab__item">
-                <div class="price-tab-logo">
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
                     <img src="@Url.Content("GoldTechLanding/images/ricgold.jpg")" alt="ricgold">
                 </div>
-                <div class="nalichie">В наличии</div>
-                <div class="prodaja">
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="ricgold-sell">$ 0</span> rub
+                    <span class="bold" id="ricgold-sell">--</span> руб.
                 </div>
-                <div class="pokupka">
+                <div class="coins-rates__buy">
                     <p>
                         Покупка
                     </p>
-                    <span class="bold" id="ricgold-buy">$ 0</span> rub
+                    <span class="bold" id="ricgold-buy">--</span> руб.
                 </div>
-            </div><!-- /.price-tab__item -- ricgold -->
+                <div id="ricgold-date" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- ricgold -->
 
-            <div class="price-tab__item">
-                <div class="price-tab-logo">
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
                     <img src="@Url.Content("GoldTechLanding/images/monetainvest.jpg")" alt="monetainvest">
                 </div>
-                <div class="nalichie">В наличии</div>
-                <div class="prodaja">
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="monetainvest-sell">$ 0</span> rub
+                    <span class="bold" id="monetainvest-sell">--</span> руб.
                 </div>
-                <div class="pokupka">
+                <div class="coins-rates__buy">
                     <p>
                         Покупка
                     </p>
-                    <span class="bold" id="monetainvest-buy">$ 0</span> rub
+                    <span class="bold" id="monetainvest-buy">--</span> руб.
                 </div>
-            </div><!-- /.price-tab__item -- monetainvest -->
+                <div id="monetainvest-date" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- monetainvest -->
 
-            <div class="price-tab__item">
-                <div class="price-tab-logo">
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
                     <img src="@Url.Content("GoldTechLanding/images/lanta.jpg")" alt="Ланта Банк">
                 </div>
-                <div class="nalichie">В наличии</div>
-                <div class="prodaja">
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="lanta-sell">$ 0</span> rub
+                    <span class="bold" id="lanta-sell">--</span> руб.
                 </div>
-                <div class="pokupka">
+                <div class="coins-rates__buy">
                     <p>
                         Покупка
                     </p>
-                    <span class="bold" id="lanta-buy"></span>
+                    <span class="bold" id="lanta-buy">--</span>
                 </div>
-            </div><!-- /.price-tab__item -- lanta -->
-            <!--
-            <div class="price-tab__item">
-                <div class="price-tab-logo">
+                <div id="lanta-date" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- lanta -->
+
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
                     <img src="@Url.Content("GoldTechLanding/images/coins_tsbnk.png")" alt="coins_tsbnk">
                 </div>
-                <div class="nalichie">В наличии</div>
-                <div class="prodaja">
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="tsbnk-sell">$ 0</span> rub
+                    <span class="bold" id="tsbnk-sell">--</span> руб.
                 </div>
-                <div class="pokupka">
+                <div class="coins-rates__buy">
                     <p>
                         Покупка
                     </p>
-                    <span class="bold" id="tsbnk-buy">$ 0</span> rub
+                    <span class="bold" id="tsbnk-buy">--</span> руб.
                 </div>
-            </div><!-- /.price-tab__item -- tsbnk -->
+                <div id="tsbnk-date" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- tsbnk -->
 
-            <div class="price-tab__item">
-                <div class="price-tab-logo">
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
                     <img src="@Url.Content("GoldTechLanding/images/9999d.jpg")" alt="золото державы">
                 </div>
-                <div class="nalichie">В наличии</div>
-                <div class="prodaja">
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="9999d-sell">$ 0</span> rub
+                    <span class="bold" id="9999d-sell">--</span> руб.
                 </div>
-                <div class="pokupka">
+                <div class="coins-rates__buy">
                     <p>
                         Покупка
                     </p>
-                    <span class="bold" id="9999d-buy">$ 0</span> rub
+                    <span class="bold" id="9999d-buy">--</span> руб.
                 </div>
-            </div><!-- /.price-tab__item -- 9999d -->
+                <div id="9999d-date" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- 9999d -->
 
-        </div><!-- /.price-tab -->
-    </div><!-- /.price-tab-wrapper -->
+        </div><!-- /.coins-rates__tab -->
+    </div><!-- /.coins-rates__tab-wrapper -->
 
     <section class="instruction section-padding" id="instruction">
         <div class="instruction-back">
