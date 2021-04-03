@@ -386,6 +386,11 @@ body {
     color: #242633;
 }
 
+.headerCoinsRates {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
 .sub-header {
     color: #6D6E72;
     font-size: 20px;
@@ -503,6 +508,11 @@ body {
 
 @media (max-width: 500px) {
     .header {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .headerCoinsRates {
         font-size: 30px;
         text-align: center;
     }
@@ -1650,6 +1660,7 @@ body {
     .coins-rates__item {
         max-width: calc((100% - 30px) / 2);
     }
+
     .coins-rates__tab-wrapper .header {
         font-size: 24px;
     }
@@ -1687,18 +1698,20 @@ body {
     text-align: center;
 }
 
-.coins-rates__buy p,
-.coins-rates__sell p {
-    margin-bottom: 0.1em;
-}
+    .coins-rates__buy p,
+    .coins-rates__sell p {
+        margin-bottom: 0.1em;
+    }
+
 .coins-rates__date {
     margin-top: 1em;
     text-align: right;
     font-size: 12px;
     color: grey;
-	opacity: 0.5;
-	padding-right: 12px;
+    opacity: 0.5;
+    padding-right: 12px;
 }
+
 .bold {
     font-weight: bold;
 }
