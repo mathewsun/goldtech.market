@@ -102,9 +102,9 @@
                 $("#rshb-date").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPM").date));
 
                 /* сейчас выводим монету Санкт-Петербург */
-                $("#sberbank-sell").text(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPS").sell);
-                $("#sberbank-buy").text(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPS").buy);
-                $("#sberbank-date").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPS").date));
+                $("#sberbank-sell").text(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPM").sell);
+                $("#sberbank-buy").text(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPM").buy);
+                $("#sberbank-date").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPM").date));
 
                 $("#ricgold-sell").text(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya--moneta-georgij-pobedonosets-mmd-2006-2020-gg-388/" && x.acronim == "GPM").sell);
                 $("#ricgold-buy").text(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya--moneta-georgij-pobedonosets-mmd-2006-2020-gg-388/" && x.acronim == "GPM").buy);
