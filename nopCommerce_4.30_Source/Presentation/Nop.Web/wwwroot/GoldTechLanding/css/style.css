@@ -1629,10 +1629,16 @@ body {
     max-width: calc(100vw - 30px);
     margin: 50px auto;
 }
+.coinsrates-subtitle {
+    color: #6D6E72;
+    text-align: center;
+    margin-top: 0;
+}
 
 .coins-rates__tab {
     width: calc(100% + 15px);
     margin-left: -15px;
+    margin-top: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

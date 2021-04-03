@@ -13,7 +13,7 @@
     <script src="@Url.Content("~/lib/jquery-validate/jquery.validate.unobtrusive-v3.2.11/jquery.validate.unobtrusive.min.js")"></script>
     <script src="@Url.Content("~/js/public.common.js")"></script>
     <title>Gold.Tech | BlockChain</title>
-    <link rel="stylesheet" href="@Url.Content("~/GoldTechLanding/css/style.css?444491")">
+    <link rel="stylesheet" href="@Url.Content("~/GoldTechLanding/css/style.css?444492")">
     <link rel="stylesheet" type="text/css" href="@Url.Content("~/GoldTechLanding/npm/slick-carousel@1.8.1/slick/slick.css")">
     <link rel="icon" type="image/png" href="@Url.Content("~/GoldTechLanding/favicon.png")">
     <script type="text/javascript" asp-location="Head">
@@ -76,7 +76,7 @@
             };
 
             $.ajax(settings).done(function (response) {
-
+                // московский монетный двор
                 $("#zoloto-md-sell-gpm").text(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPM").sell);
                 $("#zoloto-md-buy-gpm").text(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPM").buy);
                 $("#zoloto-md-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPM").date));
@@ -124,6 +124,55 @@
                 $("#9999d-sell-gpm").text(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPM").sell);
                 $("#9999d-buy-gpm").text(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPM").buy);
                 $("#9999d-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPM").date));
+
+                // Санкт-Петербургский Монетный Двор
+                $("#zoloto-md-sell-gps").text(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPS").sell);
+                $("#zoloto-md-buy-gps").text(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPS").buy);
+                $("#zoloto-md-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPS").date));
+
+                $("#zolotoy-zapas-sell-gps").text(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPS").sell);
+                $("#zolotoy-zapas-buy-gps").text(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPS").buy);
+                $("#zolotoy-zapas-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPS").date));
+
+                $("#zolotoydvor-sell-gps").text(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPS").sell);
+                $("#zolotoydvor-buy-gps").text(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPS").buy);
+                $("#zolotoydvor-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPS").date));
+
+                $("#zolotoy-club-sell-gps").text(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPS").sell);
+                $("#zolotoy-club-buy-gps").text(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPS").buy);
+                $("#zolotoy-club-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPS").date));
+
+                $("#vfbank-sell-gps").text(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPS").sell);
+                $("#vfbank-buy-gps").text(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPS").buy);
+                $("#vfbank-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPS").date));
+
+                $("#rshb-sell-gps").text(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPS").sell);
+                $("#rshb-buy-gps").text(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPS").buy);
+                $("#rshb-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPS").date));
+
+                $("#sberbank-sell-gps").text(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPS").sell);
+                $("#sberbank-buy-gps").text(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPS").buy);
+                $("#sberbank-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPS").date));
+
+                $("#ricgold-sell-gps").text(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya-moneta-georgij-pobedonosets-spmd-2006-2021-gg-1830/" && x.acronim == "GPS").sell);
+                $("#ricgold-buy-gps").text(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya-moneta-georgij-pobedonosets-spmd-2006-2021-gg-1830/" && x.acronim == "GPS").buy);
+                $("#ricgold-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya-moneta-georgij-pobedonosets-spmd-2006-2021-gg-1830/" && x.acronim == "GPS").date));
+
+                $("#monetainvest-sell-gps").text(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPS").sell);
+                $("#monetainvest-buy-gps").text(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPS").buy);
+                $("#monetainvest-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPS").date));
+
+                $("#lanta-sell-gps").text(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPS").sell);
+                $("#lanta-buy-gps").text(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPS").buy);
+                $("#lanta-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPS").date));
+
+                $("#tsbnk-sell-gps").text(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-georgiy-pobedonosets-spmd-50-rub-2018-2019-gg-zoloto-7-78-gr-spm/" && x.acronim == "GPS").sell);
+                $("#tsbnk-buy-gps").text(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-georgiy-pobedonosets-spmd-50-rub-2018-2019-gg-zoloto-7-78-gr-spm/" && x.acronim == "GPS").buy);
+                $("#tsbnk-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-georgiy-pobedonosets-spmd-50-rub-2018-2019-gg-zoloto-7-78-gr-spm/" && x.acronim == "GPS").date));
+
+                $("#9999d-sell-gps").text(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPS").sell);
+                $("#9999d-buy-gps").text(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPS").buy);
+                $("#9999d-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPS").date));
 
                 $('.coins-rates__sell span').each(function () {
                     if ($(this).text() == '0') {
@@ -1359,7 +1408,7 @@
                     <p>
                         Покупка
                     </p>
-                    <span class="bold" id="lanta-buy-gpm">--</span>
+                    <span class="bold" id="lanta-buy-gpm">--</span> руб.
                 </div>
                 <div id="lanta-date-gpm" class="coins-rates__date">--</div>
             </div><!-- /.coins-rates__item -- lanta -->
@@ -1402,6 +1451,254 @@
                     <span class="bold" id="9999d-buy-gpm">--</span> руб.
                 </div>
                 <div id="9999d-date-gpm" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- 9999d -->
+
+        </div><!-- /.coins-rates__tab -->
+    </div><!-- /.coins-rates__tab-wrapper -->
+
+    <div class="coins-rates__tab-wrapper">
+        <h2 class="header center-text headerCoinsRates">"Георгий Победоносец" 2018-2019г.в (СПМД)</h2>
+        <p class="coinsrates-subtitle">Санкт-Петербургский Монетный Двор</p>
+        <div class="coins-rates__tab">
+
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
+                    <img src="@Url.Content("GoldTechLanding/images/zoloto-md.jpg")" alt="zoloto-md">
+                </div>
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
+                    <p>
+                        Продажа
+                    </p>
+                    <span class="bold" id="zoloto-md-sell-gps">--</span> руб.
+                </div>
+                <div class="coins-rates__buy">
+                    <p>
+                        Покупка
+                    </p>
+                    <span class="bold" id="zoloto-md-buy-gps">--</span> руб.
+                </div>
+                <div id="zoloto-md-date-gps" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- zoloto-md -->
+
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
+                    <img src="@Url.Content("GoldTechLanding/images/zolotoy-zapas.jpg")" alt="zolotoy-zapas">
+                </div>
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
+                    <p>
+                        Продажа
+                    </p>
+                    <span class="bold" id="zolotoy-zapas-sell-gps">--</span> руб.
+                </div>
+                <div class="coins-rates__buy">
+                    <p>
+                        Покупка
+                    </p>
+                    <span class="bold" id="zolotoy-zapas-buy-gps">--</span> руб.
+                </div>
+                <div id="zolotoy-zapas-date-gps" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- zolotoy-zapas -->
+
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
+                    <img src="@Url.Content("GoldTechLanding/images/zolotoydvor.jpg")" alt="zolotoydvor">
+                </div>
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
+                    <p>
+                        Продажа
+                    </p>
+                    <span class="bold" id="zolotoydvor-sell-gps">--</span> руб.
+                </div>
+                <div class="coins-rates__buy">
+                    <p>
+                        Покупка
+                    </p>
+                    <span class="bold" id="zolotoydvor-buy-gps">--</span> руб.
+                </div>
+                <div id="zolotoydvor-date-gps" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- zolotoydvor -->
+
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
+                    <img src="@Url.Content("GoldTechLanding/images/zolotoy-club.jpg")" alt="zolotoy-club">
+                </div>
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
+                    <p>
+                        Продажа
+                    </p>
+                    <span class="bold" id="zolotoy-club-sell-gps">--</span> руб.
+                </div>
+                <div class="coins-rates__buy">
+                    <p>
+                        Покупка
+                    </p>
+                    <span class="bold" id="zolotoy-club-buy-gps">--</span> руб.
+                </div>
+                <div id="zolotoy-club-date-gps" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- zolotoy-club -->
+
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
+                    <img src="@Url.Content("GoldTechLanding/images/vfbank.jpg")" alt="Внешфинбанк">
+                </div>
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
+                    <p>
+                        Продажа
+                    </p>
+                    <span class="bold" id="vfbank-sell-gps">--</span> руб.
+                </div>
+                <div class="coins-rates__buy">
+                    <p>
+                        Покупка
+                    </p>
+                    <span class="bold" id="vfbank-buy-gps">--</span> руб.
+                </div>
+                <div id="vfbank-date-gps" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- vfbank -->
+
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
+                    <img src="@Url.Content("GoldTechLanding/images/rosselhozbank.jpeg")" alt="Россельхозбанк">
+                </div>
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
+                    <p>
+                        Продажа
+                    </p>
+                    <span class="bold" id="rshb-sell-gps">--</span> руб.
+                </div>
+                <div class="coins-rates__buy">
+                    <p>
+                        Покупка
+                    </p>
+                    <span class="bold" id="rshb-buy-gps">--</span> руб.
+                </div>
+                <div id="rshb-date-gps" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- rshb -->
+
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
+                    <img src="@Url.Content("GoldTechLanding/images/sber.png")" alt="sber">
+                </div>
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
+                    <p>
+                        Продажа
+                    </p>
+                    <span class="bold" id="sberbank-sell-gps">--</span> руб.
+                </div>
+                <div class="coins-rates__buy">
+                    <p>
+                        Покупка
+                    </p>
+                    <span class="bold" id="sberbank-buy-gps">--</span> руб.
+                </div>
+                <div id="sberbank-date-gps" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- sberbank -->
+
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
+                    <img src="@Url.Content("GoldTechLanding/images/ricgold.jpg")" alt="ricgold">
+                </div>
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
+                    <p>
+                        Продажа
+                    </p>
+                    <span class="bold" id="ricgold-sell-gps">--</span> руб.
+                </div>
+                <div class="coins-rates__buy">
+                    <p>
+                        Покупка
+                    </p>
+                    <span class="bold" id="ricgold-buy-gps">--</span> руб.
+                </div>
+                <div id="ricgold-date-gps" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- ricgold -->
+
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
+                    <img src="@Url.Content("GoldTechLanding/images/monetainvest.jpg")" alt="monetainvest">
+                </div>
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
+                    <p>
+                        Продажа
+                    </p>
+                    <span class="bold" id="monetainvest-sell-gps">--</span> руб.
+                </div>
+                <div class="coins-rates__buy">
+                    <p>
+                        Покупка
+                    </p>
+                    <span class="bold" id="monetainvest-buy-gps">--</span> руб.
+                </div>
+                <div id="monetainvest-date-gps" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- monetainvest -->
+
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
+                    <img src="@Url.Content("GoldTechLanding/images/lanta.jpg")" alt="Ланта Банк">
+                </div>
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
+                    <p>
+                        Продажа
+                    </p>
+                    <span class="bold" id="lanta-sell-gps">--</span> руб.
+                </div>
+                <div class="coins-rates__buy">
+                    <p>
+                        Покупка
+                    </p>
+                    <span class="bold" id="lanta-buy-gps">--</span> руб.
+                </div>
+                <div id="lanta-date-gps" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- lanta -->
+
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
+                    <img src="@Url.Content("GoldTechLanding/images/coins_tsbnk.png")" alt="coins_tsbnk">
+                </div>
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
+                    <p>
+                        Продажа
+                    </p>
+                    <span class="bold" id="tsbnk-sell-gps">--</span> руб.
+                </div>
+                <div class="coins-rates__buy">
+                    <p>
+                        Покупка
+                    </p>
+                    <span class="bold" id="tsbnk-buy-gps">--</span> руб.
+                </div>
+                <div id="tsbnk-date-gps" class="coins-rates__date">--</div>
+            </div><!-- /.coins-rates__item -- tsbnk -->
+
+            <div class="coins-rates__item">
+                <div class="coins-rates__logo">
+                    <img src="@Url.Content("GoldTechLanding/images/9999d.jpg")" alt="золото державы">
+                </div>
+                <div class="coins-rates__available">В наличии</div>
+                <div class="coins-rates__sell">
+                    <p>
+                        Продажа
+                    </p>
+                    <span class="bold" id="9999d-sell-gps">--</span> руб.
+                </div>
+                <div class="coins-rates__buy">
+                    <p>
+                        Покупка
+                    </p>
+                    <span class="bold" id="9999d-buy-gps">--</span> руб.
+                </div>
+                <div id="9999d-date-gps" class="coins-rates__date">--</div>
             </div><!-- /.coins-rates__item -- 9999d -->
 
         </div><!-- /.coins-rates__tab -->
