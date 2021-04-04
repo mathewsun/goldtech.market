@@ -13,7 +13,7 @@
     <script src="@Url.Content("~/lib/jquery-validate/jquery.validate.unobtrusive-v3.2.11/jquery.validate.unobtrusive.min.js")"></script>
     <script src="@Url.Content("~/js/public.common.js")"></script>
     <title>Gold.Tech | BlockChain</title>
-    <link rel="stylesheet" href="@Url.Content("~/GoldTechLanding/css/style.css?444492")">
+    <link rel="stylesheet" href="@Url.Content("~/GoldTechLanding/css/style.css?444495")">
     <link rel="stylesheet" type="text/css" href="@Url.Content("~/GoldTechLanding/npm/slick-carousel@1.8.1/slick/slick.css")">
     <link rel="icon" type="image/png" href="@Url.Content("~/GoldTechLanding/favicon.png")">
     <script type="text/javascript" asp-location="Head">
@@ -49,6 +49,7 @@
                 $("#gold-span_2").text('$ ' + response[2].buy);
                 $("#gold-span_3").text('$ ' + response[2].buy);
 
+
                 $("#silver-span_1").text('$ ' + response[4].buy);
                 $("#silver-span_2").text('$ ' + response[4].buy);
                 $("#silver-span_3").text('$ ' + response[4].buy);
@@ -57,13 +58,35 @@
                 $("#platinum-span_1").text('$ ' + response[3].buy);
                 $("#platinum-span_3").text('$ ' + response[3].buy);
 
-                $("#usd-span_1").html(response[0].buy + " <big>₽</big>");
-                $("#usd-span_2").html(response[0].buy + " <big>₽</big>");
-                $("#usd-span_3").html(response[0].buy + " <big>₽</big>");
+                $("#usd-span_1").html(response[0].buy + " руб.");
+                $("#usd-span_2").html(response[0].buy + " руб.");
+                $("#usd-span_3").html(response[0].buy + " руб.");
 
-                $("#eur-span_1").html(response[1].buy + " <big>₽</big>");
-                $("#eur-span_2").html(response[1].buy + " <big>₽</big>");
-                $("#eur-span_3").html(response[1].buy + " <big>₽</big>");
+                $("#eur-span_1").html(response[1].buy + " руб.");
+                $("#eur-span_2").html(response[1].buy + " руб.");
+                $("#eur-span_3").html(response[1].buy + " руб.");
+
+                var usd_arrow = response.find(x => x.acronim == "USD").isUp;
+                var eur_arrow = response.find(x => x.acronim == "EUR").isUp;
+                var xau_arrow = response.find(x => x.acronim == "XAU").isUp;
+                var pl_arrow = response.find(x => x.acronim == "PL").isUp;
+                var xag_arrow = response.find(x => x.acronim == "XAG").isUp;
+
+                function tickerArrow(str) {
+                    if (str == true) {
+                        return "↑";
+                    }
+                    else {
+                        return "↓";
+                    }
+                }
+
+                $(".exchange__item-arrow-gold").html(tickerArrow(xau_arrow));
+                $(".exchange__item-arrow-eur").html(tickerArrow(eur_arrow));
+                $(".exchange__item-arrow-platinum").html(tickerArrow(pl_arrow));
+                $(".exchange__item-arrow-usd").html(tickerArrow(usd_arrow));
+                $(".exchange__item-arrow-silver").html(tickerArrow(xag_arrow));
+
             });
         }
 
@@ -80,103 +103,137 @@
                 $("#zoloto-md-sell-gpm").text(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPM").sell);
                 $("#zoloto-md-buy-gpm").text(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPM").buy);
                 $("#zoloto-md-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPM").date));
+                $("#zoloto-md-sell-gpm-arrow").text(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPM").isUp);
 
                 $("#zolotoy-zapas-sell-gpm").text(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPM").sell);
                 $("#zolotoy-zapas-buy-gpm").text(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPM").buy);
                 $("#zolotoy-zapas-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPM").date));
+                $("#zolotoy-zapas-sell-gpm-arrow").text(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPM").isUp);
 
                 $("#zolotoydvor-sell-gpm").text(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPM").sell);
                 $("#zolotoydvor-buy-gpm").text(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPM").buy);
                 $("#zolotoydvor-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPM").date));
+                $("#zolotoydvor-sell-gpm-arrow").text(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPM").isUp);
 
                 $("#zolotoy-club-sell-gpm").text(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPM").sell);
                 $("#zolotoy-club-buy-gpm").text(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPM").buy);
                 $("#zolotoy-club-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPM").date));
+                $("#zolotoy-club-sell-gpm-arrow").text(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPM").isUp);
 
                 $("#vfbank-sell-gpm").text(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPM").sell);
                 $("#vfbank-buy-gpm").text(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPM").buy);
                 $("#vfbank-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPM").date));
+                $("#vfbank-sell-gpm-arrow").text(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPM").isUp);
 
                 $("#rshb-sell-gpm").text(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPM").sell);
                 $("#rshb-buy-gpm").text(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPM").buy);
                 $("#rshb-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPM").date));
+                $("#rshb-sell-gpm-arrow").text(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPM").isUp);
 
                 $("#sberbank-sell-gpm").text(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPM").sell);
                 $("#sberbank-buy-gpm").text(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPM").buy);
                 $("#sberbank-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPM").date));
+                $("#sberbank-sell-gpm-arrow").text(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPM").isUp);
 
                 $("#ricgold-sell-gpm").text(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya--moneta-georgij-pobedonosets-mmd-2006-2020-gg-388/" && x.acronim == "GPM").sell);
                 $("#ricgold-buy-gpm").text(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya--moneta-georgij-pobedonosets-mmd-2006-2020-gg-388/" && x.acronim == "GPM").buy);
                 $("#ricgold-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya--moneta-georgij-pobedonosets-mmd-2006-2020-gg-388/" && x.acronim == "GPM").date));
+                $("#ricgold-sell-gpm-arrow").text(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya--moneta-georgij-pobedonosets-mmd-2006-2020-gg-388/" && x.acronim == "GPM").isUp);
 
                 $("#monetainvest-sell-gpm").text(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPM").sell);
                 $("#monetainvest-buy-gpm").text(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPM").buy);
                 $("#monetainvest-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPM").date));
+                $("#monetainvest-sell-gpm-arrow").text(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPM").isUp);
 
                 $("#lanta-sell-gpm").text(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPM").sell);
                 $("#lanta-buy-gpm").text(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPM").buy);
                 $("#lanta-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPM").date));
+                $("#lanta-sell-gpm-arrow").text(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPM").isUp);
 
                 $("#tsbnk-sell-gpm").text(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-2018-georgiy-pobedonosets-mmd-50-rub-2018-g-v-zoloto-7-78-gr-mmd/" && x.acronim == "GPM").sell);
                 $("#tsbnk-buy-gpm").text(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-2018-georgiy-pobedonosets-mmd-50-rub-2018-g-v-zoloto-7-78-gr-mmd/" && x.acronim == "GPM").buy);
                 $("#tsbnk-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-2018-georgiy-pobedonosets-mmd-50-rub-2018-g-v-zoloto-7-78-gr-mmd/" && x.acronim == "GPM").date));
+                $("#tsbnk-sell-gpm-arrow").text(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-2018-georgiy-pobedonosets-mmd-50-rub-2018-g-v-zoloto-7-78-gr-mmd/" && x.acronim == "GPM").isUp);
 
                 $("#9999d-sell-gpm").text(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPM").sell);
                 $("#9999d-buy-gpm").text(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPM").buy);
                 $("#9999d-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPM").date));
+                $("#9999d-sell-gpm-arrow").text(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPM").isUp);
 
                 // Санкт-Петербургский Монетный Двор
                 $("#zoloto-md-sell-gps").text(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPS").sell);
                 $("#zoloto-md-buy-gps").text(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPS").buy);
                 $("#zoloto-md-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPS").date));
+                $("#zoloto-md-sell-gps-arrow").text(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPS").isUp);
 
                 $("#zolotoy-zapas-sell-gps").text(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPS").sell);
                 $("#zolotoy-zapas-buy-gps").text(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPS").buy);
                 $("#zolotoy-zapas-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPS").date));
+                $("#zolotoy-zapas-sell-gps-arrow").text(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPS").isUp);
 
                 $("#zolotoydvor-sell-gps").text(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPS").sell);
                 $("#zolotoydvor-buy-gps").text(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPS").buy);
                 $("#zolotoydvor-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPS").date));
+                $("#zolotoydvor-sell-gps-arrow").text(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPS").isUp);
 
                 $("#zolotoy-club-sell-gps").text(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPS").sell);
                 $("#zolotoy-club-buy-gps").text(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPS").buy);
                 $("#zolotoy-club-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPS").date));
+                $("#zolotoy-club-sell-gps-arrow").text(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPS").isUp);
 
                 $("#vfbank-sell-gps").text(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPS").sell);
                 $("#vfbank-buy-gps").text(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPS").buy);
                 $("#vfbank-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPS").date));
+                $("#vfbank-sell-gps-arrow").text(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPS").isUp);
 
                 $("#rshb-sell-gps").text(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPS").sell);
                 $("#rshb-buy-gps").text(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPS").buy);
                 $("#rshb-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPS").date));
+                $("#rshb-sell-gps-arrow").text(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPS").isUp);
 
                 $("#sberbank-sell-gps").text(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPS").sell);
                 $("#sberbank-buy-gps").text(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPS").buy);
                 $("#sberbank-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPS").date));
+                $("#sberbank-sell-gps-arrow").text(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPS").isUp);
 
                 $("#ricgold-sell-gps").text(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya-moneta-georgij-pobedonosets-spmd-2006-2021-gg-1830/" && x.acronim == "GPS").sell);
                 $("#ricgold-buy-gps").text(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya-moneta-georgij-pobedonosets-spmd-2006-2021-gg-1830/" && x.acronim == "GPS").buy);
                 $("#ricgold-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya-moneta-georgij-pobedonosets-spmd-2006-2021-gg-1830/" && x.acronim == "GPS").date));
+                $("#ricgold-sell-gps-arrow").text(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya-moneta-georgij-pobedonosets-spmd-2006-2021-gg-1830/" && x.acronim == "GPS").isUp);
 
                 $("#monetainvest-sell-gps").text(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPS").sell);
                 $("#monetainvest-buy-gps").text(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPS").buy);
                 $("#monetainvest-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPS").date));
+                $("#monetainvest-sell-gps-arrow").text(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPS").isUp);
 
                 $("#lanta-sell-gps").text(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPS").sell);
                 $("#lanta-buy-gps").text(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPS").buy);
                 $("#lanta-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPS").date));
+                $("#lanta-sell-gps-arrow").text(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPS").isUp);
 
                 $("#tsbnk-sell-gps").text(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-georgiy-pobedonosets-spmd-50-rub-2018-2019-gg-zoloto-7-78-gr-spm/" && x.acronim == "GPS").sell);
                 $("#tsbnk-buy-gps").text(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-georgiy-pobedonosets-spmd-50-rub-2018-2019-gg-zoloto-7-78-gr-spm/" && x.acronim == "GPS").buy);
                 $("#tsbnk-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-georgiy-pobedonosets-spmd-50-rub-2018-2019-gg-zoloto-7-78-gr-spm/" && x.acronim == "GPS").date));
+                $("#tsbnk-sell-gps-arrow").text(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-georgiy-pobedonosets-spmd-50-rub-2018-2019-gg-zoloto-7-78-gr-spm/" && x.acronim == "GPS").isUp);
 
                 $("#9999d-sell-gps").text(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPS").sell);
                 $("#9999d-buy-gps").text(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPS").buy);
                 $("#9999d-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPS").date));
+                $("#9999d-sell-gps-arrow").text(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPS").isUp);
+
+                $('.coins-rates__price-arrow').each(function () {
+                    if ($(this).text() == 'true') {
+                        $(this).parent().parent().find('.coins-rates__price-arrow').text("↑");
+                    }
+                    if ($(this).text() == 'false') {
+                        $(this).parent().parent().find('.coins-rates__price-arrow').text("↓");
+                    }
+                });
 
                 $('.coins-rates__sell span').each(function () {
                     if ($(this).text() == '0') {
                         $(this).parent().parent().find('.coins-rates__available').text("Нет в наличие").css('color', 'gray');
+                        $(this).parent().parent().find('.coins-rates__price-arrow').text(" ");
                     }
                 });
 
@@ -241,18 +298,23 @@
                             <ul class="exchange__list">
                                 <li class="exchange__item">
                                     Золото: <span class="exchange__val" id="gold-span_1">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-gold" id="gold-span-arrow-1"></span>
                                 </li>
                                 <li class="exchange__item">
                                     Серебро: <span class="exchange__val" id="silver-span_1">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-silver" id="silver-span-arrow-1"></span>
                                 </li>
                                 <li class="exchange__item">
                                     Платина: <span class="exchange__val" id="platinum-span_1">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-platinum" id="platinum-span-arrow-1"></span>
                                 </li>
                                 <li class="exchange__item">
-                                    Доллар: <span class="exchange__val" id="usd-span_1">0 <big>₽</big></span>
+                                    Доллар: <span class="exchange__val" id="usd-span_1">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-usd" id="usd-span-arrow-1"></span>
                                 </li>
                                 <li class="exchange__item">
-                                    Евро: <span class="exchange__val" id="eur-span_1">0 <big>₽</big></span>
+                                    Евро: <span class="exchange__val" id="eur-span_1">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-eur" id="eur-span-arrow-1"></span>
                                 </li>
                             </ul>
                         </div>
@@ -263,18 +325,23 @@
                             <ul class="exchange__list">
                                 <li class="exchange__item">
                                     Золото: <span class="exchange__val" id="gold-span_2">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-gold" id="gold-span-arrow-2"></span>
                                 </li>
                                 <li class="exchange__item">
                                     Серебро: <span class="exchange__val" id="silver-span_2">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-silver" id="silver-span-arrow-2"></span>
                                 </li>
                                 <li class="exchange__item">
                                     Платина: <span class="exchange__val" id="platinum-span_2">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-platinum" id="platinum-span-arrow-2"></span>
                                 </li>
                                 <li class="exchange__item">
-                                    Доллар: <span class="exchange__val" id="usd-span_2">0 <big>₽</big></span>
+                                    Доллар: <span class="exchange__val" id="usd-span_2">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-usd" id="usd-span-arrow-2"></span>
                                 </li>
                                 <li class="exchange__item">
-                                    Евро: <span class="exchange__val" id="eur-span_2">0 <big>₽</big></span>
+                                    Евро: <span class="exchange__val" id="eur-span_2">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-eur" id="eur-span-arrow-2"></span>
                                 </li>
                             </ul>
                         </div>
@@ -285,18 +352,23 @@
                             <ul class="exchange__list">
                                 <li class="exchange__item">
                                     Золото: <span class="exchange__val" id="gold-span_3">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-gold" id="gold-span-arrow-3"></span>
                                 </li>
                                 <li class="exchange__item">
                                     Серебро: <span class="exchange__val" id="silver-span_3">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-silver" id="silver-span-arrow-3"></span>
                                 </li>
                                 <li class="exchange__item">
                                     Платина: <span class="exchange__val" id="platinum-span_3">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-platinum" id="platinum-span-arrow-3"></span>
                                 </li>
                                 <li class="exchange__item">
-                                    Доллар: <span class="exchange__val" id="usd-span_3">0 <big>₽</big></span>
+                                    Доллар: <span class="exchange__val" id="usd-span_3">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-usd" id="usd-span-arrow-3"></span>
                                 </li>
                                 <li class="exchange__item">
-                                    Евро: <span class="exchange__val" id="eur-span_3">0 <big>₽</big></span>
+                                    Евро: <span class="exchange__val" id="eur-span_3">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-eur" id="eur-span-arrow-3"></span>
                                 </li>
                             </ul>
                         </div>
@@ -1211,6 +1283,7 @@
     </section>
     <div class="coins-rates__tab-wrapper">
         <h2 class="header center-text headerCoinsRates">"Георгий Победоносец" 2018-2020г.в (ММД)</h2>
+        <p class="coinsrates-subtitle">Московский монетный двор</p>
         <div class="coins-rates__tab">
 
             <div class="coins-rates__item">
@@ -1222,7 +1295,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="zoloto-md-sell-gpm">--</span> руб.
+                    <span class="bold" id="zoloto-md-sell-gpm">--</span> руб. <span class="coins-rates__price-arrow" id="zoloto-md-sell-gpm-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1242,7 +1315,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="zolotoy-zapas-sell-gpm">--</span> руб.
+                    <span class="bold" id="zolotoy-zapas-sell-gpm">--</span> руб. <span class="coins-rates__price-arrow" id="zolotoy-zapas-sell-gpm-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1262,7 +1335,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="zolotoydvor-sell-gpm">--</span> руб.
+                    <span class="bold" id="zolotoydvor-sell-gpm">--</span> руб. <span class="coins-rates__price-arrow" id="zolotoydvor-sell-gpm-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1282,7 +1355,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="zolotoy-club-sell-gpm">--</span> руб.
+                    <span class="bold" id="zolotoy-club-sell-gpm">--</span> руб. <span class="coins-rates__price-arrow" id="zolotoy-club-sell-gpm-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1302,7 +1375,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="vfbank-sell-gpm">--</span> руб.
+                    <span class="bold" id="vfbank-sell-gpm">--</span> руб. <span class="coins-rates__price-arrow" id="vfbank-sell-gpm-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1322,7 +1395,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="rshb-sell-gpm">--</span> руб.
+                    <span class="bold" id="rshb-sell-gpm">--</span> руб. <span class="coins-rates__price-arrow" id="rshb-sell-gpm-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1342,7 +1415,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="sberbank-sell-gpm">--</span> руб.
+                    <span class="bold" id="sberbank-sell-gpm">--</span> руб. <span class="coins-rates__price-arrow" id="sberbank-sell-gpm-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1362,7 +1435,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="ricgold-sell-gpm">--</span> руб.
+                    <span class="bold" id="ricgold-sell-gpm">--</span> руб. <span class="coins-rates__price-arrow" id="ricgold-sell-gpm-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1382,7 +1455,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="monetainvest-sell-gpm">--</span> руб.
+                    <span class="bold" id="monetainvest-sell-gpm">--</span> руб. <span class="coins-rates__price-arrow" id="monetainvest-sell-gpm-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1402,7 +1475,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="lanta-sell-gpm">--</span> руб.
+                    <span class="bold" id="lanta-sell-gpm">--</span> руб. <span class="coins-rates__price-arrow" id="lanta-sell-gpm-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1422,7 +1495,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="tsbnk-sell-gpm">--</span> руб.
+                    <span class="bold" id="tsbnk-sell-gpm">--</span> руб. <span class="coins-rates__price-arrow" id="tsbnk-sell-gpm-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1442,7 +1515,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="9999d-sell-gpm">--</span> руб.
+                    <span class="bold" id="9999d-sell-gpm">--</span> руб. <span class="coins-rates__price-arrow" id="9999d-sell-gpm-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1470,7 +1543,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="zoloto-md-sell-gps">--</span> руб.
+                    <span class="bold" id="zoloto-md-sell-gps">--</span> руб. <span class="coins-rates__price-arrow" id="zoloto-md-sell-gps-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1490,7 +1563,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="zolotoy-zapas-sell-gps">--</span> руб.
+                    <span class="bold" id="zolotoy-zapas-sell-gps">--</span> руб. <span class="coins-rates__price-arrow" id="zolotoy-zapas-sell-gps-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1510,7 +1583,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="zolotoydvor-sell-gps">--</span> руб.
+                    <span class="bold" id="zolotoydvor-sell-gps">--</span> руб. <span class="coins-rates__price-arrow" id="zolotoydvor-sell-gps-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1530,7 +1603,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="zolotoy-club-sell-gps">--</span> руб.
+                    <span class="bold" id="zolotoy-club-sell-gps">--</span> руб. <span class="coins-rates__price-arrow" id="zolotoy-club-sell-gps-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1550,7 +1623,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="vfbank-sell-gps">--</span> руб.
+                    <span class="bold" id="vfbank-sell-gps">--</span> руб. <span class="coins-rates__price-arrow" id="vfbank-sell-gps-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1570,7 +1643,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="rshb-sell-gps">--</span> руб.
+                    <span class="bold" id="rshb-sell-gps">--</span> руб. <span class="coins-rates__price-arrow" id="rshb-sell-gps-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1590,7 +1663,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="sberbank-sell-gps">--</span> руб.
+                    <span class="bold" id="sberbank-sell-gps">--</span> руб. <span class="coins-rates__price-arrow" id="sberbank-sell-gps-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1610,7 +1683,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="ricgold-sell-gps">--</span> руб.
+                    <span class="bold" id="ricgold-sell-gps">--</span> руб. <span class="coins-rates__price-arrow" id="ricgold-sell-gps-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1630,7 +1703,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="monetainvest-sell-gps">--</span> руб.
+                    <span class="bold" id="monetainvest-sell-gps">--</span> руб. <span class="coins-rates__price-arrow" id="monetainvest-sell-gps-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1650,7 +1723,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="lanta-sell-gps">--</span> руб.
+                    <span class="bold" id="lanta-sell-gps">--</span> руб. <span class="coins-rates__price-arrow" id="lanta-sell-gps-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1670,7 +1743,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="tsbnk-sell-gps">--</span> руб.
+                    <span class="bold" id="tsbnk-sell-gps">--</span> руб. <span class="coins-rates__price-arrow" id="tsbnk-sell-gps-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>
@@ -1690,7 +1763,7 @@
                     <p>
                         Продажа
                     </p>
-                    <span class="bold" id="9999d-sell-gps">--</span> руб.
+                    <span class="bold" id="9999d-sell-gps">--</span> руб. <span class="coins-rates__price-arrow" id="999d-sell-gps-arrow"></span>
                 </div>
                 <div class="coins-rates__buy">
                     <p>

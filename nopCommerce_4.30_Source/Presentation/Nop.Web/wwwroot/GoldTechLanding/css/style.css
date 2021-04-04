@@ -1708,7 +1708,9 @@ body {
     .coins-rates__sell p {
         margin-bottom: 0.1em;
     }
-
+.coins-rates__price-arrow {
+    color: #C39B6A;
+}
 .coins-rates__date {
     margin-top: 1em;
     text-align: right;
