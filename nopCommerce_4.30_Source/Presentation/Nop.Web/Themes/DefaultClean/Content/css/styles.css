@@ -201,10 +201,11 @@ label, label + * {
 	color: #fff;
 	font-size: 12px;
 	padding: 6px 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 .exchange__body {
 	position: relative;
-	padding: 0 100px 0 30px;
+	//padding: 0 100px 0 30px;
 }
 .exchange__marquee {
 	white-space: nowrap;
