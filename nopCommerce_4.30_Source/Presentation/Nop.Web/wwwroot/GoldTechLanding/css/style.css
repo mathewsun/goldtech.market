@@ -1710,6 +1710,7 @@ body {
     }
 .coins-rates__price-arrow {
     color: #C39B6A;
+    font-size: 14px;
 }
 .coins-rates__date {
     margin-top: 1em;
