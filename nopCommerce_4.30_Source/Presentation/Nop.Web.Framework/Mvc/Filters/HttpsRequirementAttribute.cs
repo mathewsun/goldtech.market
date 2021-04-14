@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -78,6 +79,8 @@ namespace Nop.Web.Framework.Mvc.Filters
             /// <param name="filterContext">Authorization filter context</param>
             public void OnAuthorization(AuthorizationFilterContext filterContext)
             {
+                if (filterContext.HttpContext.Request.Host.Host.Contains("localhost")) return;
+
                 if (filterContext == null)
                     throw new ArgumentNullException(nameof(filterContext));
 
