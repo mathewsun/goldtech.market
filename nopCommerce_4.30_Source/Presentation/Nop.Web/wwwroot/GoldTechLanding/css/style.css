@@ -252,7 +252,7 @@ body {
     height: 45px;
     display: inline-block;
     float: left;
-    background-image: url(../images/logo-1.png);
+    background-image: url(../images/GT-logo.png);
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -1710,6 +1710,7 @@ body {
     }
 .coins-rates__price-arrow {
     color: #C39B6A;
+    font-size: 14px;
 }
 .coins-rates__date {
     margin-top: 1em;
@@ -2189,7 +2190,7 @@ footer {
 
     footer .logo-footer {
         height: 45px;
-        background-image: url(../images/logo-footer.png);
+        background-image: url(../images/GT-logo-footer.png);
         background-repeat: no-repeat;
         display: inline-block;
         float: left;

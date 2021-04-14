@@ -190,8 +190,11 @@
                 if (str == true) {
                     return "↑";
                 }
-                else {
+                if (str == false) {
                     return "↓";
+                }
+                if (str == null) {
+                    return " ";
                 }
             }
 
