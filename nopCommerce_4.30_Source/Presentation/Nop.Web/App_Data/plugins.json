@@ -74,6 +74,18 @@
     {
       "SystemName": "Shipping.DPD",
       "Version": "1.0.7"
+    },
+    {
+      "SystemName": "Payments.Tinkoff",
+      "Version": "1.00"
+    },
+    {
+      "SystemName": "Shipping.RussianPost",
+      "Version": "1.01"
+    },
+    {
+      "SystemName": "Shipping.Cdek",
+      "Version": "1.00"
     }
   ],
   "PluginNamesToUninstall": [],
