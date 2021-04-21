@@ -1,0 +1,57 @@
+﻿@model Nop.Plugin.Shipping.Cdek.Models.PublicInfoModel
+@{
+    Layout = "";
+
+}
+@if (!Model.hide)
+{
+    <div class="method-name">
+        <label><b>Доставка СДЭК</b></label>
+    </div>
+    <div class="method-description">
+        <p></p>
+        <p>На карте выберите свой город (от него зависит стоимость доставки) и пункт выдачи заказов и нажмите кнопку "Выбрать" или выберите курьерскую доставку. Вы также можете выбрать ниже другой способ доставки и нажать кнопку "Далее".</p>
+        <p></p>
+    </div>
+    <script type="text/javascript" src="@string.Format("http://{0}/lib/cdekwidget/widjet.js", Model.Host)" id="ISDEKscript"></script>
+    <div id="cdekwidget" style="height:600px;"></div>
+    <script type="text/javascript">
+    var widjet = new ISDEKWidjet({
+        hideMessages: false,
+        defaultCity: 'auto',
+        cityFrom: '@Html.Raw(Model.CityFrom)',
+        choose: true,
+        link: 'cdekwidget',
+        templatepath: '@String.Format("http://{0}/lib/cdekwidget/scripts/template.json", Model.Host)',
+        servicepath: '@String.Format("http://{0}/Plugins/ShippingCdek/Service", Model.Host)',
+        onChoose: selectoption1,
+        onChooseProfile: selectoption2
+    });
+    function selectoption1(wat) {
+        var xhr = new XMLHttpRequest();
+        var url = "@String.Format("http://{0}/Plugins/ShippingCdek/SelectOption", Model.Host)";
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        var json = JSON.stringify({ id: wat.id, price: wat.price, name: wat.PVZ.Name, city: wat.city });
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200 && xhr.responseText === "OK") {
+                window.location = "@String.Format("http://{0}/Checkout/PaymentMethod", Model.Host)"
+            }
+        };
+        xhr.send(json);
+    }
+    function selectoption2(wat) {
+        var xhr = new XMLHttpRequest();
+        var url = "@String.Format("http://{0}/Plugins/ShippingCdek/SelectOption", Model.Host)";
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        var json = JSON.stringify({ id: wat.id, price: wat.price });
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200 && xhr.responseText === "OK") {
+                window.location = "@String.Format("http://{0}/Checkout/PaymentMethod", Model.Host)"
+            }
+        };
+        xhr.send(json);
+    }
+    </script>
+}

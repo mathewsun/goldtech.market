@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Shipping methods",
+  "FriendlyName": "Cdek",
+  "SystemName": "Shipping.Cdek",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.30" ],
+  "Author": "Artur Alekseev",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Shipping.Cdek.dll",
+  "Description": "Shipping rate calculator"
+}
