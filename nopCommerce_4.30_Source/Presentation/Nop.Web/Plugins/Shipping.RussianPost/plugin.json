@@ -5,7 +5,7 @@
     "4.30"
   ],
   "Author": "Artur Alekseev",
-  "DisplayOrder": 1,
+  "DisplayOrder": 4,
   "FileName": "Nop.Plugin.Shipping.RussianPost.dll",
   "Description": "Shipping rate calculator",
   "LimitedToStores": [],

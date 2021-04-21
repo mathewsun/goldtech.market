@@ -23,14 +23,17 @@
     "warningsAsErrors": false,
     "optimize": false,
     "keyFile": "",
-    "emitEntryPoint": false,
+    "emitEntryPoint": true,
     "xmlDoc": false,
     "debugType": "portable"
   },
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Nop.Plugin.Payments.Manual/1.0.0": {
+      "Nop.Web/4.3.0.0": {
         "dependencies": {
+          "Nop.Core": "4.3.0",
+          "Nop.Data": "4.3.0",
+          "Nop.Services": "4.3.0",
           "Nop.Web.Framework": "4.3.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
@@ -305,10 +308,10 @@
           "WindowsBase": "4.0.0.0"
         },
         "runtime": {
-          "Nop.Plugin.Payments.Manual.dll": {}
+          "Nop.Web.dll": {}
         },
         "compile": {
-          "Nop.Plugin.Payments.Manual.dll": {}
+          "Nop.Web.dll": {}
         }
       },
       "AdvancedStringBuilder/0.1.0": {
@@ -5328,7 +5331,7 @@
     }
   },
   "libraries": {
-    "Nop.Plugin.Payments.Manual/1.0.0": {
+    "Nop.Web/4.3.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

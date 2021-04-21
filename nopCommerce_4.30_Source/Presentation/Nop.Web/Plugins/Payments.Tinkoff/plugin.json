@@ -1,11 +1,16 @@
 ﻿{
   "Group": "Payment methods",
   "FriendlyName": "Tinkoff",
-  "SystemName": "Payments.Tinkoff",
-  "Version": "1.00",
-  "SupportedVersions": [ "4.30" ],
+  "SupportedVersions": [
+    "4.30"
+  ],
   "Author": "Stella team",
   "DisplayOrder": 1,
   "FileName": "Nop.Plugin.Payments.Tinkoff.dll",
-  "Description": "This plugin allows paying with Tinkoff"
+  "Description": "This plugin allows paying with Tinkoff",
+  "LimitedToStores": [],
+  "LimitedToCustomerRoles": [],
+  "DependsOnSystemNames": [],
+  "SystemName": "Payments.Tinkoff",
+  "Version": "1.00"
 }
