@@ -2,7 +2,7 @@
 @model DPDCheckoutShippingMethodModel
 @{
     Layout = "_ColumnsOne";
-    Html.AppendScriptParts(ResourceLocation.Head, "https://chooser.dpd.ru/dpdchooser.js?nocache=1499949132826", excludeFromBundle: true);
+    Html.AppendScriptParts(ResourceLocation.Head, "http://chooser.dpd.ru/dpdchooser.js?nocache=1499949132826", excludeFromBundle: true);
     //title
     Html.AddTitleParts(T("PageTitle.Checkout").Text);
     //page class
@@ -57,7 +57,7 @@
                 DeclaredValue: (@Html.Raw(Model.ProductCost)),
                 Weight: (@Html.Raw(Model.ProductWeight)) <= 0 ? 1 : (@Html.Raw(Model.ProductWeight))
             };
-            $.post("https://web-api.online/api/DPDCitiesDeliveryCost", data, function (result, status)
+            $.post("http://web-api.online/api/DPDCitiesDeliveryCost", data, function (result, status)
             {
                 var select = document.getElementById("dpd-dt-services-select");
 

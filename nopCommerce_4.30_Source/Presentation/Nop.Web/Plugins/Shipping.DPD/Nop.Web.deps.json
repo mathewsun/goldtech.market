@@ -23,19 +23,18 @@
     "warningsAsErrors": false,
     "optimize": false,
     "keyFile": "",
-    "emitEntryPoint": false,
+    "emitEntryPoint": true,
     "xmlDoc": false,
     "debugType": "portable"
   },
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Nop.Plugin.Shipping.DPD/1.0.0": {
+      "Nop.Web/4.3.0.0": {
         "dependencies": {
-          "Nop.Web": "4.3.0",
+          "Nop.Core": "4.3.0",
+          "Nop.Data": "4.3.0",
+          "Nop.Services": "4.3.0",
           "Nop.Web.Framework": "4.3.0",
-          "System.ServiceModel.Duplex": "4.4.4",
-          "System.ServiceModel.NetTcp": "4.4.4",
-          "System.ServiceModel.Security": "4.4.4",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -309,10 +308,10 @@
           "WindowsBase": "4.0.0.0"
         },
         "runtime": {
-          "Nop.Plugin.Shipping.DPD.dll": {}
+          "Nop.Web.dll": {}
         },
         "compile": {
-          "Nop.Plugin.Shipping.DPD.dll": {}
+          "Nop.Web.dll": {}
         }
       },
       "AdvancedStringBuilder/0.1.0": {
@@ -3285,21 +3284,6 @@
           "System.Threading": "4.3.0"
         }
       },
-      "System.ServiceModel.Duplex/4.4.4": {
-        "dependencies": {
-          "System.Private.ServiceModel": "4.7.0",
-          "System.ServiceModel.Primitives": "4.7.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.ServiceModel.Duplex.dll": {
-            "assemblyVersion": "4.1.0.3",
-            "fileVersion": "4.6.26720.1"
-          }
-        },
-        "compile": {
-          "ref/netstandard2.0/System.ServiceModel.Duplex.dll": {}
-        }
-      },
       "System.ServiceModel.Http/4.7.0": {
         "dependencies": {
           "System.Private.ServiceModel": "4.7.0",
@@ -3313,21 +3297,6 @@
         },
         "compile": {
           "ref/netstandard2.0/System.ServiceModel.Http.dll": {}
-        }
-      },
-      "System.ServiceModel.NetTcp/4.4.4": {
-        "dependencies": {
-          "System.Private.ServiceModel": "4.7.0",
-          "System.ServiceModel.Primitives": "4.7.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.ServiceModel.NetTcp.dll": {
-            "assemblyVersion": "4.1.2.3",
-            "fileVersion": "4.6.26720.1"
-          }
-        },
-        "compile": {
-          "ref/netstandard2.0/System.ServiceModel.NetTcp.dll": {}
         }
       },
       "System.ServiceModel.Primitives/4.7.0": {
@@ -3347,21 +3316,6 @@
         "compile": {
           "ref/netcoreapp2.1/System.ServiceModel.Primitives.dll": {},
           "ref/netcoreapp2.1/System.ServiceModel.dll": {}
-        }
-      },
-      "System.ServiceModel.Security/4.4.4": {
-        "dependencies": {
-          "System.Private.ServiceModel": "4.7.0",
-          "System.ServiceModel.Primitives": "4.7.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.ServiceModel.Security.dll": {
-            "assemblyVersion": "4.0.3.3",
-            "fileVersion": "4.6.26720.1"
-          }
-        },
-        "compile": {
-          "ref/netstandard2.0/System.ServiceModel.Security.dll": {}
         }
       },
       "System.Spatial/5.8.4": {
@@ -3729,20 +3683,6 @@
         },
         "compile": {
           "Nop.Services.dll": {}
-        }
-      },
-      "Nop.Web/4.3.0": {
-        "dependencies": {
-          "Nop.Core": "4.3.0",
-          "Nop.Data": "4.3.0",
-          "Nop.Services": "4.3.0",
-          "Nop.Web.Framework": "4.3.0"
-        },
-        "runtime": {
-          "Nop.Web.dll": {}
-        },
-        "compile": {
-          "Nop.Web.dll": {}
         }
       },
       "Nop.Web.Framework/4.3.0": {
@@ -5391,7 +5331,7 @@
     }
   },
   "libraries": {
-    "Nop.Plugin.Shipping.DPD/1.0.0": {
+    "Nop.Web/4.3.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -7132,13 +7072,6 @@
       "path": "system.security.securestring/4.3.0",
       "hashPath": "system.security.securestring.4.3.0.nupkg.sha512"
     },
-    "System.ServiceModel.Duplex/4.4.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-y/XLnKJ+xnuEUjrgJkXeLKCH4A+EwkX2TdOcTdgsEtxWmWq1+RbCjMd0zIlyNrbGD+nM9BxNg9rLVWVAPq81RA==",
-      "path": "system.servicemodel.duplex/4.4.4",
-      "hashPath": "system.servicemodel.duplex.4.4.4.nupkg.sha512"
-    },
     "System.ServiceModel.Http/4.7.0": {
       "type": "package",
       "serviceable": true,
@@ -7146,26 +7079,12 @@
       "path": "system.servicemodel.http/4.7.0",
       "hashPath": "system.servicemodel.http.4.7.0.nupkg.sha512"
     },
-    "System.ServiceModel.NetTcp/4.4.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-TZUwkBUHK+HgPVpypcnCEzenn+Hly3mQ+QDqDtHKyqVBP2Yt+DAMp3NwuW35mTSMRqna5p9hd0U0vVq5azovOQ==",
-      "path": "system.servicemodel.nettcp/4.4.4",
-      "hashPath": "system.servicemodel.nettcp.4.4.4.nupkg.sha512"
-    },
     "System.ServiceModel.Primitives/4.7.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-YUXIMO4kL1v6dUVptJGixAx/8Ai5trQzVn3gbk0mpwxh77kGAs+MyBRoHN/5ZoxtwNn4E1dq3N4rJCAgAUaiJA==",
       "path": "system.servicemodel.primitives/4.7.0",
       "hashPath": "system.servicemodel.primitives.4.7.0.nupkg.sha512"
-    },
-    "System.ServiceModel.Security/4.4.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-8mJj3lUNbBkntouQ3Eg3IF04GxiDrDK2X79+kcfq8V+W7NoYBREgWczaD60ZmW4KKRKnL0q3OnUNJlkzJJfe5w==",
-      "path": "system.servicemodel.security/4.4.4",
-      "hashPath": "system.servicemodel.security.4.4.4.nupkg.sha512"
     },
     "System.Spatial/5.8.4": {
       "type": "package",
@@ -7367,11 +7286,6 @@
       "sha512": ""
     },
     "Nop.Services/4.3.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Nop.Web/4.3.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
