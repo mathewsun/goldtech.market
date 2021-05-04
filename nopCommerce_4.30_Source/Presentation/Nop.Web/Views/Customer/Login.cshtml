@@ -12,7 +12,7 @@
     Html.AppendPageCssClassParts("html-login-page");
 
     //register URL with return URL (if specified)
-    var registerUrl = Url.RouteUrl("Register", new { returnUrl = "/shop" }, webHelper.CurrentRequestProtocol);
+    var registerUrl = Url.RouteUrl("Register", new { returnUrl = "/register" }, webHelper.CurrentRequestProtocol);
 }
 <div class="page login-page">
     <div class="page-title">
@@ -57,12 +57,12 @@
                         @T("Account.Login.NewCustomerText")
                     </div>
                     <div class="buttons">
-                        <input type="button" class="button-1 register-button" onclick="location.href='/shop'" value="@T("Account.Register")" />
+                        <input type="button" class="button-1 register-button" onclick="location.href='/register'" value="@T("Account.Register")" />
                     </div>
                 </div>
             }
             <div class="returning-wrapper fieldset">
-                <form asp-route="Login" asp-route-returnurl="/shop" method="post" autocomplete="off">
+                <form asp-route="Login" asp-route-returnurl="/login" method="post" autocomplete="off">
                     <div asp-validation-summary="ModelOnly" class="message-error">@T("Account.Login.Unsuccessful")</div>
                     <div class="title">
                         <strong>@T("Account.Login.ReturningCustomer")</strong>
