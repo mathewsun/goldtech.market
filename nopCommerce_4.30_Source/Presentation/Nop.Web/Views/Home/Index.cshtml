@@ -103,60 +103,60 @@
 
             $.ajax(settings).done(function (response) {
                 // московский монетный двор
-                $("#zoloto-md-sell-gpm").text(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPM").sell);
-                $("#zoloto-md-buy-gpm").text(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPM").buy);
-                $("#zoloto-md-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPM").date));
-                $("#zoloto-md-sell-gpm-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPM").isUp));
+                $("#zoloto-md-sell-gpm").text(response.find(x => x.site == "https://zoloto-md.ru/" && x.acronim == "GPM").sell);
+                $("#zoloto-md-buy-gpm").text(response.find(x => x.site == "https://zoloto-md.ru/" && x.acronim == "GPM").buy);
+                $("#zoloto-md-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://zoloto-md.ru/" && x.acronim == "GPM").date));
+                $("#zoloto-md-sell-gpm-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://zoloto-md.ru/" && x.acronim == "GPM").isUp));
 
                 $("#zolotoy-zapas-sell-gpm").text(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPM").sell);
                 $("#zolotoy-zapas-buy-gpm").text(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPM").buy);
                 $("#zolotoy-zapas-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPM").date));
                 $("#zolotoy-zapas-sell-gpm-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPM").isUp));
 
-                $("#zolotoydvor-sell-gpm").text(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPM").sell);
-                $("#zolotoydvor-buy-gpm").text(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPM").buy);
-                $("#zolotoydvor-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPM").date));
-                $("#zolotoydvor-sell-gpm-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPM").isUp));
+                $("#zolotoydvor-sell-gpm").text(response.find(x => x.site == "https://www.zolotoydvor.ru/" && x.acronim == "GPM").sell);
+                $("#zolotoydvor-buy-gpm").text(response.find(x => x.site == "https://www.zolotoydvor.ru/" && x.acronim == "GPM").buy);
+                $("#zolotoydvor-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.zolotoydvor.ru/" && x.acronim == "GPM").date));
+                $("#zolotoydvor-sell-gpm-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.zolotoydvor.ru/" && x.acronim == "GPM").isUp));
 
                 $("#zolotoy-club-sell-gpm").text(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPM").sell);
                 $("#zolotoy-club-buy-gpm").text(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPM").buy);
                 $("#zolotoy-club-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPM").date));
                 $("#zolotoy-club-sell-gpm-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPM").isUp));
 
-                $("#vfbank-sell-gpm").text(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPM").sell);
-                $("#vfbank-buy-gpm").text(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPM").buy);
-                $("#vfbank-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPM").date));
-                $("#vfbank-sell-gpm-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPM").isUp));
+                $("#vfbank-sell-gpm").text(response.find(x => x.site == "https://www.vfbank.ru/" && x.acronim == "GPM").sell);
+                $("#vfbank-buy-gpm").text(response.find(x => x.site == "https://www.vfbank.ru/" && x.acronim == "GPM").buy);
+                $("#vfbank-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.vfbank.ru/" && x.acronim == "GPM").date));
+                $("#vfbank-sell-gpm-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.vfbank.ru/" && x.acronim == "GPM").isUp));
 
-                $("#rshb-sell-gpm").text(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPM").sell);
-                $("#rshb-buy-gpm").text(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPM").buy);
-                $("#rshb-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPM").date));
-                $("#rshb-sell-gpm-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPM").isUp));
+                $("#rshb-sell-gpm").text(response.find(x => x.site == "https://www.rshb.ru/" && x.acronim == "GPM").sell);
+                $("#rshb-buy-gpm").text(response.find(x => x.site == "https://www.rshb.ru/" && x.acronim == "GPM").buy);
+                $("#rshb-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.rshb.ru/" && x.acronim == "GPM").date));
+                $("#rshb-sell-gpm-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.rshb.ru/" && x.acronim == "GPM").isUp));
 
-                $("#sberbank-sell-gpm").text(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPM").sell);
-                $("#sberbank-buy-gpm").text(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPM").buy);
-                $("#sberbank-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPM").date));
-                $("#sberbank-sell-gpm-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPM").isUp));
+                $("#sberbank-sell-gpm").text(response.find(x => x.site == "https://www.sberbank.ru/" && x.acronim == "GPM").sell);
+                $("#sberbank-buy-gpm").text(response.find(x => x.site == "https://www.sberbank.ru/" && x.acronim == "GPM").buy);
+                $("#sberbank-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.sberbank.ru/" && x.acronim == "GPM").date));
+                $("#sberbank-sell-gpm-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.sberbank.ru/" && x.acronim == "GPM").isUp));
 
-                $("#ricgold-sell-gpm").text(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya--moneta-georgij-pobedonosets-mmd-2006-2020-gg-388/" && x.acronim == "GPM").sell);
-                $("#ricgold-buy-gpm").text(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya--moneta-georgij-pobedonosets-mmd-2006-2020-gg-388/" && x.acronim == "GPM").buy);
-                $("#ricgold-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya--moneta-georgij-pobedonosets-mmd-2006-2020-gg-388/" && x.acronim == "GPM").date));
-                $("#ricgold-sell-gpm-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya--moneta-georgij-pobedonosets-mmd-2006-2020-gg-388/" && x.acronim == "GPM").isUp));
+                $("#ricgold-sell-gpm").text(response.find(x => x.site == "https://www.ricgold.com/" && x.acronim == "GPM").sell);
+                $("#ricgold-buy-gpm").text(response.find(x => x.site == "https://www.ricgold.com/" && x.acronim == "GPM").buy);
+                $("#ricgold-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.ricgold.com/" && x.acronim == "GPM").date));
+                $("#ricgold-sell-gpm-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.ricgold.com/" && x.acronim == "GPM").isUp));
 
                 $("#monetainvest-sell-gpm").text(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPM").sell);
                 $("#monetainvest-buy-gpm").text(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPM").buy);
                 $("#monetainvest-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPM").date));
                 $("#monetainvest-sell-gpm-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPM").isUp));
 
-                $("#lanta-sell-gpm").text(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPM").sell);
-                $("#lanta-buy-gpm").text(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPM").buy);
-                $("#lanta-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPM").date));
-                $("#lanta-sell-gpm-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPM").isUp));
+                $("#lanta-sell-gpm").text(response.find(x => x.site == "https://lanta.ru/" && x.acronim == "GPM").sell);
+                $("#lanta-buy-gpm").text(response.find(x => x.site == "https://lanta.ru/" && x.acronim == "GPM").buy);
+                $("#lanta-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://lanta.ru/" && x.acronim == "GPM").date));
+                $("#lanta-sell-gpm-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://lanta.ru/" && x.acronim == "GPM").isUp));
 
-                $("#tsbnk-sell-gpm").text(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-2018-georgiy-pobedonosets-mmd-50-rub-2018-g-v-zoloto-7-78-gr-mmd/" && x.acronim == "GPM").sell);
-                $("#tsbnk-buy-gpm").text(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-2018-georgiy-pobedonosets-mmd-50-rub-2018-g-v-zoloto-7-78-gr-mmd/" && x.acronim == "GPM").buy);
-                $("#tsbnk-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-2018-georgiy-pobedonosets-mmd-50-rub-2018-g-v-zoloto-7-78-gr-mmd/" && x.acronim == "GPM").date));
-                $("#tsbnk-sell-gpm-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-2018-georgiy-pobedonosets-mmd-50-rub-2018-g-v-zoloto-7-78-gr-mmd/" && x.acronim == "GPM").isUp));
+                $("#tsbnk-sell-gpm").text(response.find(x => x.site == "https://coins.tsbnk.ru/" && x.acronim == "GPM").sell);
+                $("#tsbnk-buy-gpm").text(response.find(x => x.site == "https://coins.tsbnk.ru/" && x.acronim == "GPM").buy);
+                $("#tsbnk-date-gpm").text(CoinsRatesDateFormat(response.find(x => x.site == "https://coins.tsbnk.ru/" && x.acronim == "GPM").date));
+                $("#tsbnk-sell-gpm-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://coins.tsbnk.ru/" && x.acronim == "GPM").isUp));
 
                 $("#9999d-sell-gpm").text(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPM").sell);
                 $("#9999d-buy-gpm").text(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPM").buy);
@@ -164,60 +164,60 @@
                 $("#9999d-sell-gpm-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPM").isUp));
 
                 // Санкт-Петербургский Монетный Двор
-                $("#zoloto-md-sell-gps").text(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPS").sell);
-                $("#zoloto-md-buy-gps").text(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPS").buy);
-                $("#zoloto-md-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPS").date));
-                $("#zoloto-md-sell-gps-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://zoloto-md.ru/bullion-coins" && x.acronim == "GPS").isUp));
+                $("#zoloto-md-sell-gps").text(response.find(x => x.site == "https://zoloto-md.ru/" && x.acronim == "GPS").sell);
+                $("#zoloto-md-buy-gps").text(response.find(x => x.site == "https://zoloto-md.ru/" && x.acronim == "GPS").buy);
+                $("#zoloto-md-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://zoloto-md.ru/" && x.acronim == "GPS").date));
+                $("#zoloto-md-sell-gps-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://zoloto-md.ru/" && x.acronim == "GPS").isUp));
 
                 $("#zolotoy-zapas-sell-gps").text(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPS").sell);
                 $("#zolotoy-zapas-buy-gps").text(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPS").buy);
                 $("#zolotoy-zapas-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPS").date));
                 $("#zolotoy-zapas-sell-gps-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.zolotoy-zapas.ru/" && x.acronim == "GPS").isUp));
 
-                $("#zolotoydvor-sell-gps").text(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPS").sell);
-                $("#zolotoydvor-buy-gps").text(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPS").buy);
-                $("#zolotoydvor-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPS").date));
-                $("#zolotoydvor-sell-gps-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.zolotoydvor.ru/Zolotye-monety-Rossii_100g.html" && x.acronim == "GPS").isUp));
+                $("#zolotoydvor-sell-gps").text(response.find(x => x.site == "https://www.zolotoydvor.ru/" && x.acronim == "GPS").sell);
+                $("#zolotoydvor-buy-gps").text(response.find(x => x.site == "https://www.zolotoydvor.ru/" && x.acronim == "GPS").buy);
+                $("#zolotoydvor-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.zolotoydvor.ru/" && x.acronim == "GPS").date));
+                $("#zolotoydvor-sell-gps-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.zolotoydvor.ru/" && x.acronim == "GPS").isUp));
 
                 $("#zolotoy-club-sell-gps").text(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPS").sell);
                 $("#zolotoy-club-buy-gps").text(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPS").buy);
                 $("#zolotoy-club-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPS").date));
                 $("#zolotoy-club-sell-gps-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.zolotoy-club.ru/" && x.acronim == "GPS").isUp));
 
-                $("#vfbank-sell-gps").text(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPS").sell);
-                $("#vfbank-buy-gps").text(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPS").buy);
-                $("#vfbank-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPS").date));
-                $("#vfbank-sell-gps-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.vfbank.ru/fizicheskim-licam/monety/" && x.acronim == "GPS").isUp));
+                $("#vfbank-sell-gps").text(response.find(x => x.site == "https://www.vfbank.ru/" && x.acronim == "GPS").sell);
+                $("#vfbank-buy-gps").text(response.find(x => x.site == "https://www.vfbank.ru/" && x.acronim == "GPS").buy);
+                $("#vfbank-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.vfbank.ru/" && x.acronim == "GPS").date));
+                $("#vfbank-sell-gps-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.vfbank.ru/" && x.acronim == "GPS").isUp));
 
-                $("#rshb-sell-gps").text(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPS").sell);
-                $("#rshb-buy-gps").text(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPS").buy);
-                $("#rshb-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPS").date));
-                $("#rshb-sell-gps-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.rshb.ru/natural/coins/" && x.acronim == "GPS").isUp));
+                $("#rshb-sell-gps").text(response.find(x => x.site == "https://www.rshb.ru/" && x.acronim == "GPS").sell);
+                $("#rshb-buy-gps").text(response.find(x => x.site == "https://www.rshb.ru/" && x.acronim == "GPS").buy);
+                $("#rshb-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.rshb.ru/" && x.acronim == "GPS").date));
+                $("#rshb-sell-gps-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.rshb.ru/" && x.acronim == "GPS").isUp));
 
-                $("#sberbank-sell-gps").text(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPS").sell);
-                $("#sberbank-buy-gps").text(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPS").buy);
-                $("#sberbank-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPS").date));
-                $("#sberbank-sell-gps-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.sberbank.ru/proxy/services/coin-catalog/coins/5216-0060?region=38&condition=1" && x.acronim == "GPS").isUp));
+                $("#sberbank-sell-gps").text(response.find(x => x.site == "https://www.sberbank.ru/" && x.acronim == "GPS").sell);
+                $("#sberbank-buy-gps").text(response.find(x => x.site == "https://www.sberbank.ru/" && x.acronim == "GPS").buy);
+                $("#sberbank-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.sberbank.ru/" && x.acronim == "GPS").date));
+                $("#sberbank-sell-gps-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.sberbank.ru/" && x.acronim == "GPS").isUp));
 
-                $("#ricgold-sell-gps").text(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya-moneta-georgij-pobedonosets-spmd-2006-2021-gg-1830/" && x.acronim == "GPS").sell);
-                $("#ricgold-buy-gps").text(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya-moneta-georgij-pobedonosets-spmd-2006-2021-gg-1830/" && x.acronim == "GPS").buy);
-                $("#ricgold-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya-moneta-georgij-pobedonosets-spmd-2006-2021-gg-1830/" && x.acronim == "GPS").date));
-                $("#ricgold-sell-gps-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.ricgold.com/shop/investitsionnye-monety-6/zolotaya-moneta-georgij-pobedonosets-spmd-2006-2021-gg-1830/" && x.acronim == "GPS").isUp));
+                $("#ricgold-sell-gps").text(response.find(x => x.site == "https://www.ricgold.com/" && x.acronim == "GPS").sell);
+                $("#ricgold-buy-gps").text(response.find(x => x.site == "https://www.ricgold.com/" && x.acronim == "GPS").buy);
+                $("#ricgold-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://www.ricgold.com/" && x.acronim == "GPS").date));
+                $("#ricgold-sell-gps-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://www.ricgold.com/" && x.acronim == "GPS").isUp));
 
                 $("#monetainvest-sell-gps").text(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPS").sell);
                 $("#monetainvest-buy-gps").text(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPS").buy);
                 $("#monetainvest-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPS").date));
                 $("#monetainvest-sell-gps-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://msk.monetainvest.ru/" && x.acronim == "GPS").isUp));
 
-                $("#lanta-sell-gps").text(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPS").sell);
-                $("#lanta-buy-gps").text(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPS").buy);
-                $("#lanta-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPS").date));
-                $("#lanta-sell-gps-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://lanta.ru/metals/coins/zolotie-monety/" && x.acronim == "GPS").isUp));
+                $("#lanta-sell-gps").text(response.find(x => x.site == "https://lanta.ru/" && x.acronim == "GPS").sell);
+                $("#lanta-buy-gps").text(response.find(x => x.site == "https://lanta.ru/" && x.acronim == "GPS").buy);
+                $("#lanta-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://lanta.ru/" && x.acronim == "GPS").date));
+                $("#lanta-sell-gps-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://lanta.ru/" && x.acronim == "GPS").isUp));
 
-                $("#tsbnk-sell-gps").text(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-georgiy-pobedonosets-spmd-50-rub-2018-2019-gg-zoloto-7-78-gr-spm/" && x.acronim == "GPS").sell);
-                $("#tsbnk-buy-gps").text(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-georgiy-pobedonosets-spmd-50-rub-2018-2019-gg-zoloto-7-78-gr-spm/" && x.acronim == "GPS").buy);
-                $("#tsbnk-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-georgiy-pobedonosets-spmd-50-rub-2018-2019-gg-zoloto-7-78-gr-spm/" && x.acronim == "GPS").date));
-                $("#tsbnk-sell-gps-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://coins.tsbnk.ru/katalog/rossiyskie/investitsionnaya-rossiyskaya-moneta-georgiy-pobedonosets-spmd-50-rub-2018-2019-gg-zoloto-7-78-gr-spm/" && x.acronim == "GPS").isUp));
+                $("#tsbnk-sell-gps").text(response.find(x => x.site == "https://coins.tsbnk.ru/" && x.acronim == "GPS").sell);
+                $("#tsbnk-buy-gps").text(response.find(x => x.site == "https://coins.tsbnk.ru/" && x.acronim == "GPS").buy);
+                $("#tsbnk-date-gps").text(CoinsRatesDateFormat(response.find(x => x.site == "https://coins.tsbnk.ru/" && x.acronim == "GPS").date));
+                $("#tsbnk-sell-gps-arrow").text(coinsRatesArrow(response.find(x => x.site == "https://coins.tsbnk.ru/" && x.acronim == "GPS").isUp));
 
                 $("#9999d-sell-gps").text(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPS").sell);
                 $("#9999d-buy-gps").text(response.find(x => x.site == "https://9999d.ru/" && x.acronim == "GPS").buy);
