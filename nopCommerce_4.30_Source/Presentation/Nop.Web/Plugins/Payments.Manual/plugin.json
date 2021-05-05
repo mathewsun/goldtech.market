@@ -1,16 +1,11 @@
 ﻿{
   "Group": "Payment methods",
   "FriendlyName": "Credit Card",
-  "SupportedVersions": [
-    "4.30"
-  ],
-  "Author": "nopCommerce team",
-  "DisplayOrder": 5,
-  "FileName": "Nop.Plugin.Payments.Manual.dll",
-  "Description": "This plugin enables credit card payment (stored into database)",
-  "LimitedToStores": [],
-  "LimitedToCustomerRoles": [],
-  "DependsOnSystemNames": [],
   "SystemName": "Payments.Manual",
-  "Version": "1.53"
+  "Version": "1.53",
+  "SupportedVersions": [ "4.30" ],
+  "Author": "nopCommerce team",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Payments.Manual.dll",
+  "Description": "This plugin enables credit card payment (stored into database)"
 }

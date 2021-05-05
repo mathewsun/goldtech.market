@@ -5,7 +5,7 @@
     "4.30"
   ],
   "Author": "Stella team",
-  "DisplayOrder": 2,
+  "DisplayOrder": 1,
   "FileName": "Nop.Plugin.Shipping.DPD.dll",
   "Description": "This plugin offers shipping rates by DPD",
   "LimitedToStores": [],
