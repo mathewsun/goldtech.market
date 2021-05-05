@@ -1,0 +1,57 @@
+﻿@model Nop.Plugin.Shipping.RussianPost.Models.RussianPostShippingModel
+@inject Nop.Core.IWebHelper webHelper
+@{
+    Layout = "_ConfigurePlugin";
+}
+
+@await Component.InvokeAsync("StoreScopeConfiguration")
+
+<form asp-controller="ShippingRussianPost" asp-action="Configure" method="post">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="zipfrom_OverrideForStore" asp-input="zipfrom" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        Индекс отправителя:
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="zipfrom" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="additionalcost_OverrideForStore" asp-input="additionalcost" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        Добавить к стоимости:
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="additionalcost" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="login_OverrideForStore" asp-input="login" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        Логин для сервиса:
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="login" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-override-store-checkbox asp-for="password_OverrideForStore" asp-input="password" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        Пароль для сервиса:
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="password" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-9 col-md-offset-3">
+                        <input type="submit" name="save" class="btn bg-primary" value="@T("Admin.Common.Save")" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

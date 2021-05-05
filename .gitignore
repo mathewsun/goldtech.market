@@ -349,7 +349,6 @@ MigrationBackup/
 .ionide/
 /nopCommerce_4.30_Source/.idea
 /nopCommerce_4.30_Source/.vs
-Plugins
 /nopCommerce_4.30_Source/Plugins/Nop.Plugin.ExchangeRate.EcbExchange/obj
 /nopCommerce_4.30_Source/Plugins/Nop.Plugin.ExternalAuth.Facebook/obj
 /nopCommerce_4.30_Source/Plugins/Nop.Plugin.Misc.SendinBlue/obj

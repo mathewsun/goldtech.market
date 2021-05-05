@@ -1,0 +1,16 @@
+﻿{
+  "Group": "Shipping methods",
+  "FriendlyName": "RussianPost",
+  "SupportedVersions": [
+    "4.30"
+  ],
+  "Author": "Artur Alekseev",
+  "DisplayOrder": 4,
+  "FileName": "Nop.Plugin.Shipping.RussianPost.dll",
+  "Description": "Shipping rate calculator",
+  "LimitedToStores": [],
+  "LimitedToCustomerRoles": [],
+  "DependsOnSystemNames": [],
+  "SystemName": "Shipping.RussianPost",
+  "Version": "1.01"
+}

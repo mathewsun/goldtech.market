@@ -1,0 +1,93 @@
+﻿@{
+    Layout = "_ConfigurePlugin";
+}
+
+@model Nop.Plugin.Shipping.Cdek.Models.ConfigureModel
+
+@await Component.InvokeAsync("StoreScopeConfiguration")
+
+<form asp-controller="ShippingCdek" asp-action="Configure" method="post">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-3">
+                        Логин:
+                    </div>
+                    <div class="col-md-9">
+                        <nop-override-store-checkbox asp-for="login_OverrideForStore" asp-input="login" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-editor asp-for="login" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        Пароль:
+                    </div>
+                    <div class="col-md-9">
+                        <nop-override-store-checkbox asp-for="password_OverrideForStore" asp-input="password" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-editor asp-for="password" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        Надбавка к цене доставки:
+                    </div>
+                    <div class="col-md-9">
+                        <nop-override-store-checkbox asp-for="additionalprice_OverrideForStore" asp-input="additionalprice" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-editor asp-for="additionalprice" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        Процент платежной системы:
+                    </div>
+                    <div class="col-md-9">
+                        <nop-override-store-checkbox asp-for="paymentpercent_OverrideForStore" asp-input="paymentpercent" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-editor asp-for="paymentpercent" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        Процент страховки:
+                    </div>
+                    <div class="col-md-9">
+                        <nop-override-store-checkbox asp-for="insurancerate_OverrideForStore" asp-input="insurancerate" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-editor asp-for="insurancerate" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        Курьер забирает товары:
+                    </div>
+                    <div class="col-md-9">
+                        <nop-override-store-checkbox asp-for="fromdoor_OverrideForStore" asp-input="fromdoor" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-editor asp-for="fromdoor" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        Город отправителя:
+                    </div>
+                    <div class="col-md-9">
+                        <nop-override-store-checkbox asp-for="shippingorigincityid_OverrideForStore" asp-input="shippingorigincityid" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-select asp-for="shippingorigincityid" asp-items="Model.citylist" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        Ключ API для Яндекс карт:
+                    </div>
+                    <div class="col-md-9">
+                        <nop-override-store-checkbox asp-for="yandexapikey_OverrideForStore" asp-input="yandexapikey" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                        <nop-editor asp-for="yandexapikey" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-9 col-md-offset-3">
+                        <input type="submit" name="save" class="btn bg-primary" value="@T("Admin.Common.Save")" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,309 @@
+﻿@model DPDShippingModel
+
+@using Nop.Plugin.Shipping.DPD.Domain
+@using Nop.Plugin.Shipping.DPD.Models
+
+@{
+    Layout = "_ConfigurePlugin";
+}
+
+<form asp-controller="DPDShipping" asp-action="Configure" method="post">
+    <script>
+        $(document).ready(function () {
+            $("#dpd-address-label").click(function () {
+                if ($("#dpd-adress-content").is(":visible")) {
+                    $("#dpd-adress-content").hide();
+                    $("#dpd-address-hidden-input").val(false);
+                }
+                else {
+                    $("#dpd-adress-content").show();
+                    $("#dpd-address-hidden-input").val(true);
+                }
+            });
+            $("#Code").on("input", function () {
+                $("#AddressCode").val($("#Code").val());
+            });
+        });
+    </script>
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="UseSandbox" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="UseSandbox" />
+                        <span asp-validation-for="UseSandbox"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="ClientNumber" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="ClientNumber" />
+                        <span asp-validation-for="ClientNumber"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="ClientKey" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="ClientKey" />
+                        <span asp-validation-for="ClientKey"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="SenderCity" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="SenderCity" />
+                        <span asp-validation-for="SenderCity"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="CitiesApiUrl" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="CitiesApiUrl" />
+                        <span asp-validation-for="CitiesApiUrl"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="AddressCode" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="AddressCode" />
+                        <span asp-validation-for="AddressCode"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <input style="margin-top:10px" type="hidden" name="IsCreateNewAddressSelected" value="@false" id="dpd-address-hidden-input" />
+
+                    </div>
+                    <div class="col-md-9" id="dpd-address-label">
+                        <label>Click for create new dpd address</label>
+                    </div>
+                </div>
+                <div id="dpd-adress-content" style="display: none;">
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <nop-label asp-for="Code" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="Code" />
+                            <span asp-validation-for="Code" id="dpd-code-input"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <nop-label asp-for="Name" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="Name" />
+                            <span asp-validation-for="Name"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <nop-label asp-for="CountryName" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="CountryName" />
+                            <span asp-validation-for="CountryName"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <nop-label asp-for="Index" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="Index" />
+                            <span asp-validation-for="Index"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <nop-label asp-for="Region" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="Region" />
+                            <span asp-validation-for="Region"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <nop-label asp-for="City" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="City" />
+                            <span asp-validation-for="City"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <nop-label asp-for="Street" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="Street" />
+                            <span asp-validation-for="Street"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <nop-label asp-for="House" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="House" />
+                            <span asp-validation-for="House"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <nop-label asp-for="HouseCorps" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="HouseCorps" />
+                            <span asp-validation-for="HouseCorps"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <nop-label asp-for="Building" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="Building" />
+                            <span asp-validation-for="Building"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <nop-label asp-for="OwnerShip" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="OwnerShip" />
+                            <span asp-validation-for="OwnerShip"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <nop-label asp-for="Office" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="Office" />
+                            <span asp-validation-for="Office"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <nop-label asp-for="Apartament" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="Apartament" />
+                            <span asp-validation-for="Apartament"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <nop-label asp-for="ContactFullName" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="ContactFullName" />
+                            <span asp-validation-for="ContactFullName"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <nop-label asp-for="ContactPhone" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="ContactPhone" />
+                            <span asp-validation-for="ContactPhone"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <nop-label asp-for="ContactEmail" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="ContactEmail" />
+                            <span asp-validation-for="ContactEmail"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <nop-label asp-for="Instructions" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="Instructions" />
+                            <span asp-validation-for="Instructions"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <nop-label asp-for="NeedPass" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="NeedPass" />
+                            <span asp-validation-for="NeedPass"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="CargoRegistered" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="CargoRegistered" />
+                        <span asp-validation-for="CargoRegistered"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="AvailableServiceVariantTypes" />
+                    </div>
+                    <div class="col-md-9" id="dileviryTypes">
+                        @for (int i = 0; i < Model.AvailableServiceVariantTypes.Count; i++)
+                        {
+                            <div class="checkbox">
+                                <label id="label-@i">
+                                    <input style="margin-top:10px" type="checkbox" name="ServiceVariantTypes" value="@(Model.AvailableServiceVariantTypes[i].Text)" id="checkbox-@i" checked="@(Model.AvailableServiceVariantTypes[i].Selected)" />
+                                    <span style="font-size:21px">@T("Enums.Nop.Plugin.Shipping.DPD.ServiceVariantType." + Model.AvailableServiceVariantTypes[i].Text.ToUpper())</span>
+                                </label>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <nop-label asp-for="AvailableServiceCodeTypes" />
+                    </div>
+                    <div class="col-md-9" id="dileviryTypes">
+                        @for (int i = 0; i < Model.AvailableServiceCodeTypes.Count; i++)
+                        {
+                            <div class="checkbox">
+                                <label id="label-@i">
+                                    <input style="margin-top:10px" type="checkbox" name="ServiceCodeTypes" value="@(Model.AvailableServiceCodeTypes[i].Text)" id="checkbox-@i" checked="@(Model.AvailableServiceCodeTypes[i].Selected)" />
+                                    <span style="font-size:21px">@(Model.AvailableServiceCodeTypes[i].Text)</span>
+                                </label>
+                            </div>
+
+                        }
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-9 col-md-offset-3">
+                        <input type="submit" name="save" class="btn bg-blue" value="@T("Admin.Common.Save")" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,405 @@
+﻿@model Nop.Web.Models.Home.PartnersModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="@Url.Content("~/lib/jquery/jquery-3.4.1.min.js")"></script>
+    <script src="@Url.Content("~/lib/jquery-validate/jquery.validate-v1.19.1/jquery.validate.min.js")"></script>
+    <script src="@Url.Content("~/lib/jquery-validate/jquery.validate.unobtrusive-v3.2.11/jquery.validate.unobtrusive.min.js")"></script>
+    <script src="@Url.Content("~/js/public.common.js")"></script>
+    <title>Gold.Tech | BlockChain</title>
+    <link rel="stylesheet" href="@Url.Content("~/GoldTechLanding/css/style.css?444495")">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/GoldTechLanding/npm/slick-carousel@1.8.1/slick/slick.css")">
+    <link rel="icon" type="image/png" href="@Url.Content("~/GoldTechLanding/favicon.png")">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript" asp-location="Head">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        ym(67763815, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            google.charts.load('current', {
+                'packages': ['line']
+            });
+            google.charts.setOnLoadCallback(drawChart);
+        });
+
+        function drawChart() {
+
+            var graficData = [];
+
+            var url = "https://web-api.online/api/Currencies/CoinRatesByAcronimAndSite?acronim=gps&site=" + "@Model.PartnerUrl";
+
+            $.get(url,
+                function (data) {
+                    // graficData = data;
+
+                    function coinChartDateFormat(str) {
+                        var date = new Date(str);
+                        var month = date.getMonth() + 1;
+                        var day = date.getDate();
+                        var year = date.getYear();
+                        if (month < 10) month = "0" + month;
+                        if (day < 10) day = "0" + day;
+
+                        return day + "." + month;
+                    }
+
+                    // var newResult = graficData.map(item => ${item.date} ${item.sell} ${item.sell});
+
+                    for (var k in data) {
+                        var element = [];
+                        element.push(coinChartDateFormat(data[k].date));
+                        element.push(data[k].sell);
+                        element.push(data[k].buy);
+
+                        graficData.push(element);
+                    }
+
+                    console.log(graficData);
+
+                    var data = new google.visualization.DataTable();
+                    data.addColumn('string', 'Дата');
+                    data.addColumn('number', 'Продажа');
+                    data.addColumn('number', 'Покупка');
+
+                    data.addRows(graficData);
+
+                    var options = {
+                        chart: {
+                            title: '"Георгий Победоносец" 2018-2020г.в (ММД)',
+                        },
+                        width: 900,
+                        height: 500
+                    };
+
+                    var chart = new google.charts.Line(document.getElementById('linechart_material'));
+
+                    chart.draw(data, google.charts.Line.convertOptions(options));
+                });
+        };
+
+        
+    </script>
+    <!-- google charts -->
+    <noscript>
+        <div>
+            <img src="@Url.Content("~/GoldTechLanding/watch/67763815/1.gif")" style="position:absolute; left:-9999px;" alt="">
+        </div>
+    </noscript>
+    <script type="text/javascript">
+
+        function loadTicker() {
+            const settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": 'https://web-api.online/api/Currencies/Ticker',
+                "method": "GET"
+            };
+
+            $.ajax(settings).done(function (response) {
+                $("#gold-span_1").text('$ ' + response[2].buy);
+                $("#gold-span_2").text('$ ' + response[2].buy);
+                $("#gold-span_3").text('$ ' + response[2].buy);
+
+                $("#silver-span_1").text('$ ' + response[4].buy);
+                $("#silver-span_2").text('$ ' + response[4].buy);
+                $("#silver-span_3").text('$ ' + response[4].buy);
+
+                $("#platinum-span_2").text('$ ' + response[3].buy);
+                $("#platinum-span_1").text('$ ' + response[3].buy);
+                $("#platinum-span_3").text('$ ' + response[3].buy);
+
+                $("#usd-span_1").html(response[0].buy + " руб.");
+                $("#usd-span_2").html(response[0].buy + " руб.");
+                $("#usd-span_3").html(response[0].buy + " руб.");
+
+                $("#eur-span_1").html(response[1].buy + " руб.");
+                $("#eur-span_2").html(response[1].buy + " руб.");
+                $("#eur-span_3").html(response[1].buy + " руб.");
+
+                var usd_arrow = response.find(x => x.acronim == "USD").isUp;
+                var eur_arrow = response.find(x => x.acronim == "EUR").isUp;
+                var xau_arrow = response.find(x => x.acronim == "XAU").isUp;
+                var pl_arrow = response.find(x => x.acronim == "PL").isUp;
+                var xag_arrow = response.find(x => x.acronim == "XAG").isUp;
+
+                function tickerArrow(str) {
+                    if (str == true) {
+                        return "↑";
+                    }
+                    if (str == false) {
+                        return "↓";
+                    }
+                    if (str == null) {
+                        return " ";
+                    }
+                }
+
+                $(".exchange__item-arrow-gold").html(tickerArrow(xau_arrow));
+                $(".exchange__item-arrow-eur").html(tickerArrow(eur_arrow));
+                $(".exchange__item-arrow-platinum").html(tickerArrow(pl_arrow));
+                $(".exchange__item-arrow-usd").html(tickerArrow(usd_arrow));
+                $(".exchange__item-arrow-silver").html(tickerArrow(xag_arrow));
+
+            });
+        }
+
+        $(document).ready(function () {
+            loadTicker();
+        });
+    </script>
+
+</head>
+<body>
+
+    <div class="preloader">
+        <div class="image-preload">
+            <img id="image-preload" src="@Url.Content("~/GoldTechLanding/images/GT-logo.png")">
+        </div>
+        <div class="loader">
+            <div class="loader--dot"></div>
+            <div class="loader--dot"></div>
+            <div class="loader--dot"></div>
+            <div class="loader--dot"></div>
+            <div class="loader--dot"></div>
+            <div class="loader--dot"></div>
+            <div class="loader--text"></div>
+        </div>
+    </div>
+    <div id="order">
+        <order></order>
+    </div>
+    <nav class="navbar">
+        <div class="exchange">
+            <div class="container">
+                <div class="exchange__body">
+                    <div class="exchange__marquee" style="overflow-wrap: normal; white-space: nowrap; overflow: hidden;">
+                        <div class="exchange-line">
+                            <span class="exchange__title">
+                                Биржевые индексы:
+                            </span>
+                            <ul class="exchange__list">
+                                <li class="exchange__item">
+                                    Золото: <span class="exchange__val" id="gold-span_1">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-gold" id="gold-span-arrow-1"></span>
+                                </li>
+                                <li class="exchange__item">
+                                    Серебро: <span class="exchange__val" id="silver-span_1">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-silver" id="silver-span-arrow-1"></span>
+                                </li>
+                                <li class="exchange__item">
+                                    Платина: <span class="exchange__val" id="platinum-span_1">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-platinum" id="platinum-span-arrow-1"></span>
+                                </li>
+                                <li class="exchange__item">
+                                    Доллар: <span class="exchange__val" id="usd-span_1">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-usd" id="usd-span-arrow-1"></span>
+                                </li>
+                                <li class="exchange__item">
+                                    Евро: <span class="exchange__val" id="eur-span_1">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-eur" id="eur-span-arrow-1"></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="exchange-line">
+                            <span class="exchange__title">
+                                Биржевые индексы:
+                            </span>
+                            <ul class="exchange__list">
+                                <li class="exchange__item">
+                                    Золото: <span class="exchange__val" id="gold-span_2">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-gold" id="gold-span-arrow-2"></span>
+                                </li>
+                                <li class="exchange__item">
+                                    Серебро: <span class="exchange__val" id="silver-span_2">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-silver" id="silver-span-arrow-2"></span>
+                                </li>
+                                <li class="exchange__item">
+                                    Платина: <span class="exchange__val" id="platinum-span_2">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-platinum" id="platinum-span-arrow-2"></span>
+                                </li>
+                                <li class="exchange__item">
+                                    Доллар: <span class="exchange__val" id="usd-span_2">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-usd" id="usd-span-arrow-2"></span>
+                                </li>
+                                <li class="exchange__item">
+                                    Евро: <span class="exchange__val" id="eur-span_2">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-eur" id="eur-span-arrow-2"></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="exchange-line">
+                            <span class="exchange__title">
+                                Биржевые индексы:
+                            </span>
+                            <ul class="exchange__list">
+                                <li class="exchange__item">
+                                    Золото: <span class="exchange__val" id="gold-span_3">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-gold" id="gold-span-arrow-3"></span>
+                                </li>
+                                <li class="exchange__item">
+                                    Серебро: <span class="exchange__val" id="silver-span_3">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-silver" id="silver-span-arrow-3"></span>
+                                </li>
+                                <li class="exchange__item">
+                                    Платина: <span class="exchange__val" id="platinum-span_3">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-platinum" id="platinum-span-arrow-3"></span>
+                                </li>
+                                <li class="exchange__item">
+                                    Доллар: <span class="exchange__val" id="usd-span_3">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-usd" id="usd-span-arrow-3"></span>
+                                </li>
+                                <li class="exchange__item">
+                                    Евро: <span class="exchange__val" id="eur-span_3">--</span>
+                                    <span class="exchange__item-arrow exchange__item-arrow-eur" id="eur-span-arrow-3"></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-footer-content">
+            <div class="logo"></div>
+            <ul class="navbar-elements">
+                <div class="adaptive">
+                    <li class="nav-item">
+                        <a href="shop" class="flow-scroll">Магазин</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="flow-scroll">О компании</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#offer" class="flow-scroll">Монеты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#instruction" class="flow-scroll">Как купить</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#qna" class="flow-scroll">Вопрос-ответ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="flow-scroll">Контакты</a>
+                    </li>
+                    @if (Model.IsAuthetihicated == false)
+                    {
+                        <li class="nav-item">
+                            <a href="login" class="flow-scroll">Войти</a>
+                        </li>
+                    }
+                    <navbar></navbar>
+                </div>
+                <div class="mobile-menu">
+                    <div class="spoiler-head toggle-mobile" id="toggle-mobile">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <div class="spoiler-body">
+                        <ul class="navbar-elements">
+                            <li class="nav-item">
+                                <a href="shop" class="flow-scroll">Магазин</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#about" class="flow-scroll">О компании</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#offer" class="flow-scroll">Монеты</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#instruction" class="flow-scroll">Как купить</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#qna" class="flow-scroll">Вопрос-ответ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#contact" class="flow-scroll">Контакты</a>
+                            </li>
+                            @if (Model.IsAuthetihicated == false)
+                            {
+                                <li class="nav-item">
+                                    <a href="login" class="flow-scroll">Войти</a>
+                                </li>
+                            }
+                            <navbar></navbar>
+                        </ul>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="start">
+        <div class="content-start">
+            <h1 style="margin-bottom: 50px !important;">
+                Ланта
+            </h1>
+            <div>
+                https://lanta.ru/metals/coins/zolotie-monety/
+            </div>
+            <div class="partnerInfo">
+
+                <div id="linechart_material"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="coins-rates__tab-wrapper">
+        <h2 class="header center-text headerCoinsRates">Ланта</h2>
+        <p class="coinsrates-subtitle">https://lanta.ru/metals/coins/zolotie-monety/</p>
+        <div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="nav-footer-content">
+            <div class="logo-footer"></div>
+            <div class="rights">
+                <p style="color: white; font-family: Bold"></p>
+                <p>
+                    ООО "Голден Тех" 2020. Все права защищены.
+                </p>
+                <p hidden="">
+                    1123317, Москва, Пресненская набережная 12<br>
+                    Башня «Око» 33-й этаж, офис №6
+                </p>
+            </div>
+            <div class="inn">
+                <p>
+                    ИНН 7725788590<br>
+                    ОГРН 1137746320403
+                </p>
+            </div>
+            <div class="social">
+                <ul style="list-style-type: none; text-align: left !important;">
+                    <li>
+                        <a href="https://www.instagram.com/goldtech.market/" title="Мы в Instagram"><img src="/GoldTechLanding/images/instagram_gold.png" width="35" height="35"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="@Url.Content("~/GoldTechLanding/npm/js-cookie@rc/dist/js.cookie.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/GoldTechLanding/npm/slick-carousel@1.8.1/slick/slick.min.js")"></script>
+    <script src="@Url.Content("~/GoldTechLanding/js/js.js")"></script>
+</body>
+</html>
