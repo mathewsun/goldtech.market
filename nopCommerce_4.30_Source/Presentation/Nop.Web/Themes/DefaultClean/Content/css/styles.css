@@ -64,11 +64,14 @@ script {
 
 
 body {
-    max-width: 100%;
+	max-width: 100%;
 	overflow-x: hidden;
 	background-color: #fff;
-	font: normal 14px Arial, Helvetica, sans-serif;
-    color: #777;
+	/* font: normal 14px Arial, Helvetica, sans-serif;	*/
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	color: #666;
+	font-weight: 400;
 }
 h1,h2,h3,h4,h5,h6 {
 	color: #444;
@@ -6774,7 +6777,7 @@ pre {
 .header-menu > ul > li {
 	display: inline-block;
 	border-left: 1px solid #ddd;
-	padding: 0 15px;
+	padding: 0 12px;
 	vertical-align: middle;
 }
 .header-menu > ul > li:first-child {
@@ -6784,7 +6787,7 @@ pre {
 	display: block;
 	padding: 5px 10px;
 	line-height: 20px;
-	font-size: 17px; /*reset zeroing*/
+	font-size: 16px; /*reset zeroing*/
 	color: #555;
 	cursor: pointer;
 }
