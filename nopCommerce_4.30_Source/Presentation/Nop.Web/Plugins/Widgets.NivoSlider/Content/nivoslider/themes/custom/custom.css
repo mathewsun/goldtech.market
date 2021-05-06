@@ -37,12 +37,14 @@
 	width: 14px;
 	height: 14px;
 	margin: 0 7px;
-	box-shadow: 0 0 1px 0 rgba(0,0,0,0.2);
+	/*box-shadow: 0 0 1px 0 rgba(0,0,0,0.2);*/
 	background-color: #fff;
 	font-size: 0;
+	border: 2px solid #C39B6A;
+	border-radius: 50%;
 }
 .theme-custom .nivo-controlNav a.active {
-	background-color: #4ab2f1;
+	background-color: #C39B6A;
 }
 
 /* DIRECTIONAL NAVIGATION */
@@ -84,7 +86,7 @@
 	color: #fff;
 }
 .theme-custom .nivo-caption a:hover {
-    color: #4ab2f1;
+    color: #C39B6A;
 }
 
 /* THUMBNAILS */

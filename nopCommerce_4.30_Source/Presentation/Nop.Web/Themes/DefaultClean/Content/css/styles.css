@@ -64,11 +64,14 @@ script {
 
 
 body {
-    max-width: 100%;
+	max-width: 100%;
 	overflow-x: hidden;
 	background-color: #fff;
-	font: normal 14px Arial, Helvetica, sans-serif;
-    color: #777;
+	/* font: normal 14px Arial, Helvetica, sans-serif;	*/
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	color: #666;
+	font-weight: 400;
 }
 h1,h2,h3,h4,h5,h6 {
 	color: #444;
@@ -89,15 +92,16 @@ input[type="email"],
 input[type="tel"],
 input[type="password"],
 textarea, select {
-    height: 36px; /*safari padding fix*/
-    border: 1px solid #ddd;
-    padding: 8px;
-    vertical-align: middle;
+	height: 36px; /*safari padding fix*/
+	border: 1px solid rgba(195, 155, 106, 0.6);
+	padding: 8px;
+	vertical-align: middle;
+	transition: all 0.2s ease;
 }
 input, textarea, select, button {
 	font-size: 14px;
-	font-family: Arial, Helvetica, sans-serif;
-	color: #777;
+	font-family: 'Montserrat', sans-serif;
+	color: #666;
 }
 textarea {
 	min-height: 150px;
@@ -112,7 +116,7 @@ input[type="email"]:focus,
 input[type="tel"]:focus,
 input[type="password"]:focus,
 textarea:focus, select:focus {
-    border-color: #ccc;
+    border-color: rgba(195, 155, 106, 0.9);
     color: #444;
 }
 input[type="checkbox"],
@@ -695,7 +699,7 @@ label, label + * {
 	/*override jQuery UI styles, do not delete doubled properties*/
 	background-color: #fff !important;
 	padding: 15px 15px 20px 15px !important;
-	color: #777;
+	color: #666;
 }
 .ui-dialog-content .page{
     min-height: 0;
@@ -964,7 +968,7 @@ label, label + * {
 	background: none !important;
 	padding: 15px !important;
 	line-height: normal !important;
-	color: #777 !important;
+	color: #666 !important;
 }
 .ui-autocomplete a:hover,
 .ui-autocomplete a.ui-state-focus {
@@ -983,7 +987,8 @@ label, label + * {
 
 
 .footer {
-	background-color: #eee;
+	background-color: #242633;
+	color: #999;
 	text-align: center;
 }
 
@@ -1003,9 +1008,10 @@ label, label + * {
 }
 .footer-block .title {
 	margin: 0 0 1px;
-	background: #C39B6A url('../images/toggle-white.png') right center no-repeat;
+	/* background: #C39B6A url('../images/toggle-white.png') right center no-repeat; */
+	background: url('../images/toggle-white.png') right center no-repeat;
 	padding: 10px 15px;
-	font-size: 20px;
+	font-size: 18px;
 	color: #fff;
 	cursor: pointer;
 }
@@ -1015,7 +1021,7 @@ label, label + * {
 .footer-block .list {
 	display: none;
 	margin: 0 0 20px;
-	background-color: #fff;
+	/* background-color: #fff; */
 	padding: 10px 15px;
 }
 .footer-block .list a {
@@ -1034,13 +1040,13 @@ label, label + * {
 .follow-us .title {
 	margin: 0 0 10px;
 	background: none;
-	color: #444;
+	color: #fff;
 	cursor: auto;
 }
 .follow-us .social ul {
 	margin: 0 0 30px;
-	border-bottom: 1px solid #ddd;
-	padding: 0 0 30px;
+	/* border-bottom: 1px solid #ddd;
+	padding: 0 0 30px; */
 	font-size: 0;
 }
 .follow-us .social li {
@@ -1057,6 +1063,13 @@ label, label + * {
 	width: 180px;
 	height: 36px;
 	margin: 0 -1px 0 0;
+	background: transparent;
+	border-radius: 18px;
+	margin: 0 15px 15px 0;
+	width: 160px;
+}
+.newsletter-email input[type="button"] {
+	border-radius: 18px;
 }
 .newsletter-subscribe-button {
 	float: left;
@@ -1103,8 +1116,9 @@ label, label + * {
 	margin: 10px 0 0;
 }
 .footer-powered-by a {
-	font-weight: bold;
-	color: #C39B6A;
+	/* font-weight: bold;
+	color: #C39B6A; */
+	color: #999;
 }
 .footer-powered-by a:hover {
 	text-decoration: underline;
@@ -1130,7 +1144,7 @@ label, label + * {
 .block .title {
 	position: relative;
 	margin: 0 0 10px;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid rgba(195, 155, 105, 0.6);
 	background: #f6f6f6 url('../images/toggle-gray.png') right 14px no-repeat;
 	padding: 12px 30px 12px 10px;
 	font-size: 20px;
@@ -1301,7 +1315,7 @@ label, label + * {
 
 .breadcrumb {
 	margin: 0 0 50px;
-	background-color: #f6f6f6;
+	/* background-color: #f6f6f6; */
 	padding: 5px 10px;
 }
 .breadcrumb ul {
@@ -1309,6 +1323,7 @@ label, label + * {
 }
 .breadcrumb li {
 	display: inline-block;
+	border-bottom: 1px solid #C39B6A;
 }
 .breadcrumb li * {
 	display: inline-block;
@@ -1369,6 +1384,7 @@ label, label + * {
 }
 .product-selectors select {
 	margin: 0 8px;
+	border-radius: 16px;
 }
 .product-selectors .product-viewmode {
 	display: none;
@@ -1481,7 +1497,7 @@ label, label + * {
 	z-index: 1;
 	overflow: hidden;
 	background-color: #fff;
-    margin: 0 0 20px;
+    margin: 20px;
 }
 .item-box .picture a {
 	display: block;
@@ -1498,8 +1514,8 @@ label, label + * {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	max-width: 100%;
-	max-height: 100%;
+	max-width: 90%;
+	max-height: 90%;
 	margin: auto;
     -webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
@@ -1512,12 +1528,12 @@ label, label + * {
 	padding: 0 10px;
 }
 .item-box .product-title {
-	margin: 0 0 10px;
+	margin: 0 0 15px;
 	overflow: hidden;
 	font-size: 17px;
     line-height: 1.2;
 	font-weight: normal;
-	color: #C39B6A;
+	/* color: #C39B6A; */
 }
 .item-box .product-title a {
 	display: block;
@@ -1586,6 +1602,7 @@ label, label + * {
 	font-size: 15px;
 	color: #fff;
 	text-transform: uppercase;
+	border-radius: 20px;
 }
 .item-box .product-box-add-to-cart-button:hover {
 	background-color: #d4ab79;
@@ -1593,8 +1610,9 @@ label, label + * {
 .item-box .add-to-compare-list-button,
 .item-box .add-to-wishlist-button {
 	width: 20%;
-	border-left: 1px solid #fff !important;
-	background-color: #eaeaea;
+	/*border-left: 1px solid #fff !important;
+	background-color: #eaeaea; */
+	background: transparent;
 	background-position: center;
 	background-repeat: no-repeat;
 	font-size: 0;
@@ -1607,7 +1625,8 @@ label, label + * {
 }
 .item-box .add-to-compare-list-button:hover,
 .item-box .add-to-wishlist-button:hover {
-	background-color: #ddd;
+	/*background-color: #ddd;*/
+	transform: scale(1.1);
 }
 
 .home-page-category-grid,
@@ -1775,8 +1794,8 @@ label, label + * {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	max-width: 100%;
-	max-height: 100%;
+	max-width: 90%;
+	max-height: 90%;
 	margin: auto;
 }
 .gallery .picture-thumbs {
@@ -1810,7 +1829,7 @@ label, label + * {
 }
 .overview .product-name {
 	margin: 0 0 25px;
-	border-bottom: 1px solid #ddd;
+	/* border-bottom: 1px solid #ddd; */
     padding: 0 0 10px;
 }
 .overview .product-name h1 {
@@ -1877,17 +1896,18 @@ label, label + * {
 	display: block;
 	width: 100%;
 	border: none;
-	background-color: #eaeaea;
+	background: transparent;
 	background-position: left center;
 	background-repeat: no-repeat;
 	padding: 12px 15px 12px 40px;
 	text-align: left;
-	font-size: 14px; /*reset zeroing*/
+	/* font-size: 14px; /*reset zeroing*/
+	font-size: 0;
 	color: #666;
 }
 .overview .button-2:hover,
 .variant-overview .button-2:hover {
-	background-color: #ddd;
+	transform: scale(1.1)
 }
 
 .overview .add-to-compare-list-button {
@@ -1895,6 +1915,7 @@ label, label + * {
 }
 .overview .email-a-friend-button {
     background-image: url('../images/email-button.png');
+	display: none;
 }
 .overview .subscribe-button,
 .variant-overview .subscribe-button {
@@ -2018,7 +2039,7 @@ label, label + * {
 }
 .customer-entered-price .price-range {
 	margin: 5px 0 0;
-	color: #777;
+	color: #666;
 }
 
 .tier-prices {
@@ -2065,6 +2086,8 @@ label, label + * {
 	text-align: center;
     font-size: 15px;
 	color: #444;
+	border: none; 
+	border-bottom: 1px solid #666;
 }
 .overview .qty-dropdown,
 .variant-overview .qty-dropdown {
@@ -2076,12 +2099,14 @@ label, label + * {
 .overview .add-to-cart-button,
 .variant-overview .add-to-cart-button {
 	height: 43px;
-    border: none;
+	border: none;
 	background-color: #C39B6A;
-    padding: 0 24px;
-    font-size: 15px;
+	padding: 0 24px;
+	font-size: 15px;
 	color: #fff;
 	text-transform: uppercase;
+	border-radius: 20px;
+	margin-left: 15px;
 }
 .overview .add-to-cart-button:hover,
 .variant-overview .add-to-cart-button:hover {
@@ -2203,6 +2228,7 @@ label, label + * {
 	width: auto;
 	min-width: 100px;
 	max-width: 100%;
+	border-radius: 16px;
 }
 .attributes .option-list label {
 	margin: 0 5px;
@@ -2230,7 +2256,7 @@ label, label + * {
 	border-radius: 0;
 	padding: 0;
 	font: normal 14px Arial, Helvetica, sans-serif;
-	color: #777;
+	color: #666;
 }
 .ui-datepicker-header {
 	position: relative;
@@ -2712,7 +2738,7 @@ label, label + * {
 }
 .compare-products-table td label {
 	font-weight: normal;
-    color: #777;
+    color: #666;
 }
 .compare-products-table .remove-button {
 	display: inline-block;
@@ -3704,9 +3730,11 @@ label, label + * {
   right: 8px;
   margin: 4% 50%;
 }
-
+.shipping-address span {
+	font-size: 12px;
+}
 .shipping-address .required {
-  margin-left: 0px;
+	margin-left: 0px;
 }
 
 .estimate-shipping-row {
@@ -3894,7 +3922,7 @@ label, label + * {
 
 .product-estimate-shipping .shipping-title {
   font-size: 16px;
-  font-weight: bold;
+  /* font-weight: bold; */
   color: #444;
   margin-bottom: 5px;
   justify-content: center;
@@ -4848,7 +4876,7 @@ label, label + * {
 }
 .forums-table-section .topic-title span {
 	display: block;
-	color: #777;
+	color: #666;
 }
 .forums-table-section .forum-description,
 .forums-table-section .topic-starter {
@@ -4861,7 +4889,7 @@ label, label + * {
 	margin: 5px 0;
 }
 .forums-table-section .latest-post label {
-	color: #777;
+	color: #666;
 }
 
 .forums-table-section .view-all {
@@ -5118,7 +5146,7 @@ label, label + * {
     border: 1px dashed #ccc;
     background-color: #f9f9f9;
 	padding: 10px;
-	color: #777;
+	color: #666;
 }
 .topic-post .signature {
 	border-top: 1px solid #ddd;
@@ -5251,7 +5279,7 @@ label, label + * {
     background: none;
     padding: 0;
     font: normal 14px Arial, Helvetica, sans-serif;
-    color: #777;
+    color: #666;
 }
 .ui-widget.ui-widget-content.ui-tabs {
     border: none;
@@ -5374,8 +5402,8 @@ label, label + * {
 	/*override jQuery UI styles, do not delete doubled properties*/
 	line-height: normal;
 	font-size: 14px;
-	font-family: Arial, Helvetica, sans-serif;
-	color: #777;
+	font-family: 'Montserrat', sans-serif;
+	color: #666;
 }
 .profile-info-box .user-details {
 	margin: 0 0 30px;
@@ -5396,8 +5424,8 @@ label, label + * {
 	/*override jQuery UI styles, do not delete doubled properties*/
 	line-height: normal;
 	font-size: 14px;
-	font-family: Arial, Helvetica, sans-serif;
-	color: #777;
+	font-family: 'Montserrat', sans-serif;
+	color: #666;
 }
 .latest-posts .topic {
 	margin: 0 0 35px;
@@ -5800,7 +5828,7 @@ pre {
 }
 .item-box .product-title {
     min-height: 42px;
-    margin: 0 0 5px;
+    margin: 0 0 15px;
 }
 
 
@@ -5955,7 +5983,8 @@ pre {
 	margin: 0 0 15px;
 	background: none;
 	padding: 0;
-	color: #444;
+	color: #fff;
+	font-size: 16px;
 	cursor: auto;
 }
 .footer-block .list {
@@ -6774,7 +6803,7 @@ pre {
 .header-menu > ul > li {
 	display: inline-block;
 	border-left: 1px solid #ddd;
-	padding: 0 15px;
+	padding: 0 12px;
 	vertical-align: middle;
 }
 .header-menu > ul > li:first-child {
@@ -6784,7 +6813,7 @@ pre {
 	display: block;
 	padding: 5px 10px;
 	line-height: 20px;
-	font-size: 17px; /*reset zeroing*/
+	font-size: 16px; /*reset zeroing*/
 	color: #555;
 	cursor: pointer;
 }
@@ -6870,8 +6899,9 @@ pre {
 }
 	.newsletter-email .newsletter-subscribe-button {
 		font-size: 12px;
-		width: 100px;
+		width: 120px;
 		padding: 0 5px;
+		border-radius: 18px;
 	}
 .newsletter-validation .field-validation-valid {
 	text-align: left;
