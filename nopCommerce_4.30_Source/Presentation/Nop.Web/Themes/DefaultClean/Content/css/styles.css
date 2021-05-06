@@ -99,8 +99,8 @@ textarea, select {
 }
 input, textarea, select, button {
 	font-size: 14px;
-	font-family: Arial, Helvetica, sans-serif;
-	color: #777;
+	font-family: 'Montserrat', sans-serif;
+	color: #666;
 }
 textarea {
 	min-height: 150px;
@@ -698,7 +698,7 @@ label, label + * {
 	/*override jQuery UI styles, do not delete doubled properties*/
 	background-color: #fff !important;
 	padding: 15px 15px 20px 15px !important;
-	color: #777;
+	color: #666;
 }
 .ui-dialog-content .page{
     min-height: 0;
@@ -967,7 +967,7 @@ label, label + * {
 	background: none !important;
 	padding: 15px !important;
 	line-height: normal !important;
-	color: #777 !important;
+	color: #666 !important;
 }
 .ui-autocomplete a:hover,
 .ui-autocomplete a.ui-state-focus {
@@ -986,7 +986,8 @@ label, label + * {
 
 
 .footer {
-	background-color: #eee;
+	background-color: #242633;
+	color: #999;
 	text-align: center;
 }
 
@@ -1006,9 +1007,10 @@ label, label + * {
 }
 .footer-block .title {
 	margin: 0 0 1px;
-	background: #C39B6A url('../images/toggle-white.png') right center no-repeat;
+	/* background: #C39B6A url('../images/toggle-white.png') right center no-repeat; */
+	background: url('../images/toggle-white.png') right center no-repeat;
 	padding: 10px 15px;
-	font-size: 20px;
+	font-size: 18px;
 	color: #fff;
 	cursor: pointer;
 }
@@ -1018,7 +1020,7 @@ label, label + * {
 .footer-block .list {
 	display: none;
 	margin: 0 0 20px;
-	background-color: #fff;
+	/* background-color: #fff; */
 	padding: 10px 15px;
 }
 .footer-block .list a {
@@ -1037,13 +1039,13 @@ label, label + * {
 .follow-us .title {
 	margin: 0 0 10px;
 	background: none;
-	color: #444;
+	color: #fff;
 	cursor: auto;
 }
 .follow-us .social ul {
 	margin: 0 0 30px;
-	border-bottom: 1px solid #ddd;
-	padding: 0 0 30px;
+	/* border-bottom: 1px solid #ddd;
+	padding: 0 0 30px; */
 	font-size: 0;
 }
 .follow-us .social li {
@@ -1060,6 +1062,13 @@ label, label + * {
 	width: 180px;
 	height: 36px;
 	margin: 0 -1px 0 0;
+	background: transparent;
+	border-radius: 18px;
+	margin: 0 15px 15px 0;
+	width: 160px;
+}
+.newsletter-email input[type="button"] {
+	border-radius: 18px;
 }
 .newsletter-subscribe-button {
 	float: left;
@@ -1106,8 +1115,9 @@ label, label + * {
 	margin: 10px 0 0;
 }
 .footer-powered-by a {
-	font-weight: bold;
-	color: #C39B6A;
+	/* font-weight: bold;
+	color: #C39B6A; */
+	color: #999;
 }
 .footer-powered-by a:hover {
 	text-decoration: underline;
@@ -2021,7 +2031,7 @@ label, label + * {
 }
 .customer-entered-price .price-range {
 	margin: 5px 0 0;
-	color: #777;
+	color: #666;
 }
 
 .tier-prices {
@@ -2233,7 +2243,7 @@ label, label + * {
 	border-radius: 0;
 	padding: 0;
 	font: normal 14px Arial, Helvetica, sans-serif;
-	color: #777;
+	color: #666;
 }
 .ui-datepicker-header {
 	position: relative;
@@ -2715,7 +2725,7 @@ label, label + * {
 }
 .compare-products-table td label {
 	font-weight: normal;
-    color: #777;
+    color: #666;
 }
 .compare-products-table .remove-button {
 	display: inline-block;
@@ -4851,7 +4861,7 @@ label, label + * {
 }
 .forums-table-section .topic-title span {
 	display: block;
-	color: #777;
+	color: #666;
 }
 .forums-table-section .forum-description,
 .forums-table-section .topic-starter {
@@ -4864,7 +4874,7 @@ label, label + * {
 	margin: 5px 0;
 }
 .forums-table-section .latest-post label {
-	color: #777;
+	color: #666;
 }
 
 .forums-table-section .view-all {
@@ -5121,7 +5131,7 @@ label, label + * {
     border: 1px dashed #ccc;
     background-color: #f9f9f9;
 	padding: 10px;
-	color: #777;
+	color: #666;
 }
 .topic-post .signature {
 	border-top: 1px solid #ddd;
@@ -5254,7 +5264,7 @@ label, label + * {
     background: none;
     padding: 0;
     font: normal 14px Arial, Helvetica, sans-serif;
-    color: #777;
+    color: #666;
 }
 .ui-widget.ui-widget-content.ui-tabs {
     border: none;
@@ -5377,8 +5387,8 @@ label, label + * {
 	/*override jQuery UI styles, do not delete doubled properties*/
 	line-height: normal;
 	font-size: 14px;
-	font-family: Arial, Helvetica, sans-serif;
-	color: #777;
+	font-family: 'Montserrat', sans-serif;
+	color: #666;
 }
 .profile-info-box .user-details {
 	margin: 0 0 30px;
@@ -5399,8 +5409,8 @@ label, label + * {
 	/*override jQuery UI styles, do not delete doubled properties*/
 	line-height: normal;
 	font-size: 14px;
-	font-family: Arial, Helvetica, sans-serif;
-	color: #777;
+	font-family: 'Montserrat', sans-serif;
+	color: #666;
 }
 .latest-posts .topic {
 	margin: 0 0 35px;
@@ -5958,7 +5968,8 @@ pre {
 	margin: 0 0 15px;
 	background: none;
 	padding: 0;
-	color: #444;
+	color: #fff;
+	font-size: 16px;
 	cursor: auto;
 }
 .footer-block .list {
@@ -6873,8 +6884,9 @@ pre {
 }
 	.newsletter-email .newsletter-subscribe-button {
 		font-size: 12px;
-		width: 100px;
+		width: 120px;
 		padding: 0 5px;
+		border-radius: 18px;
 	}
 .newsletter-validation .field-validation-valid {
 	text-align: left;
