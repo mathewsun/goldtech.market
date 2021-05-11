@@ -1,96 +1,97 @@
 ﻿
-<div class="header">
+<div class="pre-header">
     @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderBefore })
-    <div class="header-upper">
-        <div class="exchange">
-            <div class="container">
-                <div class="exchange__body">
-                    <div class="exchange__marquee" style="overflow-wrap: normal; white-space: nowrap; overflow: hidden;">
-                        <div class="exchange-line">
-                            <span class="exchange__title">
-                                Биржевые индексы:
-                            </span>
-                            <ul class="exchange__list">
-                                <li class="exchange__item">
-                                    Золото: <span class="exchange__val" id="gold-span_1">--</span>
-                                    <span class="exchange__item-arrow exchange__item-arrow-gold" id="gold-span-arrow-1"></span>
-                                </li>
-                                <li class="exchange__item">
-                                    Серебро: <span class="exchange__val" id="silver-span_1">--</span>
-                                    <span class="exchange__item-arrow exchange__item-arrow-silver" id="silver-span-arrow-1"></span>
-                                </li>
-                                <li class="exchange__item">
-                                    Платина: <span class="exchange__val" id="platinum-span_1">--</span>
-                                    <span class="exchange__item-arrow exchange__item-arrow-platinum" id="platinum-span-arrow-1"></span>
-                                </li>
-                                <li class="exchange__item">
-                                    Доллар: <span class="exchange__val" id="usd-span_1">--</span>
-                                    <span class="exchange__item-arrow exchange__item-arrow-usd" id="usd-span-arrow-1"></span>
-                                </li>
-                                <li class="exchange__item">
-                                    Евро: <span class="exchange__val" id="eur-span_1">--</span>
-                                    <span class="exchange__item-arrow exchange__item-arrow-eur" id="eur-span-arrow-1"></span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="exchange-line">
-                            <span class="exchange__title">
-                                Биржевые индексы:
-                            </span>
-                            <ul class="exchange__list">
-                                <li class="exchange__item">
-                                    Золото: <span class="exchange__val" id="gold-span_2">--</span>
-                                    <span class="exchange__item-arrow exchange__item-arrow-gold" id="gold-span-arrow-2"></span>
-                                </li>
-                                <li class="exchange__item">
-                                    Серебро: <span class="exchange__val" id="silver-span_2">--</span>
-                                    <span class="exchange__item-arrow exchange__item-arrow-silver" id="silver-span-arrow-2"></span>
-                                </li>
-                                <li class="exchange__item">
-                                    Платина: <span class="exchange__val" id="platinum-span_2">--</span>
-                                    <span class="exchange__item-arrow exchange__item-arrow-platinum" id="platinum-span-arrow-2"></span>
-                                </li>
-                                <li class="exchange__item">
-                                    Доллар: <span class="exchange__val" id="usd-span_2">--</span>
-                                    <span class="exchange__item-arrow exchange__item-arrow-usd" id="usd-span-arrow-2"></span>
-                                </li>
-                                <li class="exchange__item">
-                                    Евро: <span class="exchange__val" id="eur-span_2">--</span>
-                                    <span class="exchange__item-arrow exchange__item-arrow-eur" id="eur-span-arrow-2"></span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="exchange-line">
-                            <span class="exchange__title">
-                                Биржевые индексы:
-                            </span>
-                            <ul class="exchange__list">
-                                <li class="exchange__item">
-                                    Золото: <span class="exchange__val" id="gold-span_3">--</span>
-                                    <span class="exchange__item-arrow exchange__item-arrow-gold" id="gold-span-arrow-3"></span>
-                                </li>
-                                <li class="exchange__item">
-                                    Серебро: <span class="exchange__val" id="silver-span_3">--</span>
-                                    <span class="exchange__item-arrow exchange__item-arrow-silver" id="silver-span-arrow-3"></span>
-                                </li>
-                                <li class="exchange__item">
-                                    Платина: <span class="exchange__val" id="platinum-span_3">--</span>
-                                    <span class="exchange__item-arrow exchange__item-arrow-platinum" id="platinum-span-arrow-3"></span>
-                                </li>
-                                <li class="exchange__item">
-                                    Доллар: <span class="exchange__val" id="usd-span_3">--</span>
-                                    <span class="exchange__item-arrow exchange__item-arrow-usd" id="usd-span-arrow-3"></span>
-                                </li>
-                                <li class="exchange__item">
-                                    Евро: <span class="exchange__val" id="eur-span_3">--</span>
-                                    <span class="exchange__item-arrow exchange__item-arrow-eur" id="eur-span-arrow-3"></span>
-                                </li>
-                            </ul>
-                        </div>
+    <div class="exchange">
+        <div class="container">
+            <div class="exchange__body">
+                <div class="exchange__marquee" style="overflow-wrap: normal; white-space: nowrap; overflow: hidden;">
+                    <div class="exchange-line">
+                        <span class="exchange__title">
+                            Биржевые индексы:
+                        </span>
+                        <ul class="exchange__list">
+                            <li class="exchange__item">
+                                Золото: <span class="exchange__val" id="gold-span_1">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-gold" id="gold-span-arrow-1"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Серебро: <span class="exchange__val" id="silver-span_1">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-silver" id="silver-span-arrow-1"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Платина: <span class="exchange__val" id="platinum-span_1">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-platinum" id="platinum-span-arrow-1"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Доллар: <span class="exchange__val" id="usd-span_1">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-usd" id="usd-span-arrow-1"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Евро: <span class="exchange__val" id="eur-span_1">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-eur" id="eur-span-arrow-1"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="exchange-line">
+                        <span class="exchange__title">
+                            Биржевые индексы:
+                        </span>
+                        <ul class="exchange__list">
+                            <li class="exchange__item">
+                                Золото: <span class="exchange__val" id="gold-span_2">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-gold" id="gold-span-arrow-2"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Серебро: <span class="exchange__val" id="silver-span_2">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-silver" id="silver-span-arrow-2"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Платина: <span class="exchange__val" id="platinum-span_2">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-platinum" id="platinum-span-arrow-2"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Доллар: <span class="exchange__val" id="usd-span_2">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-usd" id="usd-span-arrow-2"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Евро: <span class="exchange__val" id="eur-span_2">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-eur" id="eur-span-arrow-2"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="exchange-line">
+                        <span class="exchange__title">
+                            Биржевые индексы:
+                        </span>
+                        <ul class="exchange__list">
+                            <li class="exchange__item">
+                                Золото: <span class="exchange__val" id="gold-span_3">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-gold" id="gold-span-arrow-3"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Серебро: <span class="exchange__val" id="silver-span_3">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-silver" id="silver-span-arrow-3"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Платина: <span class="exchange__val" id="platinum-span_3">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-platinum" id="platinum-span-arrow-3"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Доллар: <span class="exchange__val" id="usd-span_3">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-usd" id="usd-span-arrow-3"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Евро: <span class="exchange__val" id="eur-span_3">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-eur" id="eur-span-arrow-3"></span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+    </div><!-- /.exchange -->
+
+    <div class="container header-upper">
         <div class="header-selectors-wrapper">
             @await Component.InvokeAsync("TaxTypeSelector")
             @await Component.InvokeAsync("CurrencySelector")
@@ -101,15 +102,74 @@
             @await Component.InvokeAsync("HeaderLinks")
             @await Component.InvokeAsync("FlyoutShoppingCart")
         </div>
-    </div>
+    </div><!-- /.header-upper -->
+
+</div><!-- /.pre-header -->
+
+<div class="site-header header">
     @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderMiddle })
-    <div class="header-lower">
-        <div class="header-logo">
-            @await Component.InvokeAsync("Logo")
+
+    <div class="container header-search-wrapper">
+        @await Component.InvokeAsync("SearchBox")
+    </div><!-- /.header-search-wrapper -->
+
+    <div class="container site-header-inner">
+        <div class="site-header-left">
+            <div class="header-logo">
+                @await Component.InvokeAsync("Logo")
+            </div>
         </div>
-        <div class="search-box store-search-box">
-            @await Component.InvokeAsync("SearchBox")
-        </div>
-    </div>
+
+        <div class="site-header-right">
+            <button id="search-toggle" class="search-toggle" aria-controls="header-search">
+                search
+            </button>
+            <button id="burger-menu-toggle" class="burger-menu-button" aria-controls="burger-menu" aria-expanded="false">
+                <div class="burger">
+                    <div class="burger__inner">
+                    </div>
+                </div>
+            </button>
+        </div><!-- /.sitheader-right -->
+
+    </div><!-- /.site-header-inner -->
+
     @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderAfter })
-</div>
+</div><!-- /.site-header -->
+
+<script asp-location="Footer">
+    function burgerNav() {
+        var body = document.body;
+        var burgerButton = document.querySelector('#burger-menu-toggle');
+        var siteNavigation = document.querySelector('#burger-menu');
+
+        burgerButton.addEventListener('click', function () {
+            if (burgerButton.getAttribute('aria-expanded') === 'true') {
+                body.classList.remove('burger-menu-open');
+                burgerButton.setAttribute('aria-expanded', 'false');
+            } else {
+                burgerButton.setAttribute('aria-expanded', 'true');
+                body.classList.add('burger-menu-open');
+            }
+        });
+    }
+
+    function searchBoxOpen() {
+        var body = document.body;
+        var searchButton = document.querySelector('#search-toggle');
+        var searchBox = document.querySelector('.header-search-wrapper');
+
+        searchButton.addEventListener('click', function () {
+            if (searchButton.getAttribute('aria-expanded') === 'true') {
+                body.classList.remove('header-search-open');
+                searchButton.setAttribute('aria-expanded', 'false');
+            } else {
+                searchButton.setAttribute('aria-expanded', 'true');
+                body.classList.add('header-search-open');
+            }
+        });
+    }
+
+    burgerNav();
+    searchBoxOpen();
+</script>
