@@ -135,6 +135,50 @@
     </div><!-- /.site-header-inner -->
 
     @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderAfter })
+
+    <nav class="burger-menu">
+        <ul class="burger-menu-list">
+            <li class="burger-menu-list-item">
+                <a href="/#about">О нас</a>
+            </li>
+            <li class="burger-menu-list-item">
+                <a href="/#instruction" target="_blank">Как купить?</a>
+            </li>
+            <li class="burger-menu-list-item">
+                <a href="/#contact">Контакты</a>
+            </li>
+            @* <li class="burger-menu-list-item social-menu-wrap">
+                <ul class="social-menu">
+                    <li>
+                        <a href="#">
+                            <img class="social-icon" src="img/fa-icon/google-plus-g-brands.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="social-icon" src="img/fa-icon/twitter-brands.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="social-icon" src="img/fa-icon/facebook-f-brands.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="social-icon" src="img/fa-icon/vk-brands.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="social-icon" src="img/fa-icon/telegram-plane-brands.svg" alt="">
+                        </a>
+                    </li>
+                </ul><!-- social-menu -->
+            </li><!-- social-menu-wrap -->
+                *@
+        </ul>
+    </nav>
 </div><!-- /.site-header -->
 
 <script asp-location="Footer">
