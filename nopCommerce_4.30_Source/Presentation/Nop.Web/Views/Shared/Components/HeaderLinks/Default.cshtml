@@ -4,28 +4,6 @@
 <div class="header-links">
     <ul>
         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderLinksBefore })
-        @if (Model.IsAuthenticated)
-        {
-            <li><a href="@Url.RouteUrl("CustomerInfo")" class="ico-account"><span class="login-label">@T("Account.MyAccount")@*@Model.CustomerName*@</span></a></li>
-            <li><a href="@Url.RouteUrl("Logout")" class="ico-logout"><span class="login-label">@T("Account.Logout")</span></a></li>
-        }
-        else
-        {
-            var returnUrl = Context.Request.Query.TryGetValue("returnUrl", out var url) && !StringValues.IsNullOrEmpty(url)
-                ? url.ToString()
-                : webHelper.GetRawUrl(Context.Request);
-
-            <li><a href="@Url.RouteUrl("Login", new { returnUrl })" class="ico-login"><span class="login-label">@T("Account.Login")</span></a></li>
-        }
-        @if (Model.AllowPrivateMessages)
-        {
-            <li>
-                <a href="@Url.RouteUrl("PrivateMessages", new { tab = "" })" class="ico-inbox">
-                    <span class="inbox-label">@T("PrivateMessages.Inbox")</span>
-                    <span class="inbox-unread">@Model.UnreadPrivateMessages</span>
-                </a>
-            </li>
-        }
         @if (Model.WishlistEnabled)
         {
             <li>
@@ -35,12 +13,16 @@
                 </a>
             </li>
         }
-        @if (Model.ShoppingCartEnabled)
+        @if (Model.IsAuthenticated)
         {
-            <li id="topcartlink">
-                <a href="@Url.RouteUrl("ShoppingCart")" class="ico-cart">
-                    <span class="cart-label">@T("ShoppingCart")</span>
-                    <span class="cart-qty">@T("ShoppingCart.HeaderQuantity", Model.ShoppingCartItems)</span>
+            <li><a href="@Url.RouteUrl("Logout")" class="ico-logout"><span class="login-label">@T("Account.Logout")</span></a></li>
+        }
+        @if (Model.AllowPrivateMessages)
+        {
+            <li>
+                <a href="@Url.RouteUrl("PrivateMessages", new { tab = "" })" class="ico-inbox">
+                    <span class="inbox-label">@T("PrivateMessages.Inbox")</span>
+                    <span class="inbox-unread">@Model.UnreadPrivateMessages</span>
                 </a>
             </li>
         }
@@ -52,25 +34,6 @@
         <script asp-location="Footer">
             $(document).ready(function () {
                 displayPopupNotification('@Html.Raw(JavaScriptEncoder.Default.Encode(Model.AlertMessage))', 'success', false);
-            });
-        </script>
-    }
-    @if (Model.ShoppingCartEnabled)
-    {
-        <script asp-location="Footer">
-            $(document).ready(function () {
-                $('.header-upper').on('mouseenter', '#topcartlink', function () {
-                    $('#flyout-cart').addClass('active');
-                });
-                $('.header-upper').on('mouseleave', '#topcartlink', function () {
-                    $('#flyout-cart').removeClass('active');
-                });
-                $('.header-upper').on('mouseenter', '#flyout-cart', function () {
-                    $('#flyout-cart').addClass('active');
-                });
-                $('.header-upper').on('mouseleave', '#flyout-cart', function () {
-                    $('#flyout-cart').removeClass('active');
-                });
             });
         </script>
     }
