@@ -103,68 +103,7 @@
             <img src="@Url.Content("~/GoldTechLanding/watch/67763815/1.gif")" style="position:absolute; left:-9999px;" alt="">
         </div>
     </noscript>
-    <script type="text/javascript">
-
-        function loadTicker() {
-            const settings = {
-                "async": true,
-                "crossDomain": true,
-                "url": 'https://web-api.online/api/Currencies/Ticker',
-                "method": "GET"
-            };
-
-            $.ajax(settings).done(function (response) {
-                $("#gold-span_1").text('$ ' + response[2].buy);
-                $("#gold-span_2").text('$ ' + response[2].buy);
-                $("#gold-span_3").text('$ ' + response[2].buy);
-
-                $("#silver-span_1").text('$ ' + response[4].buy);
-                $("#silver-span_2").text('$ ' + response[4].buy);
-                $("#silver-span_3").text('$ ' + response[4].buy);
-
-                $("#platinum-span_2").text('$ ' + response[3].buy);
-                $("#platinum-span_1").text('$ ' + response[3].buy);
-                $("#platinum-span_3").text('$ ' + response[3].buy);
-
-                $("#usd-span_1").html(response[0].buy + " руб.");
-                $("#usd-span_2").html(response[0].buy + " руб.");
-                $("#usd-span_3").html(response[0].buy + " руб.");
-
-                $("#eur-span_1").html(response[1].buy + " руб.");
-                $("#eur-span_2").html(response[1].buy + " руб.");
-                $("#eur-span_3").html(response[1].buy + " руб.");
-
-                var usd_arrow = response.find(x => x.acronim == "USD").isUp;
-                var eur_arrow = response.find(x => x.acronim == "EUR").isUp;
-                var xau_arrow = response.find(x => x.acronim == "XAU").isUp;
-                var pl_arrow = response.find(x => x.acronim == "PL").isUp;
-                var xag_arrow = response.find(x => x.acronim == "XAG").isUp;
-
-                function tickerArrow(str) {
-                    if (str == true) {
-                        return "↑";
-                    }
-                    if (str == false) {
-                        return "↓";
-                    }
-                    if (str == null) {
-                        return " ";
-                    }
-                }
-
-                $(".exchange__item-arrow-gold").html(tickerArrow(xau_arrow));
-                $(".exchange__item-arrow-eur").html(tickerArrow(eur_arrow));
-                $(".exchange__item-arrow-platinum").html(tickerArrow(pl_arrow));
-                $(".exchange__item-arrow-usd").html(tickerArrow(usd_arrow));
-                $(".exchange__item-arrow-silver").html(tickerArrow(xag_arrow));
-
-            });
-        }
-
-        $(document).ready(function () {
-            loadTicker();
-        });
-    </script>
+   
 
 </head>
 <body>
