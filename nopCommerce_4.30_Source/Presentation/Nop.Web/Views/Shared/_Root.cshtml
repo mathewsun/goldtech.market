@@ -12,15 +12,11 @@
         var localized_data = {
             AjaxCartFailure: "@T("AjaxCart.Failure")"
         };
-        AjaxCart.init(false, '.fix-menu .cart-qty', '.header-links .wishlist-qty', '#flyout-cart', localized_data);
+        AjaxCart.init(false, '.fix-menu .cart-qty', '.fix-menu .wishlist-qty', '#flyout-cart', localized_data);
     </script>
-    @* <div class="header-menu">
-            @await Component.InvokeAsync("TopMenu")
-        </div> *@
-    <div class="slide-nav">
-        <div class="slide-nav-close"></div>
-        @await Component.InvokeAsync("TopMenu")
-    </div>
+
+    @await Component.InvokeAsync("TopMenu")
+
     <div class="master-wrapper-content">
         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ContentBefore })
 
@@ -35,6 +31,5 @@
     </div>
     @await Component.InvokeAsync("Footer")
 </div>
-@await Component.InvokeAsync("FixMenu")
 @await Component.InvokeAsync("EuCookieLaw")
 @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.BodyEndHtmlTagBefore })
