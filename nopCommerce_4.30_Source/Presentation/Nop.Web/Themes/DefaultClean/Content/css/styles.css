@@ -3537,13 +3537,15 @@ label, label + * {
 .registration-page {
     margin-top: 30px;
 }
-.password-recovery-page .page-title {
+.password-recovery-page .page-title,
+.registration-page .page-title{
     min-height: 1em;
     margin: 0;
     border: none;
     padding: 0;
 }
-.password-recovery-page h1 {
+.password-recovery-page h1,
+.registration-page h1 {
     font-size: 24px;
     margin-bottom: 20px;
 }
@@ -3555,19 +3557,22 @@ label, label + * {
 .password-recovery-page .fieldset {
     margin: 0 0 20px;
 }
-.password-recovery-page .form-fields {
+.password-recovery-page .form-fields,
+.registration-page .form-fields{
     border: none;
     background: none;
     padding: 0;
 }
-.password-recovery-page .required {
+.password-recovery-page .required,
+.registration-page .required{
     position: absolute;
     left: 0;
     top: 3px;
 }
 
 .login-page .returning-wrapper,
-.password-recovery-page form {
+.password-recovery-page form,
+.registration-page form {
     width: 400px;
     max-width: 100%;
     margin: 0 auto;
@@ -3579,15 +3584,18 @@ label, label + * {
     padding: 0;
     background: transparent;
 }
-.login-page .fieldset .title {
+.login-page .fieldset .title,
+.registration-page .fieldset .title {
     font-size: 18px;
 }
 .login-page .inputs,
-.password-recovery-page .inputs {
+.password-recovery-page .inputs,
+.registration-page .inputs {
     font-size: 16px;
 }
 .login-page .inputs label,
-.password-recovery-page .inputs label{
+.password-recovery-page .inputs label,
+.registration-page .inputs label {
     width: max-content;
     padding-left: 16px;
 }
@@ -3596,7 +3604,12 @@ label, label + * {
 .login-page .inputs input[type="tel"],
 .login-page .inputs input[type="Username"],
 .login-page .inputs input[type="password"],
-.password-recovery-page .inputs input[type="email"] {
+.password-recovery-page .inputs input[type="email"],
+.registration-page .inputs input[type="text"],
+.registration-page .inputs input[type="email"],
+.registration-page .inputs input[type="tel"],
+.registration-page .inputs input[type="Username"],
+.registration-page .inputs input[type="password"] {
     display: block;
     border-radius: 18px;
     padding: 8px 16px;
@@ -3606,6 +3619,7 @@ label, label + * {
 .login-page .inputs.reversed label {
     color: #C39B6A;
     padding-left: 8px;
+    display: inline;
 }
 .login-page .links-wrapper {
     display: flex;
@@ -3618,8 +3632,12 @@ label, label + * {
 .password-recovery-page .buttons {
     margin: 0 0 20px;
 }
+.registration-page .buttons {
+    margin: 30px 0 0px;
+}
 .login-page .buttons input[type="submit"],
-.password-recovery-page .buttons input[type="submit"] {
+.password-recovery-page .buttons input[type="submit"],
+.registration-page .buttons input[type="submit"] {
     width: 100%;
     height: 36px;
     background: #C39B6A;
@@ -3633,6 +3651,33 @@ label, label + * {
     background-color: #d4ab79;
 }
 
+.registration-page .fieldset {
+    margin: 0;
+}
+
+.registration-page__fieldset-newsletter {
+    margin: -15px 0 10px;
+}
+.registration-page__fieldset-newsletter .inputs {
+    margin-bottom: 0;
+    text-align: right;
+}
+.registration-page__fieldset-newsletter label {
+    color: #C39B6A;
+    display: inline;
+}
+
+
+.registration-page .message-error,
+.registration-page .field-validation-error,
+.registration-page .username-not-available-status,
+.registration-page .poll-vote-error,
+.registration-page .password-error {
+    white-space: normal;
+    text-align: left;
+}
+
+
 .external-authentication {
     width: 400px;
     max-width: 100%;
@@ -3640,7 +3685,7 @@ label, label + * {
     overflow: hidden;
     text-align: center;
     background: #F6F7F9;
-    padding-bottom: 20px;
+    padding: 0px 20px 20px;
 }
 
     .external-authentication .ExtendedAuthentication .social ul {
@@ -3668,10 +3713,13 @@ label, label + * {
         background: url('../images/google-temp-36.png') left center no-repeat;
     }
 
+.registration-page .external-authentication {
+    margin-top: -15px
+}
+
 
 @media (min-width: 1001px) {
-    .login-page .returning-wrapper,
-    .password-recovery-page form {
+    .login-page .returning-wrapper, .password-recovery-page form, .registration-page form{
         padding: 30px;
     }
     .login-page .inputs input[type="text"],
@@ -3680,12 +3728,16 @@ label, label + * {
     .login-page .inputs input[type="tel"],
     .login-page .inputs input[type="password"],
     .login-page .buttons input[type="submit"],
-    .password-recovery-page .buttons input[type="submit"] {
+    .password-recovery-page .buttons input[type="submit"],
+    .registration-page .buttons input[type="submit"] {
         height: 40px;
         border-radius: 20px;
     }
     .external-authentication {
-        padding-bottom: 30px;
+        padding: 0 30px 30px;
+    }
+    .registration-page .external-authentication {
+        margin-top: -20px
     }
 }
 
@@ -3758,7 +3810,6 @@ label, label + * {
         margin-bottom: 0;
     }
 
-.registration-page .button-1,
 .registration-result-page .button-1,
 .account-page .button-1,
 .return-request-page .button-1 {
@@ -3772,7 +3823,6 @@ label, label + * {
     text-transform: uppercase;
 }
 
-    .registration-page .button-1:hover,
     .registration-result-page .button-1:hover,
     .account-page .button-1:hover,
     .return-request-page .button-1:hover {
@@ -3816,7 +3866,6 @@ label, label + * {
     display: block;
 }
 
-.registration-page .vat-note,
 .customer-info-page .vat-note,
 .customer-info-page .email-to-revalidate-note {
     display: block;
@@ -8270,10 +8319,6 @@ pre {
         text-align: left;
     }
 
-    .registration-page .vat-note {
-        margin-left: 275px;
-    }
-
     .customer-info-page .vat-note,
     .customer-info-page .email-to-revalidate-note {
         margin-left: 150px;
@@ -8526,11 +8571,6 @@ pre {
 
 
     /*** REGISTRATION, LOGIN, ACCOUNT ***/
-
-
-    .registration-page .vat-note {
-        margin-left: 385px;
-    }
 
     .customer-info-page .vat-note,
     .customer-info-page .email-to-revalidate-note {
@@ -9089,6 +9129,24 @@ pre {
 */
 
 /* Helper class */
+.mt-0 {
+    margin-top: 0!important;
+}
+.mb-0 {
+    margin-bottom: 0!important;
+}
+.align-right {
+    text-align: right;
+}
+.align-center {
+    text-align: center;
+}
+.color-gold,
+.color-gold a,
+.color-gold label {
+    color: #C39B6A;
+}
+
 @media (max-width: 1000px) {
     .not-mobile {
         display: none;

@@ -16,26 +16,9 @@
         <form asp-route="Register" asp-route-returnurl="/shop" method="post" autocomplete="off">
             <div asp-validation-summary="ModelOnly" class="message-error"></div>
             <div class="fieldset">
-                <div class="title">
-                    <strong>@T("Account.YourPersonalDetails")</strong>
-                </div>
+
                 <div class="form-fields">
-                    @if (Model.GenderEnabled)
-                    {
-                        <div class="inputs">
-                            <label for="gender">@T("Account.Fields.Gender"):</label>
-                            <div id="gender" class="gender">
-                                <span class="male">
-                                    <input type="radio" asp-for="Gender" value="M" checked="@(Model.Gender == "M")" id="gender-male" />
-                                    <label class="forcheckbox" for="gender-male">@T("Account.Fields.Gender.Male")</label>
-                                </span>
-                                <span class="female">
-                                    <input type="radio" asp-for="Gender" value="F" checked="@(Model.Gender == "F")" id="gender-female" />
-                                    <label class="forcheckbox" for="gender-female">@T("Account.Fields.Gender.Female")</label>
-                                </span>
-                            </div>
-                        </div>
-                    }
+
                     @if (Model.FirstNameEnabled)
                     {
                         <div class="inputs">
@@ -60,27 +43,7 @@
                             <span asp-validation-for="LastName"></span>
                         </div>
                     }
-                    @if (Model.DateOfBirthEnabled)
-                    {
-                        <div class="inputs date-of-birth">
-                            <label>@T("Account.Fields.DateOfBirth"):</label>
-                            <nop-date-picker asp-day-name="@Html.NameFor(x => x.DateOfBirthDay)"
-                                             asp-month-name="@Html.NameFor(x => x.DateOfBirthMonth)"
-                                             asp-year-name="@Html.NameFor(x => x.DateOfBirthYear)"
-                                             asp-begin-year="@(DateTime.Now.Year - 110)"
-                                             asp-end-year="@(DateTime.Now.Year)"
-                                             asp-selected-day="@Model.DateOfBirthDay"
-                                             asp-selected-month="@Model.DateOfBirthMonth"
-                                             asp-selected-year="@Model.DateOfBirthYear" />
-                            @if (Model.DateOfBirthRequired)
-                            {
-                                <nop-required />
-                            }
-                            <span asp-validation-for="DateOfBirthDay"></span>
-                            <span asp-validation-for="DateOfBirthMonth"></span>
-                            <span asp-validation-for="DateOfBirthYear"></span>
-                        </div>
-                    }
+
                     <div class="inputs">
                         <label asp-for="Email" asp-postfix=":"></label>
                         <input asp-for="Email" />
@@ -112,12 +75,29 @@
                     }
                 </div>
             </div>
+            @if (Model.NewsletterEnabled || Model.CustomerAttributes.Count > 0)
+            {
+                <div class="fieldset registration-page__fieldset-newsletter">
+                    <div class="form-fields">
+                        @if (Model.NewsletterEnabled)
+                        {
+                            <div class="inputs">
+                                <label asp-for="Newsletter" asp-postfix=":"></label>
+                                <input asp-for="Newsletter" />
+                                <span asp-validation-for="Newsletter"></span>
+                            </div>
+                        }
+                        @if (Model.CustomerAttributes.Count > 0)
+                        {
+                            @await Html.PartialAsync("_CustomerAttributes", Model.CustomerAttributes)
+                        }
+                    </div>
+                </div>
+            }
             @if (Model.CompanyEnabled || Model.DisplayVatNumber)
             {
                 <div class="fieldset">
-                    <div class="title">
-                        <strong>@T("Account.CompanyDetails")</strong>
-                    </div>
+
                     <div class="form-fields">
                         @if (Model.CompanyEnabled)
                         {
@@ -143,11 +123,11 @@
                 </div>
             }
             @if (Model.StreetAddressEnabled ||
-             Model.StreetAddress2Enabled ||
-             Model.ZipPostalCodeEnabled ||
-             Model.CityEnabled ||
-             Model.CountyEnabled ||
-             Model.CountryEnabled)
+          Model.StreetAddress2Enabled ||
+          Model.ZipPostalCodeEnabled ||
+          Model.CityEnabled ||
+          Model.CountyEnabled ||
+          Model.CountryEnabled)
             {
                 <div class="fieldset">
                     <div class="title">
@@ -280,28 +260,7 @@
                     </div>
                 </div>
             }
-            @if (Model.NewsletterEnabled || Model.CustomerAttributes.Count > 0)
-            {
-                <div class="fieldset">
-                    <div class="title">
-                        <strong>@T("Account.Options")</strong>
-                    </div>
-                    <div class="form-fields">
-                        @if (Model.NewsletterEnabled)
-                        {
-                            <div class="inputs">
-                                <label asp-for="Newsletter" asp-postfix=":"></label>
-                                <input asp-for="Newsletter" />
-                                <span asp-validation-for="Newsletter"></span>
-                            </div>
-                        }
-                        @if (Model.CustomerAttributes.Count > 0)
-                        {
-                            @await Html.PartialAsync("_CustomerAttributes", Model.CustomerAttributes)
-                        }
-                    </div>
-                </div>
-            }
+
             @if (Model.AllowCustomersToSetTimeZone)
             {
                 <div class="fieldset">
@@ -318,9 +277,7 @@
                 </div>
             }
             <div class="fieldset">
-                <div class="title">
-                    <strong>@T("Account.YourPassword")</strong>
-                </div>
+
                 <div class="form-fields">
                     <div class="inputs">
                         <label asp-for="Password" asp-postfix=":"></label>
@@ -427,9 +384,17 @@
             <div class="buttons">
                 <input type="submit" id="register-button" class="button-1 register-next-step-button" value="@T("Account.Register.Button")" name="register-button" />
             </div>
+
         </form>
         <div class="external-authentication">
             @await Component.InvokeAsync("ExternalMethods", "ExternalAuthentication")
+        </div>
+
+        <div class="links-wrapper">
+            <span>Уже зарегистрированы? </span>
+            <span class="color-gold">
+                <a href='/login'>Войти</a>
+            </span>
         </div>
     </div>
 </div>
