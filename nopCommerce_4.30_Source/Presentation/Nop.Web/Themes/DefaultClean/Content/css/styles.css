@@ -3536,6 +3536,83 @@ label, label + * {
 registration-page {
     margin-top: 30px;
 }
+.login-page .returning-wrapper {
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #F6F7F9;
+}
+.login-page .form-fields {
+    border: none;
+    padding: 0;
+    background: transparent;
+}
+.login-page .fieldset .title {
+    font-size: 18px;
+}
+.login-page .inputs {
+    font-size: 16px;
+}
+.login-page .inputs label {
+    width: max-content;
+    padding-left: 16px;
+}
+.login-page .inputs input[type="text"],
+.login-page .inputs input[type="email"],
+.login-page .inputs input[type="tel"],
+.login-page .inputs input[type="Username"],
+.login-page .inputs input[type="password"] {
+    display: block;
+    border-radius: 18px;
+    padding: 8px 16px;
+    border-color: rgba(195, 155, 106, 0.5);
+}
+
+.login-page .inputs.reversed label {
+    color: #C39B6A;
+    padding-left: 8px;
+}
+.login-page .links-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #C39B6A;
+    font-weight: 700;
+}
+.login-page .buttons {
+    margin: 0 0 20px;
+}
+.login-page .buttons input[type="submit"] {
+    width: 100%;
+    height: 36px;
+    background: #C39B6A;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 18px;
+}
+.login-page .button-1:hover {
+    background-color: #d4ab79;
+}
+@media (min-width: 1001px) {
+    .login-page .returning-wrapper {
+        padding: 30px;
+    }
+    .login-page .inputs input[type="text"],
+    .login-page .inputs input[type="email"],
+    .login-page .inputs input[type="Username"],
+    .login-page .inputs input[type="tel"],
+    .login-page .inputs input[type="password"],
+    .login-page .buttons input[type="submit"] {
+        height: 40px;
+        border-radius: 20px;
+    }
+}
+
+
+
+
 
 .gender {
     display: inline-block;
@@ -3607,7 +3684,6 @@ registration-page {
 
 .registration-page .button-1,
 .registration-result-page .button-1,
-.login-page .button-1,
 .password-recovery-page .button-1,
 .account-page .button-1,
 .return-request-page .button-1 {
@@ -3623,7 +3699,6 @@ registration-page {
 
     .registration-page .button-1:hover,
     .registration-result-page .button-1:hover,
-    .login-page .button-1:hover,
     .password-recovery-page .button-1:hover,
     .account-page .button-1:hover,
     .return-request-page .button-1:hover {
@@ -3676,111 +3751,11 @@ registration-page {
     white-space: normal;
 }
 
-.login-page .customer-blocks {
-    margin: 0 0 30px;
-}
-
-.login-page .title {
-    margin: 0 0 15px;
-    font-size: 20px;
-    color: #444;
-}
-
-    .login-page .title strong {
-        font-weight: normal;
-    }
-
-.login-page .new-wrapper {
-    margin: 0 0 50px;
-}
-
-    .login-page .new-wrapper .text {
-        margin: 0 0 30px;
-        border-top: 1px solid #e6e6e6;
-        background-color: #f9f9f9;
-        padding: 30px;
-        line-height: 22px;
-    }
-
-    .login-page .new-wrapper .topic-block {
-        margin: 0;
-    }
-
-    .login-page .new-wrapper .topic-block-body strong {
-        color: #444;
-    }
-
-    .login-page .new-wrapper .button-1 {
-        margin: 0 0 5px;
-    }
-
-.login-page .returning-wrapper {
-    margin: 0;
-}
-
-    .login-page .returning-wrapper .form-fields {
-        overflow: hidden;
-        padding: 30px 15px 0;
-    }
-
-    .login-page .returning-wrapper .inputs.reversed {
-        white-space: normal;
-    }
-
-        .login-page .returning-wrapper .inputs.reversed * {
-            display: inline-block;
-            width: auto;
-            margin: 5px;
-            font-size: 14px; /*reset zeroing*/
-            color: #444;
-        }
-
-        .login-page .returning-wrapper .inputs.reversed a:hover {
-            color: #C39B6A;
-        }
-
-.login-page .captcha-box {
-    margin: -15px 0 20px;
-}
-
-.login-page .returning-wrapper .buttons {
-    background-color: #fff;
-    padding: 30px 0;
-}
-
 .external-authentication {
-    margin: 0 0 50px;
+    margin: 0 0 30px;
     overflow: hidden;
     text-align: center;
 }
-
-    .external-authentication .title {
-        margin: 0 0 15px;
-        font-size: 20px;
-        color: #444;
-    }
-
-    .external-authentication .buttons {
-        margin: 0 0 30px;
-        border-top: 1px solid #e6e6e6;
-        padding: 30px;
-    }
-
-.external-auth-errors {
-    color: #e4444c;
-}
-
-.external-auth-association {
-    color: #444;
-}
-
-    .external-auth-association a {
-        color: #C39B6A;
-    }
-
-        .external-auth-association a:hover {
-            text-decoration: underline;
-        }
 
 .password-recovery-page .result {
     margin: 0 0 5px;
@@ -8211,39 +8186,10 @@ pre {
         margin: 10px auto;
     }
 
-    .login-page .customer-blocks {
-        overflow: hidden;
-    }
+   
 
-    .login-page .new-wrapper {
-        float: left;
-        width: 49%;
-        margin: 0;
-    }
 
-        .login-page .new-wrapper .text {
-            min-height: 200px;
-        }
-
-    .login-page .returning-wrapper {
-        float: right;
-        width: 49%;
-    }
-
-        .login-page .returning-wrapper .form-fields {
-            min-height: 200px;
-            padding: 30px 0 0;
-        }
-
-        .login-page .returning-wrapper .inputs label {
-            width: 110px;
-        }
-
-        .login-page .returning-wrapper input[type="text"],
-        .login-page .returning-wrapper input[type="email"],
-        .login-page .returning-wrapper input[type="password"] {
-            width: 300px;
-        }
+    
 
     .address-list-page .section,
     .order-list-page .section,
@@ -8522,12 +8468,6 @@ pre {
 
     /*** REGISTRATION, LOGIN, ACCOUNT ***/
 
-
-    .login-page .returning-wrapper input[type="text"],
-    .login-page .returning-wrapper input[type="email"],
-    .login-page .returning-wrapper input[type="password"] {
-        width: 360px;
-    }
 
     .registration-page .vat-note {
         margin-left: 385px;
