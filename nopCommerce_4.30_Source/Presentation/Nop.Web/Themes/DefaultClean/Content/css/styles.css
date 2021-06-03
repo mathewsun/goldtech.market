@@ -3533,10 +3533,41 @@ label, label + * {
 /********** REGISTRATION, LOGIN, ACCOUNT PAGES  **********/
 
 .login-page,
-registration-page {
+.password-recovery-page, 
+.registration-page {
     margin-top: 30px;
 }
-.login-page .returning-wrapper {
+.password-recovery-page .page-title {
+    min-height: 1em;
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+.password-recovery-page h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.password-recovery-page .tooltip {
+    border: none;
+    margin-bottom: 15px;
+}
+.password-recovery-page .fieldset {
+    margin: 0 0 20px;
+}
+.password-recovery-page .form-fields {
+    border: none;
+    background: none;
+    padding: 0;
+}
+.password-recovery-page .required {
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+
+.login-page .returning-wrapper,
+.password-recovery-page form {
     width: 400px;
     max-width: 100%;
     margin: 0 auto;
@@ -3551,10 +3582,12 @@ registration-page {
 .login-page .fieldset .title {
     font-size: 18px;
 }
-.login-page .inputs {
+.login-page .inputs,
+.password-recovery-page .inputs {
     font-size: 16px;
 }
-.login-page .inputs label {
+.login-page .inputs label,
+.password-recovery-page .inputs label{
     width: max-content;
     padding-left: 16px;
 }
@@ -3562,7 +3595,8 @@ registration-page {
 .login-page .inputs input[type="email"],
 .login-page .inputs input[type="tel"],
 .login-page .inputs input[type="Username"],
-.login-page .inputs input[type="password"] {
+.login-page .inputs input[type="password"],
+.password-recovery-page .inputs input[type="email"] {
     display: block;
     border-radius: 18px;
     padding: 8px 16px;
@@ -3580,10 +3614,12 @@ registration-page {
     color: #C39B6A;
     font-weight: 700;
 }
-.login-page .buttons {
+.login-page .buttons,
+.password-recovery-page .buttons {
     margin: 0 0 20px;
 }
-.login-page .buttons input[type="submit"] {
+.login-page .buttons input[type="submit"],
+.password-recovery-page .buttons input[type="submit"] {
     width: 100%;
     height: 36px;
     background: #C39B6A;
@@ -3592,11 +3628,50 @@ registration-page {
     text-transform: uppercase;
     border-radius: 18px;
 }
-.login-page .button-1:hover {
+.login-page .buttons:hover input,
+.password-recovery-page .buttons:hover input {
     background-color: #d4ab79;
 }
+
+.external-authentication {
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto 30px;
+    overflow: hidden;
+    text-align: center;
+    background: #F6F7F9;
+    padding-bottom: 20px;
+}
+
+    .external-authentication .ExtendedAuthentication .social ul {
+        margin-top: 15px;
+        border: none;
+        font-size: inherit;
+    }
+
+    .external-authentication .ExtendedAuthentication .social li:last-child {
+        margin: 0;
+    }
+
+    .external-authentication .ExtendedAuthentication .social a {
+        display: block;
+        width: 36px;
+        height: 36px;
+        font-size: 0;
+    }
+
+    .external-authentication .facebook-btn {
+        background: url('../images/facebook-temp-36.png') left center no-repeat;
+    }
+
+    .external-authentication .google-btn {
+        background: url('../images/google-temp-36.png') left center no-repeat;
+    }
+
+
 @media (min-width: 1001px) {
-    .login-page .returning-wrapper {
+    .login-page .returning-wrapper,
+    .password-recovery-page form {
         padding: 30px;
     }
     .login-page .inputs input[type="text"],
@@ -3604,14 +3679,15 @@ registration-page {
     .login-page .inputs input[type="Username"],
     .login-page .inputs input[type="tel"],
     .login-page .inputs input[type="password"],
-    .login-page .buttons input[type="submit"] {
+    .login-page .buttons input[type="submit"],
+    .password-recovery-page .buttons input[type="submit"] {
         height: 40px;
         border-radius: 20px;
     }
+    .external-authentication {
+        padding-bottom: 30px;
+    }
 }
-
-
-
 
 
 .gender {
@@ -3684,7 +3760,6 @@ registration-page {
 
 .registration-page .button-1,
 .registration-result-page .button-1,
-.password-recovery-page .button-1,
 .account-page .button-1,
 .return-request-page .button-1 {
     min-width: 140px;
@@ -3699,7 +3774,6 @@ registration-page {
 
     .registration-page .button-1:hover,
     .registration-result-page .button-1:hover,
-    .password-recovery-page .button-1:hover,
     .account-page .button-1:hover,
     .return-request-page .button-1:hover {
         background-color: #d4ab79;
@@ -3751,21 +3825,6 @@ registration-page {
     white-space: normal;
 }
 
-.external-authentication {
-    margin: 0 0 30px;
-    overflow: hidden;
-    text-align: center;
-}
-
-.password-recovery-page .result {
-    margin: 0 0 5px;
-    font-weight: bold;
-    color: #444;
-}
-
-.password-recovery-page .tooltip {
-    margin: 0 0 25px;
-}
 
 .add-more-external-records {
     text-align: center;
