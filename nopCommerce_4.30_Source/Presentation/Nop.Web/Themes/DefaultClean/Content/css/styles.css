@@ -1116,7 +1116,7 @@ label, label + * {
 
 .header-links ul a.ico-account::before,
 .header-links ul a.ico-login::before {
-    background: url("../images/user-temp.png") center no-repeat;
+    background: url("../images/user_24-24.png") center no-repeat;
     background-size: contain;
 }
 
@@ -1131,7 +1131,7 @@ label, label + * {
 }
 
 .header-links ul a.ico-search::before {
-    background: url("../images/search-temp.png") center no-repeat;
+    background: url("../images/search_24-24.png") center no-repeat;
     background-size: contain;
 }
 
@@ -3532,7 +3532,10 @@ label, label + * {
 
 /********** REGISTRATION, LOGIN, ACCOUNT PAGES  **********/
 
-
+.login-page,
+registration-page {
+    margin-top: 30px;
+}
 
 .gender {
     display: inline-block;
@@ -8751,7 +8754,7 @@ pre {
 }
 
 .fix-menu__link-cart::after {
-    background: url("../images/cart-temp.png") center no-repeat;
+    background: url("../images/cart_46-41.png") center no-repeat;
     background-size: contain;
 }
 
