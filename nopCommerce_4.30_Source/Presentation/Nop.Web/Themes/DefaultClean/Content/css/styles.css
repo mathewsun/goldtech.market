@@ -3633,7 +3633,7 @@ label, label + * {
     margin: 0 0 20px;
 }
 .registration-page .buttons {
-    margin: 30px 0 0px;
+    margin: 30px 0 10px;
 }
 .login-page .buttons input[type="submit"],
 .password-recovery-page .buttons input[type="submit"],
@@ -3655,8 +3655,8 @@ label, label + * {
     margin: 0;
 }
 
-.registration-page__fieldset-newsletter {
-    margin: -15px 0 10px;
+.registration-page .registration-page__fieldset-newsletter {
+    margin: 0 0 10px;
 }
 .registration-page__fieldset-newsletter .inputs {
     margin-bottom: 0;
@@ -3677,6 +3677,9 @@ label, label + * {
     text-align: left;
 }
 
+.registration-page .links-wrapper {
+    margin: 10px 0 0;
+}
 
 .external-authentication {
     width: 400px;

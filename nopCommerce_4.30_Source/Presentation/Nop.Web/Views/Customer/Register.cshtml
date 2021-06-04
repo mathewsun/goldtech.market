@@ -43,22 +43,6 @@
                             <span asp-validation-for="LastName"></span>
                         </div>
                     }
-
-                    <div class="inputs">
-                        <label asp-for="Email" asp-postfix=":"></label>
-                        <input asp-for="Email" />
-                        <nop-required />
-                        <span asp-validation-for="Email"></span>
-                    </div>
-                    @if (Model.EnteringEmailTwice)
-                    {
-                        <div class="inputs">
-                            <label asp-for="ConfirmEmail" asp-postfix=":"></label>
-                            <input asp-for="ConfirmEmail" />
-                            <nop-required />
-                            <span asp-validation-for="ConfirmEmail"></span>
-                        </div>
-                    }
                     @if (Model.UsernamesEnabled)
                     {
                         <div class="inputs">
@@ -73,6 +57,22 @@
                         </div>
 
                     }
+                    <div class="inputs mb-0">
+                        <label asp-for="Email" asp-postfix=":"></label>
+                        <input asp-for="Email" />
+                        <nop-required />
+                        <span asp-validation-for="Email"></span>
+                    </div>
+                    @if (Model.EnteringEmailTwice)
+                    {
+                        <div class="inputs">
+                            <label asp-for="ConfirmEmail" asp-postfix=":"></label>
+                            <input asp-for="ConfirmEmail" />
+                            <nop-required />
+                            <span asp-validation-for="ConfirmEmail"></span>
+                        </div>
+                    }
+
                 </div>
             </div>
             @if (Model.NewsletterEnabled || Model.CustomerAttributes.Count > 0)
@@ -123,11 +123,11 @@
                 </div>
             }
             @if (Model.StreetAddressEnabled ||
-          Model.StreetAddress2Enabled ||
-          Model.ZipPostalCodeEnabled ||
-          Model.CityEnabled ||
-          Model.CountyEnabled ||
-          Model.CountryEnabled)
+         Model.StreetAddress2Enabled ||
+         Model.ZipPostalCodeEnabled ||
+         Model.CityEnabled ||
+         Model.CountyEnabled ||
+         Model.CountryEnabled)
             {
                 <div class="fieldset">
                     <div class="title">
@@ -384,17 +384,17 @@
             <div class="buttons">
                 <input type="submit" id="register-button" class="button-1 register-next-step-button" value="@T("Account.Register.Button")" name="register-button" />
             </div>
-
+            <div class="links-wrapper">
+                <span>Уже зарегистрированы? </span>
+                <span class="color-gold">
+                    <a href='/login'>Войти</a>
+                </span>
+            </div>
         </form>
         <div class="external-authentication">
             @await Component.InvokeAsync("ExternalMethods", "ExternalAuthentication")
         </div>
 
-        <div class="links-wrapper">
-            <span>Уже зарегистрированы? </span>
-            <span class="color-gold">
-                <a href='/login'>Войти</a>
-            </span>
-        </div>
+        
     </div>
 </div>
