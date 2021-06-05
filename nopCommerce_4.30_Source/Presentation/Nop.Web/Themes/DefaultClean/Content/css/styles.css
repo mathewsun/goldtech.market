@@ -1116,7 +1116,7 @@ label, label + * {
 
 .header-links ul a.ico-account::before,
 .header-links ul a.ico-login::before {
-    background: url("../images/user-temp.png") center no-repeat;
+    background: url("../images/user_24-24.png") center no-repeat;
     background-size: contain;
 }
 
@@ -1131,7 +1131,7 @@ label, label + * {
 }
 
 .header-links ul a.ico-search::before {
-    background: url("../images/search-temp.png") center no-repeat;
+    background: url("../images/search_24-24.png") center no-repeat;
     background-size: contain;
 }
 
@@ -3532,6 +3532,217 @@ label, label + * {
 
 /********** REGISTRATION, LOGIN, ACCOUNT PAGES  **********/
 
+.login-page,
+.password-recovery-page, 
+.registration-page {
+    margin-top: 30px;
+}
+.password-recovery-page .page-title,
+.registration-page .page-title{
+    min-height: 1em;
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+.password-recovery-page h1,
+.registration-page h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.password-recovery-page .tooltip {
+    border: none;
+    margin-bottom: 15px;
+}
+.password-recovery-page .fieldset {
+    margin: 0 0 20px;
+}
+.password-recovery-page .form-fields,
+.registration-page .form-fields{
+    border: none;
+    background: none;
+    padding: 0;
+}
+.password-recovery-page .required,
+.registration-page .required{
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+
+.login-page .returning-wrapper,
+.password-recovery-page form,
+.registration-page form {
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #F6F7F9;
+}
+.login-page .form-fields {
+    border: none;
+    padding: 0;
+    background: transparent;
+}
+.login-page .fieldset .title,
+.registration-page .fieldset .title {
+    font-size: 18px;
+}
+.login-page .inputs,
+.password-recovery-page .inputs,
+.registration-page .inputs {
+    font-size: 16px;
+}
+.login-page .inputs label,
+.password-recovery-page .inputs label,
+.registration-page .inputs label {
+    width: max-content;
+    padding-left: 16px;
+}
+.login-page .inputs input[type="text"],
+.login-page .inputs input[type="email"],
+.login-page .inputs input[type="tel"],
+.login-page .inputs input[type="Username"],
+.login-page .inputs input[type="password"],
+.password-recovery-page .inputs input[type="email"],
+.registration-page .inputs input[type="text"],
+.registration-page .inputs input[type="email"],
+.registration-page .inputs input[type="tel"],
+.registration-page .inputs input[type="Username"],
+.registration-page .inputs input[type="password"] {
+    display: block;
+    border-radius: 18px;
+    padding: 8px 16px;
+    border-color: rgba(195, 155, 106, 0.5);
+}
+
+.login-page .inputs.reversed label {
+    color: #C39B6A;
+    padding-left: 8px;
+    display: inline;
+}
+.login-page .links-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #C39B6A;
+    font-weight: 700;
+}
+.login-page .buttons,
+.password-recovery-page .buttons {
+    margin: 0 0 20px;
+}
+.registration-page .buttons {
+    margin: 30px 0 10px;
+}
+.login-page .buttons input[type="submit"],
+.password-recovery-page .buttons input[type="submit"],
+.registration-page .buttons input[type="submit"] {
+    width: 100%;
+    height: 36px;
+    background: #C39B6A;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 18px;
+}
+.login-page .buttons:hover input,
+.password-recovery-page .buttons:hover input {
+    background-color: #d4ab79;
+}
+
+.registration-page .fieldset {
+    margin: 0;
+}
+
+.registration-page .registration-page__fieldset-newsletter {
+    margin: 0 0 10px;
+}
+.registration-page__fieldset-newsletter .inputs {
+    margin-bottom: 0;
+    text-align: right;
+}
+.registration-page__fieldset-newsletter label {
+    color: #C39B6A;
+    display: inline;
+}
+
+
+.registration-page .message-error,
+.registration-page .field-validation-error,
+.registration-page .username-not-available-status,
+.registration-page .poll-vote-error,
+.registration-page .password-error {
+    white-space: normal;
+    text-align: left;
+}
+
+.registration-page .links-wrapper {
+    margin: 10px 0 0;
+}
+
+.external-authentication {
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto 30px;
+    overflow: hidden;
+    text-align: center;
+    background: #F6F7F9;
+    padding: 0px 20px 20px;
+}
+
+    .external-authentication .ExtendedAuthentication .social ul {
+        margin-top: 15px;
+        border: none;
+        font-size: inherit;
+    }
+
+    .external-authentication .ExtendedAuthentication .social li:last-child {
+        margin: 0;
+    }
+
+    .external-authentication .ExtendedAuthentication .social a {
+        display: block;
+        width: 36px;
+        height: 36px;
+        font-size: 0;
+    }
+
+    .external-authentication .facebook-btn {
+        background: url('../images/facebook-temp-36.png') left center no-repeat;
+    }
+
+    .external-authentication .google-btn {
+        background: url('../images/google-temp-36.png') left center no-repeat;
+    }
+
+.registration-page .external-authentication {
+    margin-top: -15px
+}
+
+
+@media (min-width: 1001px) {
+    .login-page .returning-wrapper, .password-recovery-page form, .registration-page form{
+        padding: 30px;
+    }
+    .login-page .inputs input[type="text"],
+    .login-page .inputs input[type="email"],
+    .login-page .inputs input[type="Username"],
+    .login-page .inputs input[type="tel"],
+    .login-page .inputs input[type="password"],
+    .login-page .buttons input[type="submit"],
+    .password-recovery-page .buttons input[type="submit"],
+    .registration-page .buttons input[type="submit"] {
+        height: 40px;
+        border-radius: 20px;
+    }
+    .external-authentication {
+        padding: 0 30px 30px;
+    }
+    .registration-page .external-authentication {
+        margin-top: -20px
+    }
+}
 
 
 .gender {
@@ -3602,10 +3813,7 @@ label, label + * {
         margin-bottom: 0;
     }
 
-.registration-page .button-1,
 .registration-result-page .button-1,
-.login-page .button-1,
-.password-recovery-page .button-1,
 .account-page .button-1,
 .return-request-page .button-1 {
     min-width: 140px;
@@ -3618,10 +3826,7 @@ label, label + * {
     text-transform: uppercase;
 }
 
-    .registration-page .button-1:hover,
     .registration-result-page .button-1:hover,
-    .login-page .button-1:hover,
-    .password-recovery-page .button-1:hover,
     .account-page .button-1:hover,
     .return-request-page .button-1:hover {
         background-color: #d4ab79;
@@ -3664,7 +3869,6 @@ label, label + * {
     display: block;
 }
 
-.registration-page .vat-note,
 .customer-info-page .vat-note,
 .customer-info-page .email-to-revalidate-note {
     display: block;
@@ -3673,121 +3877,6 @@ label, label + * {
     white-space: normal;
 }
 
-.login-page .customer-blocks {
-    margin: 0 0 30px;
-}
-
-.login-page .title {
-    margin: 0 0 15px;
-    font-size: 20px;
-    color: #444;
-}
-
-    .login-page .title strong {
-        font-weight: normal;
-    }
-
-.login-page .new-wrapper {
-    margin: 0 0 50px;
-}
-
-    .login-page .new-wrapper .text {
-        margin: 0 0 30px;
-        border-top: 1px solid #e6e6e6;
-        background-color: #f9f9f9;
-        padding: 30px;
-        line-height: 22px;
-    }
-
-    .login-page .new-wrapper .topic-block {
-        margin: 0;
-    }
-
-    .login-page .new-wrapper .topic-block-body strong {
-        color: #444;
-    }
-
-    .login-page .new-wrapper .button-1 {
-        margin: 0 0 5px;
-    }
-
-.login-page .returning-wrapper {
-    margin: 0;
-}
-
-    .login-page .returning-wrapper .form-fields {
-        overflow: hidden;
-        padding: 30px 15px 0;
-    }
-
-    .login-page .returning-wrapper .inputs.reversed {
-        white-space: normal;
-    }
-
-        .login-page .returning-wrapper .inputs.reversed * {
-            display: inline-block;
-            width: auto;
-            margin: 5px;
-            font-size: 14px; /*reset zeroing*/
-            color: #444;
-        }
-
-        .login-page .returning-wrapper .inputs.reversed a:hover {
-            color: #C39B6A;
-        }
-
-.login-page .captcha-box {
-    margin: -15px 0 20px;
-}
-
-.login-page .returning-wrapper .buttons {
-    background-color: #fff;
-    padding: 30px 0;
-}
-
-.external-authentication {
-    margin: 0 0 50px;
-    overflow: hidden;
-    text-align: center;
-}
-
-    .external-authentication .title {
-        margin: 0 0 15px;
-        font-size: 20px;
-        color: #444;
-    }
-
-    .external-authentication .buttons {
-        margin: 0 0 30px;
-        border-top: 1px solid #e6e6e6;
-        padding: 30px;
-    }
-
-.external-auth-errors {
-    color: #e4444c;
-}
-
-.external-auth-association {
-    color: #444;
-}
-
-    .external-auth-association a {
-        color: #C39B6A;
-    }
-
-        .external-auth-association a:hover {
-            text-decoration: underline;
-        }
-
-.password-recovery-page .result {
-    margin: 0 0 5px;
-    font-weight: bold;
-    color: #444;
-}
-
-.password-recovery-page .tooltip {
-    margin: 0 0 25px;
-}
 
 .add-more-external-records {
     text-align: center;
@@ -8208,39 +8297,10 @@ pre {
         margin: 10px auto;
     }
 
-    .login-page .customer-blocks {
-        overflow: hidden;
-    }
+   
 
-    .login-page .new-wrapper {
-        float: left;
-        width: 49%;
-        margin: 0;
-    }
 
-        .login-page .new-wrapper .text {
-            min-height: 200px;
-        }
-
-    .login-page .returning-wrapper {
-        float: right;
-        width: 49%;
-    }
-
-        .login-page .returning-wrapper .form-fields {
-            min-height: 200px;
-            padding: 30px 0 0;
-        }
-
-        .login-page .returning-wrapper .inputs label {
-            width: 110px;
-        }
-
-        .login-page .returning-wrapper input[type="text"],
-        .login-page .returning-wrapper input[type="email"],
-        .login-page .returning-wrapper input[type="password"] {
-            width: 300px;
-        }
+    
 
     .address-list-page .section,
     .order-list-page .section,
@@ -8260,10 +8320,6 @@ pre {
     .avatar-page .message-error,
     .avatar-page .buttons {
         text-align: left;
-    }
-
-    .registration-page .vat-note {
-        margin-left: 275px;
     }
 
     .customer-info-page .vat-note,
@@ -8519,17 +8575,6 @@ pre {
 
     /*** REGISTRATION, LOGIN, ACCOUNT ***/
 
-
-    .login-page .returning-wrapper input[type="text"],
-    .login-page .returning-wrapper input[type="email"],
-    .login-page .returning-wrapper input[type="password"] {
-        width: 360px;
-    }
-
-    .registration-page .vat-note {
-        margin-left: 385px;
-    }
-
     .customer-info-page .vat-note,
     .customer-info-page .email-to-revalidate-note {
         margin-left: 225px;
@@ -8751,7 +8796,7 @@ pre {
 }
 
 .fix-menu__link-cart::after {
-    background: url("../images/cart-temp.png") center no-repeat;
+    background: url("../images/cart_46-41.png") center no-repeat;
     background-size: contain;
 }
 
@@ -9087,6 +9132,24 @@ pre {
 */
 
 /* Helper class */
+.mt-0 {
+    margin-top: 0!important;
+}
+.mb-0 {
+    margin-bottom: 0!important;
+}
+.align-right {
+    text-align: right;
+}
+.align-center {
+    text-align: center;
+}
+.color-gold,
+.color-gold a,
+.color-gold label {
+    color: #C39B6A;
+}
+
 @media (max-width: 1000px) {
     .not-mobile {
         display: none;
