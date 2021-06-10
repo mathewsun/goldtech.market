@@ -6,3 +6,13 @@ copy all Views to themes
 copy setting from GoldTech.market to new_GTM
 copy Views from GoldTech.market to new_GTM, not all
 
+
+-------------
+local@raspel.ru
+nopcom1
+
+db
+gtm_main
+
+nopcomuser
+nopcomuser1
