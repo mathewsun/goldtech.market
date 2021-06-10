@@ -1,7 +1,8 @@
-new nopcom 4.30
-new db
-instal with test products
-add theme
++new nopcom 4.30
++new db
++instal with test products
++add theme & copy files from DefaultClean
+copy all Views
 copy all Views to themes
 copy setting from GoldTech.market to new_GTM
 copy Views from GoldTech.market to new_GTM, not all
