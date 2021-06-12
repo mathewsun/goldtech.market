@@ -9147,6 +9147,129 @@ pre {
     align-items: center;
 */
 
+
+/* .блок цены конкурентов */
+
+.coins-rates__tab-wrapper {
+    margin: 50px auto;
+}
+
+.headerCoinsRates {
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+@media (max-width: 500px) {
+    .headerCoinsRates {
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+.coinsrates-subtitle,
+.topic-page p.coinsrates-subtitle {
+    color: #6D6E72;
+    text-align: center;
+    margin-top: 0;
+    color: #777;
+    font-size: 18px;
+}
+@media (min-width: 500px) {
+    .coinsrates-subtitle,
+    .topic-page p.coinsrates-subtitle {
+        font-size: 18px;
+    }
+}
+
+.coins-rates__tab {
+    width: calc(100% + 15px);
+    margin-left: -15px;
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+    /* max-height: 795px; */
+    /* если надо убрать лишние элементы и оставить максимум 3 р€да, по 2 или 3 элемента */
+}
+
+.coins-rates__item {
+    width: 180px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    padding-top: 30px;
+    padding-bottom: 8px;
+    -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.17);
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.17);
+}
+
+@media (max-width: 500px) {
+    .coins-rates__item {
+        max-width: calc((100% - 30px) / 2);
+    }
+
+    .coins-rates__tab-wrapper .header {
+        font-size: 24px;
+    }
+}
+
+.coins-rates__logo {
+    width: 120px;
+    height: 50px;
+    margin: 0 auto 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+    .coins-rates__logo img {
+        max-width: 100%;
+        width: auto;
+        max-height: 100%;
+        height: auto;
+    }
+
+.coins-rates__available {
+    text-align: center;
+    color: #1B9B56;
+}
+
+.coins-rates__buy,
+.coins-rates__sell {
+    text-align: center;
+}
+
+    .coins-rates__buy p,
+    .coins-rates__sell p {
+        margin-bottom: 0.1em;
+        text-align: center;
+    }
+
+.coins-rates__price-arrow {
+    color: #C39B6A;
+    font-size: 14px;
+}
+
+.coins-rates__date {
+    margin-top: 1em;
+    text-align: right;
+    font-size: 12px;
+    color: grey;
+    opacity: 0.5;
+    padding-right: 12px;
+}
+
 /*                          MOST IMPORTANT 
                         *   this helper class after other classes
 */
