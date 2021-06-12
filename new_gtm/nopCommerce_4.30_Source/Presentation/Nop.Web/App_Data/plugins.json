@@ -12,10 +12,6 @@
       "Version": "1.26"
     },
     {
-      "SystemName": "Misc.SendinBlue",
-      "Version": "3.26"
-    },
-    {
       "SystemName": "Payments.CheckMoneyOrder",
       "Version": "1.44"
     },
@@ -48,10 +44,6 @@
       "Version": "1.60"
     },
     {
-      "SystemName": "Tax.Avalara",
-      "Version": "2.35"
-    },
-    {
       "SystemName": "Tax.FixedOrByCountryStateZip",
       "Version": "1.33"
     },
@@ -66,10 +58,6 @@
     {
       "SystemName": "Widgets.NivoSlider",
       "Version": "1.38"
-    },
-    {
-      "SystemName": "ExternalAuth.Facebook",
-      "Version": "1.63"
     }
   ],
   "PluginNamesToUninstall": [],
