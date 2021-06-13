@@ -1,0 +1,20 @@
++new nopcom 4.30
++new db
++instal with test products
++add theme & copy files from DefaultClean
++copy Views
++copy setting from GoldTech.market to new_GTM
++copy Views from GoldTech.market to new_GTM, not all
++remove plugins
+
+change admin login&email 
+
+-------------
+local@raspel.ru
+nopcom1
+
+db
+gtm_main
+
+nopcomuser
+nopcomuser1

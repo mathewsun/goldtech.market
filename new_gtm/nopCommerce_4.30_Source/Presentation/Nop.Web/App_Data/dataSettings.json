@@ -1,0 +1,5 @@
+﻿{
+  "DataConnectionString": "Data Source=DESKTOP-G1NKDL3\\SQLEXPRESS;Initial Catalog=gtm_main;Integrated Security=False;Persist Security Info=False;User ID=nopcomuser;Password=nopcomuser1",
+  "DataProvider": "sqlserver",
+  "RawDataSettings": {}
+}
